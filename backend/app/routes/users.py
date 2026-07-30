@@ -1,0 +1,91 @@
+from fastapi import APIRouter, HTTPException
+from bson.errors import InvalidId
+
+from app.services import user_service
+from app.schemas.user import UserUpdate
+
+
+router = APIRouter(
+    prefix="/api/users",
+    tags=["Users"]
+)
+
+
+
+
+@router.get("/")
+async def get_users():
+
+    return user_service.get_users()
+
+
+
+
+
+@router.get("/{id}")
+async def get_user(id: str):
+
+    try:
+
+        user = user_service.get_user(id)
+
+    except InvalidId:
+
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid User ID"
+        )
+
+
+    if user is None:
+
+        raise HTTPException(
+            status_code=404,
+            detail="User not found"
+        )
+
+
+    return user
+
+
+
+
+
+@router.put("/{id}")
+async def update_user(
+    id: str,
+    body: UserUpdate
+):
+
+    try:
+
+        data = body.model_dump(
+            exclude_unset=True
+        )
+
+
+        result = user_service.update_user(
+            id,
+            data
+        )
+
+
+    except InvalidId:
+
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid User ID"
+        )
+
+
+    if result == 0:
+
+        raise HTTPException(
+            status_code=404,
+            detail="User not found"
+        )
+
+
+    return {
+        "message": "User updated successfully"
+    }
