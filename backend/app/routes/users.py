@@ -2,15 +2,11 @@ from fastapi import APIRouter, HTTPException
 from bson.errors import InvalidId
 
 from app.services import user_service
-from app.schemas.user import UserUpdate
-
-
+from app.schemas.user import UserCreate, UserUpdate
 router = APIRouter(
     prefix="/api/users",
     tags=["Users"]
 )
-
-
 
 
 @router.get("/")
@@ -19,14 +15,10 @@ async def get_users():
     return user_service.get_users()
 
 
-
-
-
 @router.get("/{id}")
 async def get_user(id: str):
 
     try:
-
         user = user_service.get_user(id)
 
     except InvalidId:
@@ -36,7 +28,6 @@ async def get_user(id: str):
             detail="Invalid User ID"
         )
 
-
     if user is None:
 
         raise HTTPException(
@@ -44,11 +35,7 @@ async def get_user(id: str):
             detail="User not found"
         )
 
-
     return user
-
-
-
 
 
 @router.put("/{id}")
@@ -59,16 +46,12 @@ async def update_user(
 
     try:
 
-        data = body.model_dump(
-            exclude_unset=True
-        )
-
+        data = body.model_dump(exclude_unset=True)
 
         result = user_service.update_user(
             id,
             data
         )
-
 
     except InvalidId:
 
@@ -77,7 +60,6 @@ async def update_user(
             detail="Invalid User ID"
         )
 
-
     if result == 0:
 
         raise HTTPException(
@@ -85,7 +67,30 @@ async def update_user(
             detail="User not found"
         )
 
-
     return {
         "message": "User updated successfully"
+    }
+
+
+# ==============================
+# CREATE USER
+# ==============================
+
+@router.post("/")
+async def create_user(body: UserCreate):
+
+    data = body.model_dump()
+
+    result = user_service.create_user(data)
+
+    if result is None:
+
+        raise HTTPException(
+            status_code=400,
+            detail="Email already exists"
+        )
+
+    return {
+        "message": "User created successfully",
+        "id": result
     }
