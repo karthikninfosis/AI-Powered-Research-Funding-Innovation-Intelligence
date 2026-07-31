@@ -10,27 +10,16 @@ router = APIRouter(
     tags=["Users"]
 )
 
-
-
-
 @router.get("/")
 async def get_users():
 
     return user_service.get_users()
 
-
-
-
-
 @router.get("/{id}")
 async def get_user(id: str):
-
     try:
-
         user = user_service.get_user(id)
-
     except InvalidId:
-
         raise HTTPException(
             status_code=400,
             detail="Invalid User ID"
@@ -47,10 +36,6 @@ async def get_user(id: str):
 
     return user
 
-
-
-
-
 @router.put("/{id}")
 async def update_user(
     id: str,
@@ -58,10 +43,7 @@ async def update_user(
 ):
 
     try:
-
-        data = body.model_dump(
-            exclude_unset=True
-        )
+        data = body.model_dump(exclude_unset=True)
 
 
         result = user_service.update_user(

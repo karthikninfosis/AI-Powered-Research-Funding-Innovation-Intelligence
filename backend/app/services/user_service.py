@@ -38,15 +38,9 @@ def serialize_user(user):
         "updated_at": user.get("updated_at")
     }
 
-
-
-
-
-
 def get_users():
 
     result = []
-
 
     for user in users_collection.find():
 
@@ -54,12 +48,7 @@ def get_users():
             serialize_user(user)
         )
 
-
     return result
-
-
-
-
 
 # ==============================
 # GET USER BY ID
@@ -79,21 +68,9 @@ def get_user(id):
     except InvalidId:
 
         raise InvalidId
-
-
-
     if user:
-
         return serialize_user(user)
-
-
     return None
-
-
-
-
-
-
 
 def update_user(id, data):
 

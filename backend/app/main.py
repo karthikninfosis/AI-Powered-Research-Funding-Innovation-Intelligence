@@ -3,7 +3,9 @@ from app.config.database import db
 
 app = FastAPI(title="Research Platform API")
 from app.routes.users import router as users_router
+from app.routes.roles import router as role_router
 
+app.include_router(role_router)
 app.include_router(users_router)
 
 
