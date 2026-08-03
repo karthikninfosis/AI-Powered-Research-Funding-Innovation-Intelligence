@@ -29,6 +29,17 @@ async def update_role(role_id: str, role: RoleUpdate):
     return await RoleService.update_role(role_id, role)
 
 
+@router.put("/{role_id}/remove-permission")
+async def remove_permission(role_id: str, permission: str):
+
+    role = await RoleService.remove_permission(role_id, permission)
+
+    if not role:
+        raise HTTPException(404, "Role not found")
+
+    return role
+
+
 @router.delete("/{role_id}")
 async def delete_role(role_id: str):
 
