@@ -1,0 +1,320 @@
+/* ==========================================
+   AI Dashboard
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#081321;
+
+    color:white;
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar{
+
+    width:260px;
+
+    background:#101c2f;
+
+    padding:30px 20px;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    color:#18d8ff;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    padding:16px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#18d8ff;
+
+    color:black;
+
+}
+
+.sidebar .active{
+
+    background:#18d8ff;
+
+    color:black;
+
+}
+
+/* ================= Main ================= */
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:35px;
+
+}
+
+/* ================= Top Bar ================= */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+.profile-btn{
+
+    background:#18d8ff;
+
+    color:black;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.profile-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(24,216,255,.35);
+
+}
+
+/* ================= Cards ================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:#12233d;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    transition:.3s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(24,216,255,.25);
+
+}
+
+.card h3{
+
+    font-size:17px;
+
+    color:#b8d4f2;
+
+    margin-bottom:12px;
+
+}
+
+.card h1{
+
+    font-size:38px;
+
+    color:#18d8ff;
+
+}
+
+/* ================= Section ================= */
+
+.section{
+
+    background:#12233d;
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.section h2{
+
+    margin-bottom:20px;
+
+}
+
+/* ================= Recommendation ================= */
+
+.recommendation{
+
+    background:#182d4d;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+.recommendation p{
+
+    color:#c8d8ea;
+
+    margin:15px 0;
+
+}
+
+.recommendation button{
+
+    background:#18d8ff;
+
+    color:black;
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.recommendation button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(24,216,255,.35);
+
+}
+
+/* ================= Research List ================= */
+
+.section ul{
+
+    padding-left:20px;
+
+}
+
+.section ul li{
+
+    margin:12px 0;
+
+    color:#d7e7f6;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:1000px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+display:none;
+
+}
+
+.main-content{
+
+margin-left:0;
+
+width:100%;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}

@@ -1,0 +1,268 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:url("https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600") no-repeat center center/cover;
+
+    overflow:hidden;
+
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(5,15,30,.65);
+
+    backdrop-filter:blur(4px);
+
+}
+
+.login-page{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.login-card{
+
+    width:430px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+
+    padding:40px;
+
+    color:#fff;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:#15d8ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+}
+
+.login-card h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:#d6d6d6;
+
+    margin-bottom:30px;
+
+}
+
+.input-group-custom{
+
+    margin-bottom:20px;
+
+}
+
+.input-group-custom label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+.input-group-custom input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    outline:none;
+
+}
+
+.password-box{
+
+    position:relative;
+
+}
+
+.eye{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+}
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+
+}
+
+.options a{
+
+    color:#19d6ff;
+
+    text-decoration:none;
+
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#15d8ff;
+
+    color:#000;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.divider{
+
+    text-align:center;
+
+    margin:20px 0;
+
+    color:white;
+
+}
+
+.google-btn,
+.github-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+}
+
+.google-btn{
+
+    background:white;
+
+}
+
+.github-btn{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+.register{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.register a{
+
+    color:#19d6ff;
+
+    text-decoration:none;
+
+}
