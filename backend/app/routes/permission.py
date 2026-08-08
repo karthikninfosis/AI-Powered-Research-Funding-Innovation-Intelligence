@@ -1,8 +1,9 @@
 from typing import Annotated, Any
 
 from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
-from app.middleware.auth import require_admin
+from app.middleware.auth import get_current_user
 from app.schemas.permission import (
     PermissionAssignment,
     PermissionCreate,
@@ -17,6 +18,31 @@ from app.services.permission_service import (
 )
 
 router = APIRouter(prefix="/api/permissions", tags=["Permissions"])
+security = HTTPBearer(auto_error=False)
+
+
+async def require_permission_admin(
+    credentials: Annotated[
+        HTTPAuthorizationCredentials | None,
+        Depends(security),
+    ],
+) -> dict[str, Any]:
+    if credentials is None or credentials.scheme.lower() != "bearer":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Not authenticated",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    user = await get_current_user(access_token=credentials.credentials)
+
+    if str(user.get("role", "")).lower() != "admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Admin access required",
+        )
+
+    return user
 
 
 def _permission_id_error(error: InvalidPermissionIdError) -> HTTPException:
@@ -36,7 +62,7 @@ def _role_id_error(error: InvalidRoleIdError) -> HTTPException:
 @router.post("", status_code=status.HTTP_201_CREATED)
 async def create_permission(
     body: PermissionCreate,
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     try:
         permission = await PermissionService.create_permission(body)
@@ -51,7 +77,7 @@ async def create_permission(
 
 @router.get("")
 async def get_permissions(
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     permissions = await PermissionService.get_permissions()
     return response("Permissions retrieved", permissions)
@@ -60,7 +86,7 @@ async def get_permissions(
 @router.get("/{permission_id}")
 async def get_permission_by_id(
     permission_id: str,
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     try:
         permission = await PermissionService.get_permission_by_id(permission_id)
@@ -80,7 +106,7 @@ async def get_permission_by_id(
 async def update_permission(
     permission_id: str,
     body: PermissionUpdate,
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     try:
         permission = await PermissionService.update_permission(permission_id, body)
@@ -104,7 +130,7 @@ async def update_permission(
 @router.delete("/{permission_id}")
 async def delete_permission(
     permission_id: str,
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     try:
         deleted = await PermissionService.delete_permission(permission_id)
@@ -124,7 +150,7 @@ async def delete_permission(
 async def assign_permission(
     role_id: str,
     body: PermissionAssignment,
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     try:
         assigned = await PermissionService.assign_permission_to_role(
@@ -151,7 +177,7 @@ async def assign_permission(
 async def remove_permission(
     role_id: str,
     permission_id: str,
-    _: Annotated[dict[str, Any], Depends(require_admin)],
+    _: Annotated[dict[str, Any], Depends(require_permission_admin)],
 ) -> dict[str, Any]:
     try:
         removed = await PermissionService.remove_permission_from_role(
