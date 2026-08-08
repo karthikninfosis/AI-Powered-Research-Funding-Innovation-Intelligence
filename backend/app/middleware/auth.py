@@ -1,5 +1,5 @@
 from fastapi import Cookie
-from fastapi import HTTPException
+from fastapi import Depends, HTTPException, status
 from jose import jwt
 from jose.exceptions import JWTError
 from app.config.settings import JWT_EXPIRE_MINUTES,JWT_ALGORITHM,JWT_SECRET
@@ -29,3 +29,12 @@ async def get_current_user(
             status_code=401,
             detail="Invalid token"
         )
+
+async def require_admin(user=Depends(get_current_user)):
+    if user.get("role") != "admin":
+        raise HTTPException(
+            status_code=403,
+            detail="Admin access required"
+        )
+
+    return user
