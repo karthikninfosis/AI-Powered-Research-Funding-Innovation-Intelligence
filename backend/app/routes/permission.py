@@ -16,7 +16,10 @@ from app.services.permission_service import (
     RoleNotFoundError,
 )
 
-router = APIRouter(prefix="/api/permissions", tags=["Permissions"])
+router = APIRouter(
+    prefix="/api/permissions",
+    tags=["Permissions"]
+)
 
 
 def _permission_id_error(error: InvalidPermissionIdError) -> HTTPException:
@@ -37,7 +40,7 @@ def _role_id_error(error: InvalidRoleIdError) -> HTTPException:
 async def create_permission(
     body: PermissionCreate,
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     try:
         permission = await PermissionService.create_permission(body)
     except PermissionCodeExistsError as error:
@@ -46,22 +49,29 @@ async def create_permission(
             detail=str(error),
         ) from error
 
-    return response("Permission created successfully", permission)
+    return {
+        "message": "Permission created successfully",
+        "data": permission,
+    }
 
 
 @router.get("")
 async def get_permissions(
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     permissions = await PermissionService.get_permissions()
-    return response("Permissions retrieved", permissions)
+
+    return {
+        "message": "Permissions retrieved",
+        "data": permissions,
+    }
 
 
 @router.get("/{permission_id}")
 async def get_permission_by_id(
     permission_id: str,
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     try:
         permission = await PermissionService.get_permission_by_id(permission_id)
     except InvalidPermissionIdError as error:
@@ -73,7 +83,10 @@ async def get_permission_by_id(
             detail="Permission not found",
         )
 
-    return response("Permission retrieved", permission)
+    return {
+        "message": "Permission retrieved",
+        "data": permission,
+    }
 
 
 @router.put("/{permission_id}")
@@ -81,9 +94,12 @@ async def update_permission(
     permission_id: str,
     body: PermissionUpdate,
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     try:
-        permission = await PermissionService.update_permission(permission_id, body)
+        permission = await PermissionService.update_permission(
+            permission_id,
+            body,
+        )
     except InvalidPermissionIdError as error:
         raise _permission_id_error(error) from error
     except PermissionCodeExistsError as error:
@@ -98,14 +114,17 @@ async def update_permission(
             detail="Permission not found",
         )
 
-    return response("Permission updated successfully", permission)
+    return {
+        "message": "Permission updated successfully",
+        "data": permission,
+    }
 
 
 @router.delete("/{permission_id}")
 async def delete_permission(
     permission_id: str,
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     try:
         deleted = await PermissionService.delete_permission(permission_id)
     except InvalidPermissionIdError as error:
@@ -117,7 +136,9 @@ async def delete_permission(
             detail="Permission not found",
         )
 
-    return response("Permission deleted successfully")
+    return {
+        "message": "Permission deleted successfully"
+    }
 
 
 @router.post("/roles/{role_id}")
@@ -125,7 +146,7 @@ async def assign_permission(
     role_id: str,
     body: PermissionAssignment,
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     try:
         assigned = await PermissionService.assign_permission_to_role(
             role_id,
@@ -136,7 +157,10 @@ async def assign_permission(
     except InvalidPermissionIdError as error:
         raise _permission_id_error(error) from error
     except RoleNotFoundError as error:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(error),
+        ) from error
 
     if not assigned:
         raise HTTPException(
@@ -144,7 +168,9 @@ async def assign_permission(
             detail="Permission not found",
         )
 
-    return response("Permission assigned successfully")
+    return {
+        "message": "Permission assigned successfully"
+    }
 
 
 @router.delete("/roles/{role_id}/{permission_id}")
@@ -152,7 +178,7 @@ async def remove_permission(
     role_id: str,
     permission_id: str,
     _: Annotated[dict[str, Any], Depends(require_admin)],
-) -> dict[str, Any]:
+):
     try:
         removed = await PermissionService.remove_permission_from_role(
             role_id,
@@ -163,7 +189,10 @@ async def remove_permission(
     except InvalidPermissionIdError as error:
         raise _permission_id_error(error) from error
     except RoleNotFoundError as error:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(error),
+        ) from error
 
     if not removed:
         raise HTTPException(
@@ -171,4 +200,6 @@ async def remove_permission(
             detail="Permission not found",
         )
 
-    return response("Permission removed successfully")
+    return {
+        "message": "Permission removed successfully"
+    }

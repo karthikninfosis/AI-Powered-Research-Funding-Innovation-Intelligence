@@ -22,3 +22,4 @@ except ConnectionFailure as e:
 except Exception as e:
     print("[DB] Error:", e)
     raise e
+
