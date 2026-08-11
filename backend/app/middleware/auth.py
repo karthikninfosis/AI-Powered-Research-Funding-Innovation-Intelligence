@@ -31,7 +31,9 @@ async def get_current_user(
         )
 
 async def require_admin(user=Depends(get_current_user)):
-    if user.get("role") != "admin":
+    ADMIN_ROLE_ID = "6a79dc6dc52f028d0dfee2c7"
+
+    if user.get("role") != ADMIN_ROLE_ID:
         raise HTTPException(
             status_code=403,
             detail="Admin access required"
