@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.config.database import db
+from app.routes.publications import router as publications_router
 
 app = FastAPI(title="Research Platform API")
 
@@ -22,3 +23,7 @@ async def test_db():
     return {
         "message": "Inserted Successfully",
     }
+
+
+# Publications APIs
+app.include_router(publications_router)
