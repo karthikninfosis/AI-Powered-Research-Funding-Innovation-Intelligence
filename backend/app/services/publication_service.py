@@ -75,3 +75,19 @@ def delete_publication(publication_id):
         return None
 
     return True
+
+
+
+# CREATE publication
+def create_publication(publication_data):
+    publication = {
+        "user_id": ObjectId(publication_data["user_id"]),
+        "title": publication_data["title"],
+        "journal": publication_data["journal"],
+        "year": publication_data["year"],
+        "doi": publication_data["doi"]
+    }
+
+    result = publications_collection.insert_one(publication)
+
+    return get_publication(str(result.inserted_id))
