@@ -1,4 +1,5 @@
 from bson import ObjectId
+from bson.errors import InvalidId
 from datetime import datetime
 
 from app.config.database import db
@@ -38,6 +39,16 @@ class RoleService:
             roles.append(role)
 
         return roles
+
+
+    @staticmethod
+    async def get_role_by_id(role_id):
+        try:
+            role_object_id = ObjectId(role_id)
+        except (InvalidId, TypeError):
+            return None
+
+        return roles_collection.find_one({"_id": role_object_id})
 
 
     @staticmethod

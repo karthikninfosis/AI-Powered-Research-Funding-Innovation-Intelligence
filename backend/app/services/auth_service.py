@@ -1,6 +1,7 @@
 import httpx
 
 from app.config.settings import USER_SERVICE_URL
+from app.services.role_service import RoleService
 from app.utils.password import verify_password
 from app.utils.jwt import create_access_token
 
@@ -16,17 +17,22 @@ async def login(data):
         return None
 
     user = response.json()
-    print(response.json())
     if not verify_password(
     data.password,
     user["password"]
         ):
         return None
 
+    role = await RoleService.get_role_by_id(user.get("role_id"))
+    role_code = role.get("code") if role else None
+
+    if not isinstance(role_code, str) or not role_code.strip():
+        return None
+
     token = create_access_token({
         "sub": str(user["_id"]),
         "email": user["email"],
-        "role": user["role_id"]
+        "role": role_code.lower()
     })
 
     return {
