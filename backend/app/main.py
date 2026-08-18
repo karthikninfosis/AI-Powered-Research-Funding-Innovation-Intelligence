@@ -6,11 +6,18 @@ app = FastAPI(title="Research Platform API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000","http://127.0.0.1:5500"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],
+#     allow_credentials=False,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 from app.routes.users import router as users_router
 from app.routes.roles import router as role_router
