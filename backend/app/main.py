@@ -24,13 +24,16 @@ from app.routes.roles import router as role_router
 from app.routes.auth import router as auth_router
 from app.routes.permission import router as permission_router
 from app.routes.research_profiles import router as research_profiles_router
+from app.routes.research_domains import router as research_domains_router
+from app.routes.funding import router as funding_router
 
 app.include_router(permission_router)
 app.include_router(role_router)
 app.include_router(users_router)
+app.include_router(research_domains_router)
 app.include_router(auth_router)
 app.include_router(research_profiles_router)
-
+app.include_router(funding_router)
 
 
 
