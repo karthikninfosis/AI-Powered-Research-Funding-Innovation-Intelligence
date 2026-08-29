@@ -12,6 +12,7 @@ from app.routes.research_domains import router as research_domains_router
 from app.routes.funding import router as funding_router
 from app.routes.document import router as document_router
 from app.routes.publications import router as publications_router
+from app.routes.technologies import router as technology_router
 
 app = FastAPI(title="Research Platform API")
 
@@ -38,6 +39,7 @@ app.include_router(research_profiles_router)
 app.include_router(funding_router)
 app.include_router(document_router)
 app.include_router(publications_router)
+app.include_router(technology_router)
 
 
 @app.get("/")
