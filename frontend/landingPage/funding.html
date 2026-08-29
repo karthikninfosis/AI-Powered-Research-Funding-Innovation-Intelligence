@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResearchIQ — Funding Intelligence</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="dashboard-wrapper">
+
+  <header class="dashboard-navbar">
+    <div class="dashboard-brand">
+      <div class="dashboard-brand-icon">RI</div>
+      <div>
+        <h2>ResearchIQ</h2>
+        <span>Funding Intelligence</span>
+      </div>
+    </div>
+
+    <div class="dashboard-navbar-actions">
+      <button class="notification-button" id="notificationButton" title="Notifications">
+        🔔
+        <span class="notification-dot"></span>
+      </button>
+
+      <div class="dashboard-user">
+        <div class="user-avatar">G</div>
+        <div class="user-info">
+          <strong>Gayathri</strong>
+          <span>Researcher</span>
+        </div>
+        <span class="user-arrow">⌄</span>
+      </div>
+    </div>
+  </header>
+
+  <button class="back-to-home" id="backToHome">← Back to ResearchIQ</button>
+
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar">
+      <nav class="sidebar-navigation">
+
+        <div class="sidebar-section">
+          <span class="sidebar-title">WORKSPACE</span>
+
+          <button class="sidebar-item active" data-section="dashboard">
+            <span class="sidebar-icon">⌂</span><span>Dashboard</span>
+          </button>
+
+          <button class="sidebar-item" data-section="discover">
+            <span class="sidebar-icon">⌕</span><span>Discover Funding</span>
+          </button>
+
+          <button class="sidebar-item" data-section="saved">
+            <span class="sidebar-icon">♡</span><span>Saved Opportunities</span>
+          </button>
+        </div>
+
+        <div class="sidebar-section">
+          <span class="sidebar-title">INTELLIGENCE</span>
+
+          <button class="sidebar-item" data-section="research">
+            <span class="sidebar-icon">◈</span><span>Research Analytics</span>
+          </button>
+
+          <button class="sidebar-item" data-section="patent">
+            <span class="sidebar-icon">◌</span><span>Patent Intelligence</span>
+          </button>
+
+          <button class="sidebar-item" data-section="ai">
+            <span class="sidebar-icon">✦</span><span>AI Recommendations</span>
+          </button>
+        </div>
+
+        <div class="sidebar-section">
+          <span class="sidebar-title">ACCOUNT</span>
+
+          <button class="sidebar-item" data-section="settings">
+            <span class="sidebar-icon">⚙</span><span>Settings</span>
+          </button>
+
+          <button class="sidebar-item" data-section="help">
+            <span class="sidebar-icon">?</span><span>Help &amp; Support</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="upgrade-icon">✦</div>
+          <h4>Unlock more intelligence</h4>
+          <p>Get advanced funding insights and AI-powered recommendations.</p>
+          <button class="upgrade-button" id="premiumButton">Explore Premium →</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="dashboard-main" id="dashboardMain">
+      <div class="dashboard-header">
+        <div>
+          <span class="dashboard-label">FUNDING INTELLIGENCE</span>
+          <h1>Discover Funding Opportunities</h1>
+          <p>Search, filter and explore research funding documents matched to your innovation interests.</p>
+        </div>
+      </div>
+
+      <div class="search-section">
+        <form class="funding-search" id="fundingSearch">
+          <div class="search-input-wrapper">
+            <span class="search-icon">⌕</span>
+            <input id="searchInput" type="text" placeholder="Search funding documents, research areas, organizations..." aria-label="Search funding documents">
+            <button type="button" class="clear-search" id="clearSearch" aria-label="Clear search" style="display:none">×</button>
+          </div>
+          <button type="submit" class="search-button">Search</button>
+          <button type="button" class="filter-button" id="filterButton"><span>☷</span> Filters</button>
+        </form>
+
+        <div class="search-suggestions">
+          <span>Popular:</span>
+          <button type="button" data-search="Artificial Intelligence">Artificial Intelligence</button>
+          <button type="button" data-search="Innovation">Innovation</button>
+          <button type="button" data-search="Digital Transformation">Digital Transformation</button>
+        </div>
+      </div>
+
+      <div class="filter-panel" id="filterPanel" style="display:none">
+        <div class="filter-panel-header">
+          <div><span class="filter-title-icon">⚙</span><h3>Filter Opportunities</h3></div>
+          <button type="button" class="clear-filters" id="clearFilters">Clear all</button>
+        </div>
+
+        <div class="filter-options">
+          <div class="filter-group">
+            <label for="fundingType">Funding Type</label>
+            <select id="fundingType">
+              <option value="All">All Funding Types</option>
+              <option value="Research Grant">Research Grant</option>
+              <option value="Innovation Grant">Innovation Grant</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="researchArea">Research Area</label>
+            <select id="researchArea">
+              <option value="All">All Research Areas</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="Emerging Technology">Emerging Technology</option>
+              <option value="Digital Transformation">Digital Transformation</option>
+              <option value="Computing">Computing</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="organization">Organization</label>
+            <select id="organization">
+              <option value="All">All Organizations</option>
+              <option value="National Research Foundation">National Research Foundation</option>
+              <option value="Innovation &amp; Technology Council">Innovation &amp; Technology Council</option>
+              <option value="Technology Development Agency">Technology Development Agency</option>
+              <option value="Advanced Computing Foundation">Advanced Computing Foundation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-info">
+          <span class="filter-info-icon">✦</span>
+          <div>
+            <strong>Smart filtering</strong>
+            <p>Combine filters with search to quickly discover the most relevant funding opportunities.</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="funding-stats" id="fundingStats"></section>
+
+      <div class="results-header">
+        <div>
+          <h2>Funding Opportunities</h2>
+          <p id="resultCount">4 opportunities found</p>
+        </div>
+        <button class="sort-button" id="sortButton">Sort by Match ▾</button>
+      </div>
+
+      <div class="funding-grid" id="fundingGrid"></div>
+    </main>
+  </div>
+</div>
+
+<div class="document-viewer-overlay" id="documentViewer" style="display:none">
+  <div class="document-viewer">
+    <div class="document-viewer-header">
+      <div class="document-title-area">
+        <span class="document-icon">📄</span>
+        <div>
+          <strong id="documentViewerTitle"></strong>
+          <span>Funding Document</span>
+        </div>
+      </div>
+      <button type="button" class="document-close-button" id="documentClose" aria-label="Close document">×</button>
+    </div>
+
+    <div class="document-menu">
+      <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+    </div>
+
+    <div class="document-content">
+      <div class="document-paper" id="documentPaper"></div>
+    </div>
+
+    <div class="document-viewer-footer">
+      <span>Research Funding Intelligence</span>
+      <button type="button" id="documentFooterClose">Close Document</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/funding.js"></script>
+</body>
+</html>

@@ -10,15 +10,16 @@ try:
 
     # Test connection
     client.admin.command("ping")
-    print("✅ Connected to MongoDB")
+    print("[DB] Connected to MongoDB")
 
     # Select database
     db = client[DATABASE_NAME]
 
 except ConnectionFailure as e:
-    print("❌ Failed to connect to MongoDB")
+    print("[DB] Failed to connect to MongoDB")
     raise e
 
 except Exception as e:
-    print("❌ Error:", e)
+    print("[DB] Error:", e)
     raise e
+

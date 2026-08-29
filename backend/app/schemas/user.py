@@ -29,7 +29,7 @@ class UserUpdate(BaseModel):
 # Response Schema
 class UserResponse(BaseModel):
     id: str
-    user_id: str          # <-- New field
+    user_id: str
     name: str
     email: EmailStr
     role_id: str
