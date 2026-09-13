@@ -1,0 +1,20 @@
+fastapi
+uvicorn[standard]
+pymongo
+motor
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+pydantic
+pydantic[email]
+pydantic-settings
+python-multipart
+email-validator
+httpx
+<<<<<<< HEAD
+supabase
+=======
+supabase
+scikit-learn
+>>>>>>> 9b979c833469edb76902072bd60696f1905a7497

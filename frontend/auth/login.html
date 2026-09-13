@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovFund | Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="index.html">InnovFund</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="help.html">Help</a>
+        <button id="signupTop">Sign Up</button>
+    </nav>
+</header>
+
+<main class="page">
+
+    <section class="login-box">
+
+        <div class="intro">
+
+            <img
+                src="research-login.png"
+                alt="InnovFund research and funding"
+                class="intro-image"
+            >
+
+        </div>
+
+        <div class="form-area">
+
+        
+            <div id="loginSection">
+
+                <small class="form-tag">ACCOUNT ACCESS</small>
+
+                <h2>Welcome back</h2>
+
+                <p class="subtitle">
+                    Sign in to continue to your InnovFund workspace.
+                </p>
+
+                <form id="loginForm">
+
+                    <label>Email address</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="you@example.com"
+                    >
+                    <small class="error" id="emailError"></small>
+
+
+                    <label>Password</label>
+
+            <div class="password-box">
+                   <input
+                     type="password"
+                      id="loginPassword"
+                     placeholder="Enter your password"
+                   >
+
+            <button type="button" id="showPassword">
+              Show
+            </button>
+            </div>
+
+            <div class="forgot-row">
+            <button type="button" id="forgotBtn">
+                 Forgot password?
+             </button>
+            </div>
+
+              <small class="error" id="passwordError"></small>
+
+            <label class="remember">
+              <input type="checkbox" id="remember">
+                 Remember me
+            </label>
+
+              <button class="login-btn" type="submit">
+                 Log in
+              </button>     
+
+                    <p id="loginMessage" class="message"></p>
+
+                </form>
+
+                <p class="switch">
+                    Don't have an account?
+                    <button id="showRegister">Create account</button>
+                </p>
+
+            </div>
+
+            <div id="registerSection" class="hidden">
+
+                <small class="form-tag">CREATE ACCOUNT</small>
+
+                <h2>Join InnovFund</h2>
+
+                <p class="subtitle">
+                    Create your account to explore research opportunities.
+                </p>
+
+                <form id="registerForm">
+
+                    <label>Full name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your full name"
+                    >
+
+                    <label>Email address</label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="you@example.com"
+                    >
+
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                    >
+
+                    <label>Confirm password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm password"
+                    >
+
+                    <label class="remember">
+                        <input type="checkbox" id="terms">
+                        I agree to the terms and privacy policy.
+                    </label>
+
+                    <button class="login-btn" type="submit">
+                        Create account
+                    </button>
+
+                    <p id="registerMessage" class="message"></p>
+
+                </form>
+
+                <p class="switch">
+                    Already have an account?
+                    <button id="showLogin">Log in</button>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="login.js"></script>
+</body>
+</html>
