@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher Dashboard | InnovFund</title>
+  <link rel="stylesheet" href="/components/sidebar.css">
+  <link rel="stylesheet" href="./researcherDashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div id="sidebar"></div>
+
+  <main id="dashboard">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">RESEARCHER PORTAL</p>
+        <h1>Researcher Dashboard</h1>
+        <p class="subtitle">Track research, funding opportunities, publications, patents and innovation performance.</p>
+      </div>
+      <div class="header-actions">
+        <button class="primary-btn" onclick="scrollToSection('funding')">Find Funding</button>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Overview</h2>
+          <p>Your research intelligence at a glance.</p>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-label">Innovation Score</span>
+          <strong id="overviewInnovationScore">--</strong>
+          <span class="stat-note">Latest analysis</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Funding Matches</span>
+          <strong id="overviewFunding">0</strong>
+          <span class="stat-note">Top recommendations</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Publications</span>
+          <strong id="overviewPublications">24</strong>
+          <span class="stat-note">Sample analytics</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Patents</span>
+          <strong id="overviewPatents">8</strong>
+          <span class="stat-note">Sample analytics</span>
+        </div>
+      </div>
+
+      <div class="overview-grid">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>Research Activity</h3>
+              <p>Monthly research output</p>
+            </div>
+          </div>
+          <canvas id="activityChart"></canvas>
+        </div>
+
+        <div class="panel score-summary">
+          <div class="panel-header">
+            <div>
+              <h3>Innovation Score</h3>
+              <p>Five-factor assessment</p>
+            </div>
+          </div>
+          <div class="score-ring" id="overviewScoreRing">
+            <span id="ringScore">--</span>
+            <small>/100</small>
+          </div>
+          <p id="scoreStatus" class="score-status">Upload a research document to begin.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section id="funding" class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Funding Recommendations</h2>
+          <p>Get the top funding opportunities for your innovation.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <form id="fundingForm" class="funding-form">
+          <div class="field">
+            <label for="innovationTitle">Innovation Title</label>
+            <input id="innovationTitle" type="text" placeholder="Enter your innovation title" required>
+          </div>
+
+          <div class="field field-wide">
+            <label for="innovationDescription">Innovation Description</label>
+            <textarea id="innovationDescription" rows="4"
+              placeholder="Describe your research or innovation..." required></textarea>
+          </div>
+
+          <div class="field small-field">
+            <label for="topK">Top Results</label>
+            <input id="topK" type="number" min="1" max="10" value="5">
+          </div>
+
+          <button class="primary-btn" type="submit" id="fundingButton">Get Recommendations</button>
+        </form>
+
+        <div id="fundingMessage" class="message"></div>
+        <div id="fundingResults" class="recommendation-list"></div>
+      </div>
+    </section>
+
+    <!-- RESEARCH TRENDS -->
+    <section id="trends" class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Research Trends</h2>
+          <p>Sample trend intelligence for your research areas.</p>
+        </div>
+      </div>
+
+      <div class="trend-grid">
+        <div class="panel">
+          <h3>Emerging Research Areas</h3>
+          <div class="trend-list">
+            <div class="trend-item"><span>Artificial Intelligence</span><strong>92%</strong></div>
+            <div class="trend-item"><span>Federated Learning</span><strong>84%</strong></div>
+            <div class="trend-item"><span>Edge Computing</span><strong>78%</strong></div>
+            <div class="trend-item"><span>Green Technology</span><strong>71%</strong></div>
+            <div class="trend-item"><span>Cybersecurity</span><strong>67%</strong></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Trend Growth</h3>
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+  <section id="publications" class="dashboard-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>Publication Analytics</h2>
+            <p>Your publication performance and research output.</p>
+        </div>
+    </div>
+
+
+    <!-- PUBLICATION STATISTICS -->
+
+    <div class="stat-grid compact">
+
+        <div class="stat-card">
+            <span class="stat-label">
+                Total Publications
+            </span>
+
+            <strong id="overviewPublications">
+                0
+            </strong>
+
+            <span class="stat-note">
+                Your publications
+            </span>
+        </div>
+
+
+        <div class="stat-card">
+            <span class="stat-label">
+                Citations
+            </span>
+
+            <strong>
+                0
+            </strong>
+
+            <span class="stat-note">
+                Publication data
+            </span>
+        </div>
+
+
+        <div class="stat-card">
+            <span class="stat-label">
+                H-Index
+            </span>
+
+            <strong>
+                0
+            </strong>
+
+            <span class="stat-note">
+                Publication data
+            </span>
+        </div>
+
+
+        <div class="stat-card">
+            <span class="stat-label">
+                This Year
+            </span>
+
+            <strong>
+                0
+            </strong>
+
+            <span class="stat-note">
+                Publications
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- PUBLICATION CHART -->
+
+    <div class="panel">
+
+        <h3>
+            Publication Growth
+        </h3>
+
+        <canvas id="publicationChart"></canvas>
+
+    </div>
+
+
+    <!-- MY PUBLICATIONS -->
+
+    <div class="panel">
+
+        <h3>
+            My Publications
+        </h3>
+
+        <div
+            id="publicationList"
+            class="publication-list"
+        >
+
+            <div class="empty-state">
+                Loading publications...
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- PATENTS -->
+<section id="patents" class="dashboard-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Patent Insights
+            </h2>
+
+            <p>
+                Your patent portfolio and technology protection.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PATENT STATISTICS -->
+
+    <div class="patent-grid">
+
+        <div class="panel patent-card">
+
+            <span class="icon">
+                ◎
+            </span>
+
+            <strong id="overviewPatents">
+                0
+            </strong>
+
+            <span>
+                Total Patents
+            </span>
+
+        </div>
+
+
+        <div class="panel patent-card">
+
+            <span class="icon">
+                ◈
+            </span>
+
+            <strong>
+                0
+            </strong>
+
+            <span>
+                Granted
+            </span>
+
+        </div>
+
+
+        <div class="panel patent-card">
+
+            <span class="icon">
+                ◇
+            </span>
+
+            <strong>
+                0
+            </strong>
+
+            <span>
+                Pending
+            </span>
+
+        </div>
+
+
+        <div class="panel patent-card">
+
+            <span class="icon">
+                ↗
+            </span>
+
+            <strong>
+                --
+            </strong>
+
+            <span>
+                Patent Strength
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- PATENT ACTIVITY -->
+
+    <div class="panel">
+
+        <h3>
+            Patent Activity
+        </h3>
+
+        <div class="patent-bars">
+
+            <div>
+                <span>
+                    AI Systems
+                </span>
+
+                <b style="width:86%"></b>
+            </div>
+
+
+            <div>
+                <span>
+                    Data Security
+                </span>
+
+                <b style="width:72%"></b>
+            </div>
+
+
+            <div>
+                <span>
+                    IoT
+                </span>
+
+                <b style="width:64%"></b>
+            </div>
+
+
+            <div>
+                <span>
+                    Healthcare Tech
+                </span>
+
+                <b style="width:51%"></b>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MY PATENTS -->
+
+    <div class="panel">
+
+        <h3>
+            My Patents
+        </h3>
+
+        <div
+            id="patentList"
+            class="patent-list"
+        >
+
+            <div class="empty-state">
+                Loading patents...
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- INNOVATION SCORE -->
+    <section id="innovation" class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Innovation Score</h2>
+          <p>Upload your research document and assess innovation potential.</p>
+        </div>
+      </div>
+
+      <div class="innovation-layout">
+        <div class="panel">
+          <form id="scoreForm">
+            <div class="upload-box">
+              <input id="researchFile" type="file" accept=".pdf,.doc,.docx,.txt">
+              <div>
+                <strong>Upload Research Document</strong>
+                <p>PDF, DOC, DOCX or TXT</p>
+              </div>
+            </div>
+
+            <div id="selectedFile" class="selected-file"></div>
+
+            <div class="research-id-row">
+              <div class="field">
+                <label for="researchId">Research ID</label>
+                <input id="researchId" type="text" placeholder="e.g. RES001" required>
+              </div>
+              <button type="button" class="secondary-btn" id="analyzeButton">
+                Analyze Document
+              </button>
+            </div>
+
+            <div class="score-input-grid">
+              <div class="score-field">
+                <label>Research Novelty <span id="noveltyValue">--</span></label>
+                <input id="novelty" type="number" min="0" max="100" placeholder="0-100">
+              </div>
+              <div class="score-field">
+                <label>Patent Strength <span id="patentValue">--</span></label>
+                <input id="patent" type="number" min="0" max="100" placeholder="0-100">
+              </div>
+              <div class="score-field">
+                <label>Technology Maturity <span id="maturityValue">--</span></label>
+                <input id="maturity" type="number" min="0" max="100" placeholder="0-100">
+              </div>
+              <div class="score-field">
+                <label>Market Potential <span id="marketValue">--</span></label>
+                <input id="market" type="number" min="0" max="100" placeholder="0-100">
+              </div>
+              <div class="score-field">
+                <label>Funding Relevance <span id="fundingValue">--</span></label>
+                <input id="fundingRelevance" type="number" min="0" max="100" placeholder="0-100">
+              </div>
+            </div>
+
+            <button class="primary-btn full-btn" type="submit">Save Innovation Score</button>
+            <div id="scoreMessage" class="message"></div>
+          </form>
+        </div>
+
+        <div class="panel final-score-panel">
+          <h3>Overall Innovation Score</h3>
+          <div class="large-score-ring">
+            <span id="overallScore">--</span>
+            <small>/100</small>
+          </div>
+          <div class="score-breakdown" id="scoreBreakdown">
+            <p>Enter all five scores to calculate the overall result.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/components/sidebar.js"></script>
+  <script src="./researcherDashboard.js"></script>
+</body>
+</html>

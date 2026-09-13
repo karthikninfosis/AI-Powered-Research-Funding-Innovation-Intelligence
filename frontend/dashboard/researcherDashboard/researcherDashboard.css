@@ -1,0 +1,623 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #18212f;
+}
+
+#dashboard {
+  margin-left: 260px;
+  padding: 34px 38px 60px;
+  min-height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #68758a;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #718096;
+  margin-bottom: 0;
+}
+
+.dashboard-section {
+  scroll-margin-top: 24px;
+  margin-bottom: 42px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin-bottom: 5px;
+  font-size: 23px;
+}
+
+.section-heading p {
+  color: #7a8798;
+  margin-bottom: 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.stat-card,
+.panel {
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(24, 33, 47, .04);
+}
+
+.stat-card {
+  padding: 21px;
+}
+
+.stat-label {
+  display: block;
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 29px;
+  margin-bottom: 5px;
+}
+
+.stat-note {
+  font-size: 12px;
+  color: #9aa5b5;
+}
+
+.overview-grid,
+.trend-grid,
+.innovation-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  padding: 22px;
+}
+
+.panel-header {
+  margin-bottom: 18px;
+}
+
+.panel h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.panel-header p {
+  color: #8a96a7;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+canvas {
+  max-height: 260px;
+}
+
+.score-summary {
+  text-align: center;
+}
+
+.score-summary .panel-header {
+  text-align: left;
+}
+
+.score-ring,
+.large-score-ring {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: conic-gradient(#27364d 0deg, #e9edf3 0deg);
+  position: relative;
+}
+
+.score-ring::after,
+.large-score-ring::after {
+  content: "";
+  position: absolute;
+  width: 119px;
+  height: 119px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.score-ring span,
+.score-ring small,
+.large-score-ring span,
+.large-score-ring small {
+  position: relative;
+  z-index: 1;
+}
+
+.score-ring span {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.score-ring small,
+.large-score-ring small {
+  color: #8290a2;
+}
+
+.score-status {
+  color: #758397;
+  font-size: 13px;
+}
+
+.funding-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 110px;
+  gap: 16px;
+  align-items: end;
+}
+
+.field-wide {
+  grid-column: span 2;
+}
+
+.field label,
+.score-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #dce2ea;
+  border-radius: 9px;
+  padding: 11px 12px;
+  font: inherit;
+  outline: none;
+  background: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #66768d;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 17px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.primary-btn {
+  background: #202d42;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #edf1f6;
+  color: #27364d;
+}
+
+.primary-btn:hover {
+  opacity: .9;
+}
+
+.message {
+  min-height: 22px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.recommendation-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.recommendation-card {
+  padding: 16px;
+  border: 1px solid #e4e9f0;
+  border-radius: 11px;
+  background: #fafbfd;
+}
+
+.recommendation-card h4 {
+  margin: 0 0 7px;
+}
+
+.recommendation-card p {
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.trend-list {
+  display: grid;
+  gap: 15px;
+}
+
+.trend-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 14px;
+}
+
+.trend-item strong {
+  font-size: 13px;
+}
+
+.compact {
+  margin-bottom: 20px;
+}
+
+.patent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.patent-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.patent-card .icon {
+  font-size: 22px;
+}
+
+.patent-card strong {
+  font-size: 28px;
+}
+
+.patent-card span:last-child {
+  color: #7d899a;
+  font-size: 13px;
+}
+
+.patent-bars {
+  display: grid;
+  gap: 17px;
+  margin-top: 20px;
+}
+
+.patent-bars > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.patent-bars b {
+  display: block;
+  height: 9px;
+  border-radius: 20px;
+  background: #34445b;
+}
+
+.upload-box {
+  min-height: 120px;
+  border: 2px dashed #ccd4df;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.upload-box input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-box p {
+  color: #8995a6;
+  font-size: 12px;
+  margin: 6px 0 0;
+}
+
+.selected-file {
+  min-height: 22px;
+  color: #68768a;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.research-id-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+  align-items: end;
+}
+
+.score-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.score-field span {
+  float: right;
+  color: #68768a;
+}
+
+.full-btn {
+  width: 100%;
+}
+
+.final-score-panel {
+  text-align: center;
+}
+
+.final-score-panel h3 {
+  text-align: left;
+}
+
+.large-score-ring {
+  width: 220px;
+  height: 220px;
+  background: conic-gradient(#27364d 0deg, #e9edf3 0deg);
+}
+
+.large-score-ring::after {
+  width: 174px;
+  height: 174px;
+}
+
+.large-score-ring span {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.score-breakdown {
+  text-align: left;
+  display: grid;
+  gap: 8px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 11px;
+  background: #f7f9fb;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .stat-grid,
+  .patent-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overview-grid,
+  .trend-grid,
+  .innovation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .field-wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  #dashboard {
+    margin-left: 0;
+    padding: 24px 18px;
+  }
+
+  .page-header {
+    flex-direction: column;
+  }
+
+  .stat-grid,
+  .patent-grid,
+  .funding-form,
+  .score-input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field-wide {
+    grid-column: span 1;
+  }
+
+  .research-id-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   PUBLICATIONS + PATENTS LIST
+========================================================= */
+
+.publication-list,
+.patent-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+
+.publication-card,
+.patent-list-card {
+    display: flex;
+    gap: 15px;
+
+    padding: 16px;
+
+    border: 1px solid #e4e9f0;
+
+    border-radius: 10px;
+
+    background: #fafbfd;
+}
+
+
+.publication-number,
+.patent-number {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #202d42;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.publication-content,
+.patent-content {
+    min-width: 0;
+}
+
+
+.publication-content h4,
+.patent-content h4 {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+
+    color: #202d42;
+}
+
+
+.publication-content p,
+.patent-content p {
+    margin: 8px 0;
+
+    color: #718096;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.publication-meta,
+.patent-meta {
+    color: #657286;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+
+.publication-year,
+.patent-status {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    background: #edf1f5;
+
+    color: #566477;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.publication-content small,
+.patent-content small {
+    color: #929dad;
+
+    font-size: 10px;
+}
+
+
+.empty-state {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #8a96a7;
+
+    font-size: 13px;
+
+    border: 1px dashed #dce2e9;
+
+    border-radius: 10px;
+
+    background: #fafbfd;
+}
