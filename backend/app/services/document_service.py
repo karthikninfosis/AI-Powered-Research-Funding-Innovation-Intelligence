@@ -1,8 +1,7 @@
-import uuid
-from app.config.supabase_client import supabase
 
-BUCKET_NAME = "documents"
+import uuid
 import re
+
 from io import BytesIO
 from datetime import datetime
 
@@ -10,127 +9,657 @@ from bson import ObjectId
 from pypdf import PdfReader
 
 from app.config.database import db
+from app.config.supabase_client import supabase
 
+
+# ============================================================
+# Configuration
+# ============================================================
+
+BUCKET_NAME = "documents"
 
 # MongoDB collection
 documents_collection = db["documents"]
 
 
+# ============================================================
+# Document Service
+# ============================================================
+
 class DocumentService:
 
+    # ========================================================
+    # Upload document
+    # ========================================================
+
     @staticmethod
-    async def upload_document(file_bytes, file_name, content_type, entity_type, entity_id=None):
+    async def upload_document(
+        file_bytes,
+        file_name,
+        content_type,
+        user_id,
+        document_type="other"
+    ):
 
-        unique_name = f"{uuid.uuid4()}_{file_name}"
+        supabase_uploaded = False
+        supabase_record_id = None
+        storage_path = None
 
-        supabase.storage.from_(BUCKET_NAME).upload(
-            unique_name,
-            file_bytes,
-            {"content-type": content_type}
+        try:
+
+            # ------------------------------------------------
+            # Validate user ID
+            # ------------------------------------------------
+
+            if not user_id:
+                raise ValueError("user_id is required")
+
+            user_id = str(user_id).strip()
+
+            if not user_id:
+                raise ValueError("user_id cannot be empty")
+
+            # ------------------------------------------------
+            # Validate document type
+            # ------------------------------------------------
+
+            allowed_document_types = {
+                "patent",
+                "research_paper",
+                "other"
+            }
+
+            document_type = str(document_type).strip().lower()
+
+            if document_type not in allowed_document_types:
+                raise ValueError(
+                    "document_type must be one of: "
+                    "patent, research_paper, other"
+                )
+
+            # ------------------------------------------------
+            # Validate file type
+            # ------------------------------------------------
+
+            if content_type != "application/pdf":
+                raise ValueError("Only PDF files are supported")
+
+            if not file_bytes:
+                raise ValueError("Uploaded file is empty")
+
+            # ------------------------------------------------
+            # Validate filename
+            # ------------------------------------------------
+
+            if not file_name:
+                raise ValueError("File name is required")
+
+            safe_file_name = (
+                str(file_name)
+                .replace("\\", "_")
+                .replace("/", "_")
+                .strip()
+            )
+
+            if not safe_file_name:
+                raise ValueError("Invalid file name")
+
+            # ------------------------------------------------
+            # Generate document UUID
+            # ------------------------------------------------
+
+            document_uuid = str(uuid.uuid4())
+
+            # ------------------------------------------------
+            # Supabase Storage path
+            # ------------------------------------------------
+
+            storage_path = (
+                f"{user_id}/"
+                f"{document_uuid}/"
+                f"{safe_file_name}"
+            )
+
+            # ------------------------------------------------
+            # Upload PDF to Supabase Storage
+            # ------------------------------------------------
+
+            supabase.storage.from_(BUCKET_NAME).upload(
+                storage_path,
+                file_bytes,
+                {
+                    "content-type": content_type,
+                    "upsert": False
+                }
+            )
+
+            supabase_uploaded = True
+
+            # ------------------------------------------------
+            # Get public URL
+            # ------------------------------------------------
+
+            file_url = (
+                supabase
+                .storage
+                .from_(BUCKET_NAME)
+                .get_public_url(storage_path)
+            )
+
+            # ------------------------------------------------
+            # Save file reference in Supabase table
+            # ------------------------------------------------
+
+            supabase_record = {
+                "user_id": user_id,
+                "file_url": file_url,
+                "storage_path": storage_path,
+                "original_filename": safe_file_name,
+                "file_type": content_type,
+                "file_size": len(file_bytes)
+            }
+
+            supabase_result = (
+                supabase
+                .table("documents")
+                .insert(supabase_record)
+                .execute()
+            )
+
+            if not supabase_result.data:
+                raise ValueError(
+                    "Failed to save document reference in Supabase"
+                )
+
+            supabase_document = supabase_result.data[0]
+
+            supabase_record_id = supabase_document.get("id")
+
+            # ------------------------------------------------
+            # Extract PDF text
+            # ------------------------------------------------
+
+            text = DocumentService.extract_text(file_bytes)
+
+            if not text or not text.strip():
+                raise ValueError(
+                    "Could not extract text from PDF. "
+                    "The PDF may be scanned or image-only."
+                )
+
+            # ------------------------------------------------
+            # Extract document information
+            # ------------------------------------------------
+
+            title = DocumentService.extract_title(text)
+            authors = DocumentService.extract_authors(text)
+            abstract = DocumentService.extract_abstract(text)
+            year = DocumentService.extract_year(text)
+            doi = DocumentService.extract_doi(text)
+            journal = DocumentService.extract_journal(text)
+            keywords = DocumentService.extract_keywords(text)
+
+            research_domain = (
+                DocumentService.detect_research_domain(text)
+            )
+
+            technology_areas = (
+                DocumentService.detect_technology_areas(text)
+            )
+
+            patent_information = (
+                DocumentService.extract_patent_information(text)
+            )
+
+            funding_information = (
+                DocumentService.extract_funding_information(text)
+            )
+
+            # ------------------------------------------------
+            # Create MongoDB document
+            # ------------------------------------------------
+
+            now = datetime.utcnow()
+
+            document = {
+                "user_id": user_id,
+                "document_type": document_type,
+
+                "title": title,
+                "authors": authors,
+                "abstract": abstract,
+                "year": year,
+                "doi": doi,
+                "journal": journal,
+                "keywords": keywords,
+
+                "research_domain": research_domain,
+                "technology_areas": technology_areas,
+
+                "patent_information": patent_information,
+                "funding_information": funding_information,
+
+                "file_information": {
+                    "original_filename": safe_file_name,
+                    "file_type": content_type,
+                    "file_size": len(file_bytes),
+                    "bucket_name": BUCKET_NAME,
+                    "storage_path": storage_path,
+                    "file_url": file_url,
+                    "supabase_document_id": supabase_record_id
+                },
+
+                "created_at": now,
+                "updated_at": now
+            }
+
+            # ------------------------------------------------
+            # Save to MongoDB
+            # ------------------------------------------------
+
+            result = documents_collection.insert_one(document)
+
+            document["_id"] = result.inserted_id
+
+            # ------------------------------------------------
+            # Return JSON-friendly document
+            # ------------------------------------------------
+
+            return DocumentService.serialize_document(document)
+
+        except Exception as e:
+
+            # ------------------------------------------------
+            # Cleanup Supabase Storage
+            # ------------------------------------------------
+
+            if supabase_uploaded and storage_path:
+                try:
+                    (
+                        supabase
+                        .storage
+                        .from_(BUCKET_NAME)
+                        .remove([storage_path])
+                    )
+                except Exception as cleanup_error:
+                    print(
+                        "[SUPABASE CLEANUP ERROR] "
+                        f"{str(cleanup_error)}"
+                    )
+
+            # ------------------------------------------------
+            # Cleanup Supabase table
+            # ------------------------------------------------
+
+            if supabase_record_id:
+                try:
+                    (
+                        supabase
+                        .table("documents")
+                        .delete()
+                        .eq("id", supabase_record_id)
+                        .execute()
+                    )
+                except Exception as cleanup_error:
+                    print(
+                        "[SUPABASE TABLE CLEANUP ERROR] "
+                        f"{str(cleanup_error)}"
+                    )
+
+            print(f"[DOCUMENT ERROR] {str(e)}")
+
+            raise e
+
+    # ========================================================
+    # Get documents
+    #
+    # Supports:
+    #   /api/documents
+    #   /api/documents?user_id=USER_006
+    #   /api/documents?document_type=research_paper
+    #   /api/documents?user_id=USER_006&document_type=research_paper
+    # ========================================================
+
+    @staticmethod
+    async def get_documents(
+        user_id: str | None = None,
+        document_type: str | None = None
+    ):
+
+        query = {}
+
+        # ----------------------------------------------------
+        # Filter by user
+        # ----------------------------------------------------
+
+        if user_id:
+            query["user_id"] = str(user_id).strip()
+
+        # ----------------------------------------------------
+        # Filter by document type
+        # ----------------------------------------------------
+
+        if document_type:
+            document_type = str(document_type).strip().lower()
+
+            allowed_document_types = {
+                "patent",
+                "research_paper",
+                "other"
+            }
+
+            if document_type not in allowed_document_types:
+                raise ValueError(
+                    "document_type must be one of: "
+                    "patent, research_paper, other"
+                )
+
+            query["document_type"] = document_type
+
+        # ----------------------------------------------------
+        # IMPORTANT:
+        # MongoDB is using PyMongo (synchronous).
+        #
+        # DO NOT use await here.
+        # ----------------------------------------------------
+
+        documents = list(
+            documents_collection
+            .find(query)
+            .sort("created_at", -1)
         )
 
-        file_url = supabase.storage.from_(BUCKET_NAME).get_public_url(unique_name)
+        # ----------------------------------------------------
+        # Serialize documents
+        # ----------------------------------------------------
 
-        result = supabase.table("documents").insert({
-            "entity_type": entity_type,
-            "entity_id": entity_id,
-            "file_name": unique_name,
-            "file_url": file_url
-        }).execute()
+        return [
+            DocumentService.serialize_document(document)
+            for document in documents
+        ]
 
-        return result.data[0]
-
-
-    @staticmethod
-    async def get_documents(entity_type=None, entity_id=None):
-
-        query = supabase.table("documents").select("*")
-
-        if entity_type:
-            query = query.eq("entity_type", entity_type)
-
-        if entity_id:
-            query = query.eq("entity_id", entity_id)
-
-        result = query.execute()
-
-        return result.data
-
+    # ========================================================
+    # Get single document
+    # ========================================================
 
     @staticmethod
     async def get_document(document_id):
 
-        result = supabase.table("documents").select("*").eq("id", document_id).execute()
-
-        if not result.data:
+        try:
+            object_id = ObjectId(document_id)
+        except Exception:
             return None
 
-        return result.data[0]
+        document = documents_collection.find_one(
+            {
+                "_id": object_id
+            }
+        )
 
+        if not document:
+            return None
+
+        return DocumentService.serialize_document(document)
+
+    # ========================================================
+    # Update document
+    # ========================================================
 
     @staticmethod
-    async def update_document(document_id, file_bytes, file_name, content_type):
+    async def update_document(
+        document_id,
+        file_bytes,
+        file_name,
+        content_type
+    ):
 
-        existing = await DocumentService.get_document(document_id)
+        try:
+            object_id = ObjectId(document_id)
+        except Exception:
+            return None
+
+        # ----------------------------------------------------
+        # Find existing document
+        # ----------------------------------------------------
+
+        existing = documents_collection.find_one(
+            {
+                "_id": object_id
+            }
+        )
 
         if not existing:
             return None
 
-        supabase.storage.from_(BUCKET_NAME).remove([existing["file_name"]])
+        # ----------------------------------------------------
+        # Validate file
+        # ----------------------------------------------------
 
-        unique_name = f"{uuid.uuid4()}_{file_name}"
+        if content_type != "application/pdf":
+            raise ValueError("Only PDF files are supported")
 
-        supabase.storage.from_(BUCKET_NAME).upload(
-            unique_name,
-            file_bytes,
-            {"content-type": content_type}
+        if not file_bytes:
+            raise ValueError("Uploaded file is empty")
+
+        # ----------------------------------------------------
+        # Extract text
+        # ----------------------------------------------------
+
+        text = DocumentService.extract_text(file_bytes)
+
+        if not text or not text.strip():
+            raise ValueError(
+                "Could not extract text from PDF."
+            )
+
+        # ----------------------------------------------------
+        # Extract information
+        # ----------------------------------------------------
+
+        title = DocumentService.extract_title(text)
+        authors = DocumentService.extract_authors(text)
+        abstract = DocumentService.extract_abstract(text)
+        year = DocumentService.extract_year(text)
+        doi = DocumentService.extract_doi(text)
+        journal = DocumentService.extract_journal(text)
+        keywords = DocumentService.extract_keywords(text)
+
+        research_domain = (
+            DocumentService.detect_research_domain(text)
         )
 
-        file_url = supabase.storage.from_(BUCKET_NAME).get_public_url(unique_name)
+        technology_areas = (
+            DocumentService.detect_technology_areas(text)
+        )
 
-        result = supabase.table("documents").update({
-            "file_name": unique_name,
-            "file_url": file_url,
-            "updated_at": "now()"
-        }).eq("id", document_id).execute()
+        patent_information = (
+            DocumentService.extract_patent_information(text)
+        )
 
-        return result.data[0]
+        funding_information = (
+            DocumentService.extract_funding_information(text)
+        )
 
+        # ----------------------------------------------------
+        # Update MongoDB
+        # ----------------------------------------------------
+
+        update_data = {
+            "title": title,
+            "authors": authors,
+            "abstract": abstract,
+            "year": year,
+            "doi": doi,
+            "journal": journal,
+            "keywords": keywords,
+            "research_domain": research_domain,
+            "technology_areas": technology_areas,
+            "patent_information": patent_information,
+            "funding_information": funding_information,
+
+            "file_information": {
+                "original_filename": file_name,
+                "file_type": content_type,
+                "file_size": len(file_bytes)
+            },
+
+            "updated_at": datetime.utcnow()
+        }
+
+        documents_collection.update_one(
+            {
+                "_id": object_id
+            },
+            {
+                "$set": update_data
+            }
+        )
+
+        # ----------------------------------------------------
+        # Get updated document
+        # ----------------------------------------------------
+
+        updated = documents_collection.find_one(
+            {
+                "_id": object_id
+            }
+        )
+
+        if not updated:
+            return None
+
+        return DocumentService.serialize_document(updated)
+
+    # ========================================================
+    # Delete document
+    # ========================================================
 
     @staticmethod
     async def delete_document(document_id):
 
-        existing = await DocumentService.get_document(document_id)
+        try:
+            object_id = ObjectId(document_id)
+        except Exception:
+            return False
+
+        # ----------------------------------------------------
+        # Find document
+        # ----------------------------------------------------
+
+        existing = documents_collection.find_one(
+            {
+                "_id": object_id
+            }
+        )
 
         if not existing:
             return False
 
-        supabase.storage.from_(BUCKET_NAME).remove([existing["file_name"]])
+        # ----------------------------------------------------
+        # Get file information
+        # ----------------------------------------------------
 
-        supabase.table("documents").delete().eq("id", document_id).execute()
+        file_information = existing.get(
+            "file_information",
+            {}
+        )
 
-        return True
-    # =========================================================
-    # Convert MongoDB ObjectId to JSON-friendly ID
-    # =========================================================
+        storage_path = file_information.get(
+            "storage_path"
+        )
+
+        # ----------------------------------------------------
+        # Delete Supabase Storage file
+        # ----------------------------------------------------
+
+        if storage_path:
+
+            try:
+                (
+                    supabase
+                    .storage
+                    .from_(BUCKET_NAME)
+                    .remove([storage_path])
+                )
+
+            except Exception as e:
+
+                print(
+                    "[SUPABASE DELETE ERROR] "
+                    f"{str(e)}"
+                )
+
+        # ----------------------------------------------------
+        # Delete Supabase table record
+        # ----------------------------------------------------
+
+        supabase_document_id = (
+            file_information.get(
+                "supabase_document_id"
+            )
+        )
+
+        if supabase_document_id:
+
+            try:
+                (
+                    supabase
+                    .table("documents")
+                    .delete()
+                    .eq(
+                        "id",
+                        supabase_document_id
+                    )
+                    .execute()
+                )
+
+            except Exception as e:
+
+                print(
+                    "[SUPABASE TABLE DELETE ERROR] "
+                    f"{str(e)}"
+                )
+
+        # ----------------------------------------------------
+        # Delete MongoDB document
+        # ----------------------------------------------------
+
+        result = documents_collection.delete_one(
+            {
+                "_id": object_id
+            }
+        )
+
+        return result.deleted_count > 0
+
+    # ========================================================
+    # Serialize MongoDB document
+    # ========================================================
+
     @staticmethod
     def serialize_document(document):
 
         if not document:
             return None
 
-        document["id"] = str(document["_id"])
-        del document["_id"]
+        document = dict(document)
+
+        if "_id" in document:
+            document["id"] = str(document["_id"])
+            del document["_id"]
 
         return document
 
-    # =========================================================
+    # ========================================================
     # Extract text from PDF
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_text(file_bytes):
 
-        reader = PdfReader(BytesIO(file_bytes))
+        reader = PdfReader(
+            BytesIO(file_bytes)
+        )
 
         pages = []
 
@@ -143,22 +672,28 @@ class DocumentService:
 
         return "\n".join(pages)
 
-    # =========================================================
+    # ========================================================
     # Clean text
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def clean_text(text):
 
         if not text:
             return ""
 
-        text = re.sub(r"\s+", " ", text)
+        text = re.sub(
+            r"\s+",
+            " ",
+            text
+        )
 
         return text.strip()
 
-    # =========================================================
+    # ========================================================
     # Extract title
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_title(text):
 
@@ -174,7 +709,6 @@ class DocumentService:
         if not lines:
             return None
 
-        # First meaningful line is usually the title
         for line in lines[:10]:
 
             lower_line = line.lower()
@@ -189,9 +723,10 @@ class DocumentService:
 
         return lines[0]
 
-    # =========================================================
+    # ========================================================
     # Extract abstract
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_abstract(text):
 
@@ -216,9 +751,10 @@ class DocumentService:
 
         return None
 
-    # =========================================================
+    # ========================================================
     # Extract DOI
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_doi(text):
 
@@ -227,7 +763,7 @@ class DocumentService:
 
         pattern = (
             r"\b10\.\d{4,9}/"
-            r"[-._;()/:A-Z0-9]+\b"
+            r"[-._;()/:\w]+\b"
         )
 
         match = re.search(
@@ -240,13 +776,16 @@ class DocumentService:
 
             doi = match.group(0)
 
-            return doi.rstrip(".,;)")
+            return doi.rstrip(
+                ".,;)"
+            )
 
         return None
 
-    # =========================================================
+    # ========================================================
     # Extract year
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_year(text):
 
@@ -264,15 +803,17 @@ class DocumentService:
 
             year_int = int(year)
 
-            if 2000 <= year_int <= current_year:
-
+            if (
+                2000 <= year_int <= current_year
+            ):
                 return year_int
 
         return None
 
-    # =========================================================
+    # ========================================================
     # Extract keywords
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_keywords(text):
 
@@ -306,15 +847,18 @@ class DocumentService:
 
             keyword = keyword.strip()
 
-            if keyword and len(keyword) <= 100:
-
+            if (
+                keyword
+                and len(keyword) <= 100
+            ):
                 result.append(keyword)
 
         return result[:20]
 
-    # =========================================================
+    # ========================================================
     # Extract authors
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_authors(text):
 
@@ -327,7 +871,6 @@ class DocumentService:
             if line.strip()
         ]
 
-        # Look at lines near the title
         for line in lines[1:10]:
 
             lower_line = line.lower()
@@ -340,13 +883,11 @@ class DocumentService:
             ):
                 continue
 
-            # Names generally contain letters and spaces
             if re.search(
                 r"[A-Z][a-z]+",
                 line
             ):
 
-                # Split authors by comma / and / &
                 authors = re.split(
                     r",|\band\b|&",
                     line,
@@ -359,7 +900,6 @@ class DocumentService:
                     if author.strip()
                 ]
 
-                # Avoid returning very long non-author lines
                 if 1 <= len(authors) <= 10:
 
                     valid_authors = []
@@ -376,14 +916,14 @@ class DocumentService:
                             valid_authors.append(author)
 
                     if valid_authors:
-
                         return valid_authors
 
         return []
 
-    # =========================================================
+    # ========================================================
     # Extract journal
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_journal(text):
 
@@ -391,11 +931,8 @@ class DocumentService:
             return None
 
         patterns = [
-
             r"\bjournal\b\s*:?\s*(.*?)(?=\byear\b|\babstract\b)",
-
             r"\bpublished\s+in\b\s*:?\s*(.*?)(?=\byear\b|\babstract\b)"
-
         ]
 
         for pattern in patterns:
@@ -413,14 +950,14 @@ class DocumentService:
                 )
 
                 if journal:
-
                     return journal[:300]
 
         return None
 
-    # =========================================================
+    # ========================================================
     # Detect research domain
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def detect_research_domain(text):
 
@@ -488,7 +1025,6 @@ class DocumentService:
             score = 0
 
             for keyword in keywords:
-
                 score += text_lower.count(keyword)
 
             scores[domain] = score
@@ -502,14 +1038,14 @@ class DocumentService:
         )
 
         if scores[best_domain] == 0:
-
             return None
 
         return best_domain
 
-    # =========================================================
+    # ========================================================
     # Detect technology areas
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def detect_technology_areas(text):
 
@@ -574,15 +1110,18 @@ class DocumentService:
 
                 if keyword in text_lower:
 
-                    detected.append(technology)
+                    detected.append(
+                        technology
+                    )
 
                     break
 
         return detected
 
-    # =========================================================
+    # ========================================================
     # Extract patent information
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_patent_information(text):
 
@@ -595,29 +1134,18 @@ class DocumentService:
 
         text_lower = text.lower()
 
-        # Check negative statements first
         negative_patterns = [
 
             r"\bno patent\b",
-
             r"\bno patents\b",
-
             r"\bno patent has been filed\b",
-
             r"\bno patents have been filed\b",
-
             r"\bpatent has not been filed\b",
-
             r"\bpatents have not been filed\b",
-
             r"\bpatent was not filed\b",
-
             r"\bpatents were not filed\b",
-
             r"\bwithout a patent\b",
-
             r"\bwithout patents\b"
-
         ]
 
         for pattern in negative_patterns:
@@ -640,28 +1168,23 @@ class DocumentService:
         )
 
         return {
-
             "has_patent": patent_count > 0,
-
             "patent_count": patent_count
         }
 
-    # =========================================================
+    # ========================================================
     # Extract funding information
-    # =========================================================
+    # ========================================================
+
     @staticmethod
     def extract_funding_information(text):
 
         if not text:
 
             return {
-
                 "has_funding": False,
-
                 "funding_count": 0,
-
                 "total_funding_received": 0,
-
                 "currency": "INR"
             }
 
@@ -670,19 +1193,12 @@ class DocumentService:
         funding_keywords = [
 
             "funding",
-
             "funded",
-
             "grant",
-
             "research grant",
-
             "financial support",
-
             "financially supported",
-
             "sponsored",
-
             "sponsorship"
         ]
 
@@ -696,16 +1212,20 @@ class DocumentService:
 
         has_funding = funding_count > 0
 
-        total_funding = 0
+        # ----------------------------------------------------
+        # Funding amount
+        # ----------------------------------------------------
 
+        total_funding = 0
         currency = "INR"
 
+        # ----------------------------------------------------
         # INR
-        inr_matches = re.findall(
+        # ----------------------------------------------------
 
+        inr_matches = re.findall(
             r"(?:inr|rs\.?|₹)\s*"
             r"([0-9,]+(?:\.[0-9]+)?)",
-
             text_lower
         )
 
@@ -719,20 +1239,18 @@ class DocumentService:
                 )
 
                 try:
-
-                    total_funding += float(
-                        amount
-                    )
+                    total_funding += float(amount)
 
                 except ValueError:
                     pass
 
+        # ----------------------------------------------------
         # USD
-        usd_matches = re.findall(
+        # ----------------------------------------------------
 
+        usd_matches = re.findall(
             r"(?:usd|\$)\s*"
             r"([0-9,]+(?:\.[0-9]+)?)",
-
             text_lower
         )
 
@@ -750,467 +1268,15 @@ class DocumentService:
                     )
 
                     try:
-
-                        total_funding += float(
-                            amount
-                        )
+                        total_funding += float(amount)
 
                     except ValueError:
                         pass
 
         return {
-
             "has_funding": has_funding,
-
             "funding_count": funding_count,
-
-            "total_funding_received":
-                total_funding,
-
+            "total_funding_received": total_funding,
             "currency": currency
         }
 
-    # =========================================================
-    # Upload + extract + save
-    # =========================================================
-    @staticmethod
-    async def upload_document(
-
-        file_bytes,
-
-        file_name,
-
-        content_type,
-
-        entity_type,
-
-        entity_id=None,
-
-        user_id=None,
-
-        profile_id=None
-
-    ):
-
-        try:
-
-            # -------------------------------------------------
-            # Validate file type
-            # -------------------------------------------------
-            if content_type != "application/pdf":
-
-                raise ValueError(
-                    "Only PDF files are supported"
-                )
-
-            # -------------------------------------------------
-            # Validate file size
-            # -------------------------------------------------
-            if not file_bytes:
-
-                raise ValueError(
-                    "Uploaded file is empty"
-                )
-
-            # -------------------------------------------------
-            # Extract PDF text
-            # -------------------------------------------------
-            text = DocumentService.extract_text(
-                file_bytes
-            )
-
-            if not text.strip():
-
-                raise ValueError(
-
-                    "Could not extract text from PDF. "
-                    "The PDF may be scanned or image-only."
-                )
-
-            # -------------------------------------------------
-            # Extract research information
-            # -------------------------------------------------
-            title = DocumentService.extract_title(
-                text
-            )
-
-            authors = DocumentService.extract_authors(
-                text
-            )
-
-            abstract = DocumentService.extract_abstract(
-                text
-            )
-
-            year = DocumentService.extract_year(
-                text
-            )
-
-            doi = DocumentService.extract_doi(
-                text
-            )
-
-            journal = DocumentService.extract_journal(
-                text
-            )
-
-            keywords = DocumentService.extract_keywords(
-                text
-            )
-
-            research_domain = (
-                DocumentService.detect_research_domain(
-                    text
-                )
-            )
-
-            technology_areas = (
-                DocumentService.detect_technology_areas(
-                    text
-                )
-            )
-
-            patent_information = (
-                DocumentService.extract_patent_information(
-                    text
-                )
-            )
-
-            funding_information = (
-                DocumentService.extract_funding_information(
-                    text
-                )
-            )
-
-            # -------------------------------------------------
-            # Create MongoDB document
-            # -------------------------------------------------
-            now = datetime.utcnow()
-
-            document = {
-
-                "user_id": user_id,
-
-                "profile_id": profile_id,
-
-                "entity_type": entity_type,
-
-                "entity_id": entity_id,
-
-                "title": title,
-
-                "authors": authors,
-
-                "abstract": abstract,
-
-                "year": year,
-
-                "doi": doi,
-
-                "journal": journal,
-
-                "keywords": keywords,
-
-                "research_domain":
-                    research_domain,
-
-                "technology_areas":
-                    technology_areas,
-
-                "patent_information":
-                    patent_information,
-
-                "funding_information":
-                    funding_information,
-
-                "file_information": {
-
-                    "original_filename":
-                        file_name,
-
-                    "file_type":
-                        content_type,
-
-                    "file_size":
-                        len(file_bytes)
-                },
-
-                "created_at": now,
-
-                "updated_at": now
-            }
-
-            # -------------------------------------------------
-            # Save to MongoDB
-            # -------------------------------------------------
-            result = (
-                documents_collection.insert_one(
-                    document
-                )
-            )
-
-            document["_id"] = result.inserted_id
-
-            return (
-                DocumentService.serialize_document(
-                    document
-                )
-            )
-
-        except Exception as e:
-
-            print(
-                f"[DOCUMENT ERROR] {str(e)}"
-            )
-
-            raise e
-
-    # =========================================================
-    # Get all documents
-    # =========================================================
-    @staticmethod
-    async def get_documents(
-
-        entity_type=None,
-
-        entity_id=None
-
-    ):
-
-        query = {}
-
-        if entity_type:
-
-            query["entity_type"] = entity_type
-
-        if entity_id:
-
-            query["entity_id"] = entity_id
-
-        documents = list(
-            documents_collection.find(
-                query
-            )
-        )
-
-        return [
-
-            DocumentService.serialize_document(
-                document
-            )
-
-            for document in documents
-
-        ]
-
-    # =========================================================
-    # Get document by ID
-    # =========================================================
-    @staticmethod
-    async def get_document(
-        document_id
-    ):
-
-        try:
-
-            object_id = ObjectId(
-                document_id
-            )
-
-        except Exception:
-
-            return None
-
-        document = (
-            documents_collection.find_one(
-                {
-                    "_id": object_id
-                }
-            )
-        )
-
-        return (
-            DocumentService.serialize_document(
-                document
-            )
-        )
-
-    # =========================================================
-    # Update document
-    # =========================================================
-    @staticmethod
-    async def update_document(
-
-        document_id,
-
-        file_bytes,
-
-        file_name,
-
-        content_type
-
-    ):
-
-        try:
-
-            object_id = ObjectId(
-                document_id
-            )
-
-        except Exception:
-
-            return None
-
-        existing = (
-            documents_collection.find_one(
-                {
-                    "_id": object_id
-                }
-            )
-        )
-
-        if not existing:
-
-            return None
-
-        if content_type != "application/pdf":
-
-            raise ValueError(
-                "Only PDF files are supported"
-            )
-
-        text = DocumentService.extract_text(
-            file_bytes
-        )
-
-        if not text.strip():
-
-            raise ValueError(
-                "Could not extract text from PDF."
-            )
-
-        update_data = {
-
-            "title":
-                DocumentService.extract_title(
-                    text
-                ),
-
-            "authors":
-                DocumentService.extract_authors(
-                    text
-                ),
-
-            "abstract":
-                DocumentService.extract_abstract(
-                    text
-                ),
-
-            "year":
-                DocumentService.extract_year(
-                    text
-                ),
-
-            "doi":
-                DocumentService.extract_doi(
-                    text
-                ),
-
-            "journal":
-                DocumentService.extract_journal(
-                    text
-                ),
-
-            "keywords":
-                DocumentService.extract_keywords(
-                    text
-                ),
-
-            "research_domain":
-                DocumentService.detect_research_domain(
-                    text
-                ),
-
-            "technology_areas":
-                DocumentService.detect_technology_areas(
-                    text
-                ),
-
-            "patent_information":
-                DocumentService.extract_patent_information(
-                    text
-                ),
-
-            "funding_information":
-                DocumentService.extract_funding_information(
-                    text
-                ),
-
-            "file_information": {
-
-                "original_filename":
-                    file_name,
-
-                "file_type":
-                    content_type,
-
-                "file_size":
-                    len(file_bytes)
-            },
-
-            "updated_at":
-                datetime.utcnow()
-        }
-
-        documents_collection.update_one(
-
-            {
-                "_id": object_id
-            },
-
-            {
-                "$set": update_data
-            }
-        )
-
-        updated = (
-            documents_collection.find_one(
-                {
-                    "_id": object_id
-                }
-            )
-        )
-
-        return (
-            DocumentService.serialize_document(
-                updated
-            )
-        )
-
-    # =========================================================
-    # Delete document
-    # =========================================================
-    @staticmethod
-    async def delete_document(
-        document_id
-    ):
-
-        try:
-
-            object_id = ObjectId(
-                document_id
-            )
-
-        except Exception:
-
-            return False
-
-        result = (
-            documents_collection.delete_one(
-                {
-                    "_id": object_id
-                }
-            )
-        )
-
-        return result.deleted_count > 0

@@ -621,3 +621,830 @@ textarea {
 
     background: #fafbfd;
 }
+/* =====================================================
+   INTELLIGENCE SEARCH
+===================================================== */
+
+.intelligence-search-panel {
+
+    background: #ffffff;
+
+    border: 1px solid #e2e7ed;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Search input */
+
+.search-input-row {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.search-input-row input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dce2e9;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #202d42;
+
+    background: #ffffff;
+
+    font-size: 13px;
+
+}
+
+
+.search-input-row input:focus {
+
+    border-color: #758195;
+
+}
+
+
+.search-input-row input::placeholder {
+
+    color: #9aa4b2;
+
+}
+
+
+.search-input-row button {
+
+    padding: 0 23px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #202d42;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.search-input-row button:hover {
+
+    background: #111b2b;
+
+}
+
+
+.search-input-row button:disabled {
+
+    opacity: .6;
+
+    cursor: wait;
+
+}
+
+
+/* Search type buttons */
+
+.search-type-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+.search-type-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border: 1px solid #e1e6ec;
+
+    border-radius: 9px;
+
+    background: #fafbfd;
+
+    color: #687589;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.search-type-button:hover {
+
+    border-color: #aeb7c3;
+
+}
+
+
+.search-type-button.active {
+
+    border-color: #202d42;
+
+    background: #f1f4f7;
+
+    color: #202d42;
+
+}
+
+
+.search-type-icon {
+
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #e9edf2;
+
+    font-size: 16px;
+
+}
+
+
+.search-type-button strong {
+
+    display: block;
+
+    font-size: 12px;
+
+}
+
+
+.search-type-button small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8a95a4;
+
+    font-size: 9px;
+
+}
+
+
+/* Status */
+
+.search-status {
+
+    min-height: 20px;
+
+    margin: 10px 2px;
+
+    color: #7d8999;
+
+    font-size: 11px;
+
+}
+
+
+/* Results */
+
+.intelligence-results {
+
+    display: grid;
+
+    gap: 12px;
+
+}
+
+
+.search-empty {
+
+    padding: 45px 20px;
+
+    border: 1px dashed #dce2e9;
+
+    border-radius: 10px;
+
+    background: #fafbfd;
+
+    text-align: center;
+
+}
+
+
+.search-empty-icon {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.search-empty h3 {
+
+    margin: 0;
+
+    color: #34445b;
+
+    font-size: 15px;
+
+}
+
+
+.search-empty p {
+
+    margin: 7px 0 0;
+
+    color: #8994a4;
+
+    font-size: 11px;
+
+}
+
+
+/* Result card */
+
+.intelligence-result-card {
+
+    padding: 18px;
+
+    border: 1px solid #e2e7ed;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+}
+
+
+.intelligence-result-card:hover {
+
+    border-color: #cbd3dc;
+
+}
+
+
+.result-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.result-card-number {
+
+    width: 30px;
+
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #202d42;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.result-card-main {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.result-card-title {
+
+    margin: 0;
+
+    color: #202d42;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+}
+
+
+.result-card-description {
+
+    margin: 8px 0 0;
+
+    color: #758195;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+
+}
+
+
+.result-card-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 12px;
+
+}
+
+
+.result-meta-item {
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    background: #f0f3f6;
+
+    color: #667487;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.result-link {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #334d72;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+.result-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* Loading */
+
+.search-loading {
+
+    padding: 35px;
+
+    border: 1px solid #e2e7ed;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    color: #7d8999;
+
+    font-size: 12px;
+
+}
+
+
+/* Error */
+
+.search-error {
+
+    padding: 18px;
+
+    border: 1px solid #efd2d2;
+
+    border-radius: 9px;
+
+    background: #fff7f7;
+
+    color: #bd5050;
+
+    font-size: 11px;
+
+}
+
+
+/* Pagination */
+
+.intelligence-pagination {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+}
+
+
+.intelligence-pagination button {
+
+    padding: 8px 13px;
+
+    border: 1px solid #dce2e9;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #566477;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.intelligence-pagination button:hover {
+
+    background: #f3f5f7;
+
+}
+
+
+.intelligence-pagination button:disabled {
+
+    opacity: .4;
+
+    cursor: not-allowed;
+
+}
+
+
+.intelligence-pagination span {
+
+    color: #687589;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 750px) {
+
+    .search-type-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .search-input-row {
+
+        flex-direction: column;
+
+    }
+
+
+    .search-input-row button {
+
+        height: 42px;
+
+    }
+
+}
+
+
+/* =====================================================
+   RESEARCH INTELLIGENCE SEARCH - FORCE STYLES
+===================================================== */
+
+#intelligenceSearchSection {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 42px !important;
+}
+
+#intelligenceSearchSection .section-heading {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 18px !important;
+}
+
+#intelligenceSearchSection .intelligence-search-panel {
+    display: block !important;
+    width: 100% !important;
+    padding: 22px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e7ed !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 18px rgba(24,33,47,.04) !important;
+}
+
+#intelligenceSearchSection .search-input-row {
+    display: flex !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin: 0 !important;
+}
+
+#intelligenceSearchSection .search-input-row input {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 44px !important;
+    min-width: 0 !important;
+    padding: 0 14px !important;
+    border: 1px solid #dce2e9 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    color: #202d42 !important;
+    font: 13px Inter, Arial, sans-serif !important;
+    outline: none !important;
+}
+
+#intelligenceSearchSection .search-input-row input:focus {
+    border-color: #758195 !important;
+    box-shadow: none !important;
+}
+
+#intelligenceSearchSection #intelligenceSearchButton {
+    height: 44px !important;
+    padding: 0 23px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: #202d42 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font: 700 12px Inter, Arial, sans-serif !important;
+}
+
+#intelligenceSearchSection .search-type-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 15px !important;
+}
+
+#intelligenceSearchSection .search-type-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 11px !important;
+    width: 100% !important;
+    min-height: 62px !important;
+    padding: 13px !important;
+    border: 1px solid #e1e6ec !important;
+    border-radius: 9px !important;
+    background: #fafbfd !important;
+    color: #687589 !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    font-family: Inter, Arial, sans-serif !important;
+}
+
+#intelligenceSearchSection .search-type-button.active {
+    border-color: #202d42 !important;
+    background: #f1f4f7 !important;
+    color: #202d42 !important;
+}
+
+#intelligenceSearchSection .search-type-icon {
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    background: #e9edf2 !important;
+    font-size: 16px !important;
+}
+
+#intelligenceSearchSection .search-type-button strong {
+    display: block !important;
+    font-size: 12px !important;
+}
+
+#intelligenceSearchSection .search-type-button small {
+    display: block !important;
+    margin-top: 4px !important;
+    color: #8a95a4 !important;
+    font-size: 9px !important;
+}
+
+#intelligenceSearchSection .search-status {
+    min-height: 20px !important;
+    margin: 10px 2px !important;
+    color: #7d8999 !important;
+    font-size: 11px !important;
+}
+
+#intelligenceSearchSection .intelligence-results {
+    display: grid !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+#intelligenceSearchSection .search-empty,
+#intelligenceSearchSection .search-loading {
+    width: 100% !important;
+    padding: 35px 20px !important;
+    border: 1px dashed #dce2e9 !important;
+    border-radius: 10px !important;
+    background: #fafbfd !important;
+    text-align: center !important;
+}
+
+#intelligenceSearchSection .search-empty h3 {
+    margin: 0 !important;
+    color: #34445b !important;
+    font-size: 15px !important;
+}
+
+#intelligenceSearchSection .search-empty p {
+    margin: 7px 0 0 !important;
+    color: #8994a4 !important;
+    font-size: 11px !important;
+}
+
+#intelligenceSearchSection .intelligence-result-card {
+    width: 100% !important;
+    padding: 18px !important;
+    border: 1px solid #e2e7ed !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+}
+
+#intelligenceSearchSection .result-card-top {
+    display: flex !important;
+    gap: 15px !important;
+}
+
+#intelligenceSearchSection .result-card-number {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 7px !important;
+    background: #202d42 !important;
+    color: #fff !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+#intelligenceSearchSection .result-card-main {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+#intelligenceSearchSection .result-card-title {
+    margin: 0 !important;
+    color: #202d42 !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+#intelligenceSearchSection .result-card-description {
+    margin: 8px 0 0 !important;
+    color: #758195 !important;
+    font-size: 11px !important;
+    line-height: 1.65 !important;
+}
+
+#intelligenceSearchSection .result-card-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+    margin-top: 12px !important;
+}
+
+#intelligenceSearchSection .result-meta-item {
+    padding: 5px 8px !important;
+    border-radius: 5px !important;
+    background: #f0f3f6 !important;
+    color: #667487 !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+}
+
+#intelligenceSearchSection .result-link {
+    display: inline-block !important;
+    margin-top: 12px !important;
+    color: #334d72 !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+#intelligenceSearchSection .intelligence-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 18px !important;
+}
+
+#intelligenceSearchSection .intelligence-pagination button {
+    padding: 8px 13px !important;
+    border: 1px solid #dce2e9 !important;
+    border-radius: 7px !important;
+    background: #fff !important;
+    color: #566477 !important;
+    cursor: pointer !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+}
+
+#intelligenceSearchSection .hidden {
+    display: none !important;
+}
+
+@media (max-width: 750px) {
+    #intelligenceSearchSection .search-type-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 550px) {
+    #intelligenceSearchSection .search-input-row {
+        flex-direction: column !important;
+    }
+
+    #intelligenceSearchSection #intelligenceSearchButton {
+        width: 100% !important;
+    }
+}

@@ -7,6 +7,272 @@
   <link rel="stylesheet" href="/components/sidebar.css">
   <link rel="stylesheet" href="./researcherDashboard.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+
+/* =====================================================
+   RESEARCH INTELLIGENCE SEARCH - FORCE STYLES
+===================================================== */
+
+#intelligenceSearchSection {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 42px !important;
+}
+
+#intelligenceSearchSection .section-heading {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 18px !important;
+}
+
+#intelligenceSearchSection .intelligence-search-panel {
+    display: block !important;
+    width: 100% !important;
+    padding: 22px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e7ed !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 18px rgba(24,33,47,.04) !important;
+}
+
+#intelligenceSearchSection .search-input-row {
+    display: flex !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin: 0 !important;
+}
+
+#intelligenceSearchSection .search-input-row input {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 44px !important;
+    min-width: 0 !important;
+    padding: 0 14px !important;
+    border: 1px solid #dce2e9 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    color: #202d42 !important;
+    font: 13px Inter, Arial, sans-serif !important;
+    outline: none !important;
+}
+
+#intelligenceSearchSection .search-input-row input:focus {
+    border-color: #758195 !important;
+    box-shadow: none !important;
+}
+
+#intelligenceSearchSection #intelligenceSearchButton {
+    height: 44px !important;
+    padding: 0 23px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: #202d42 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font: 700 12px Inter, Arial, sans-serif !important;
+}
+
+#intelligenceSearchSection .search-type-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 15px !important;
+}
+
+#intelligenceSearchSection .search-type-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 11px !important;
+    width: 100% !important;
+    min-height: 62px !important;
+    padding: 13px !important;
+    border: 1px solid #e1e6ec !important;
+    border-radius: 9px !important;
+    background: #fafbfd !important;
+    color: #687589 !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    font-family: Inter, Arial, sans-serif !important;
+}
+
+#intelligenceSearchSection .search-type-button.active {
+    border-color: #202d42 !important;
+    background: #f1f4f7 !important;
+    color: #202d42 !important;
+}
+
+#intelligenceSearchSection .search-type-icon {
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    background: #e9edf2 !important;
+    font-size: 16px !important;
+}
+
+#intelligenceSearchSection .search-type-button strong {
+    display: block !important;
+    font-size: 12px !important;
+}
+
+#intelligenceSearchSection .search-type-button small {
+    display: block !important;
+    margin-top: 4px !important;
+    color: #8a95a4 !important;
+    font-size: 9px !important;
+}
+
+#intelligenceSearchSection .search-status {
+    min-height: 20px !important;
+    margin: 10px 2px !important;
+    color: #7d8999 !important;
+    font-size: 11px !important;
+}
+
+#intelligenceSearchSection .intelligence-results {
+    display: grid !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+#intelligenceSearchSection .search-empty,
+#intelligenceSearchSection .search-loading {
+    width: 100% !important;
+    padding: 35px 20px !important;
+    border: 1px dashed #dce2e9 !important;
+    border-radius: 10px !important;
+    background: #fafbfd !important;
+    text-align: center !important;
+}
+
+#intelligenceSearchSection .search-empty h3 {
+    margin: 0 !important;
+    color: #34445b !important;
+    font-size: 15px !important;
+}
+
+#intelligenceSearchSection .search-empty p {
+    margin: 7px 0 0 !important;
+    color: #8994a4 !important;
+    font-size: 11px !important;
+}
+
+#intelligenceSearchSection .intelligence-result-card {
+    width: 100% !important;
+    padding: 18px !important;
+    border: 1px solid #e2e7ed !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+}
+
+#intelligenceSearchSection .result-card-top {
+    display: flex !important;
+    gap: 15px !important;
+}
+
+#intelligenceSearchSection .result-card-number {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 7px !important;
+    background: #202d42 !important;
+    color: #fff !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+#intelligenceSearchSection .result-card-main {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+#intelligenceSearchSection .result-card-title {
+    margin: 0 !important;
+    color: #202d42 !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+#intelligenceSearchSection .result-card-description {
+    margin: 8px 0 0 !important;
+    color: #758195 !important;
+    font-size: 11px !important;
+    line-height: 1.65 !important;
+}
+
+#intelligenceSearchSection .result-card-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+    margin-top: 12px !important;
+}
+
+#intelligenceSearchSection .result-meta-item {
+    padding: 5px 8px !important;
+    border-radius: 5px !important;
+    background: #f0f3f6 !important;
+    color: #667487 !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+}
+
+#intelligenceSearchSection .result-link {
+    display: inline-block !important;
+    margin-top: 12px !important;
+    color: #334d72 !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+#intelligenceSearchSection .intelligence-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 18px !important;
+}
+
+#intelligenceSearchSection .intelligence-pagination button {
+    padding: 8px 13px !important;
+    border: 1px solid #dce2e9 !important;
+    border-radius: 7px !important;
+    background: #fff !important;
+    color: #566477 !important;
+    cursor: pointer !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+}
+
+#intelligenceSearchSection .hidden {
+    display: none !important;
+}
+
+@media (max-width: 750px) {
+    #intelligenceSearchSection .search-type-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 550px) {
+    #intelligenceSearchSection .search-input-row {
+        flex-direction: column !important;
+    }
+
+    #intelligenceSearchSection #intelligenceSearchButton {
+        width: 100% !important;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -82,7 +348,207 @@
         </div>
       </div>
     </section>
+<!-- =====================================================
+     RESEARCH INTELLIGENCE SEARCH
+===================================================== -->
 
+<section
+    id="intelligenceSearchSection"
+    class="dashboard-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                RESEARCH INTELLIGENCE
+            </div>
+
+            <h2>
+                Search Research Intelligence
+            </h2>
+
+            <p>
+                Search research papers, funding opportunities and patents.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Search Box -->
+
+    <div class="intelligence-search-panel">
+
+        <div class="search-input-row">
+
+            <input
+                type="text"
+                id="intelligenceSearchInput"
+                placeholder="Enter a topic, technology, keyword..."
+                autocomplete="off"
+            >
+
+            <button
+                id="intelligenceSearchButton"
+                onclick="searchIntelligence()"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Search Type -->
+
+        <div class="search-type-row">
+
+            <button
+                class="search-type-button active"
+                data-search-type="papers"
+                onclick="selectSearchType('papers', this)"
+            >
+
+                <span class="search-type-icon">
+                    📄
+                </span>
+
+                <span>
+
+                    <strong>
+                        Research Papers
+                    </strong>
+
+                    <small>
+                        Find research and publications
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                class="search-type-button"
+                data-search-type="funding"
+                onclick="selectSearchType('funding', this)"
+            >
+
+                <span class="search-type-icon">
+                    💰
+                </span>
+
+                <span>
+
+                    <strong>
+                        Funding
+                    </strong>
+
+                    <small>
+                        Find funding opportunities
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                class="search-type-button"
+                data-search-type="patents"
+                onclick="selectSearchType('patents', this)"
+            >
+
+                <span class="search-type-icon">
+                    ⚙
+                </span>
+
+                <span>
+
+                    <strong>
+                        Patents
+                    </strong>
+
+                    <small>
+                        Find patents and technologies
+                    </small>
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Search Status -->
+
+    <div
+        id="intelligenceSearchStatus"
+        class="search-status"
+    ></div>
+
+
+    <!-- Results -->
+
+    <div
+        id="intelligenceSearchResults"
+        class="intelligence-results"
+    >
+
+        <div class="search-empty">
+
+            <div class="search-empty-icon">
+                🔎
+            </div>
+
+            <h3>
+                Search the research database
+            </h3>
+
+            <p>
+                Enter a keyword and choose Research Papers,
+                Funding or Patents.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Pagination -->
+
+    <div
+        id="intelligencePagination"
+        class="intelligence-pagination hidden"
+    >
+
+        <button
+            id="previousSearchPage"
+            onclick="changeSearchPage(-1)"
+        >
+            ← Previous
+        </button>
+
+
+        <span id="searchPageNumber">
+            Page 1
+        </span>
+
+
+        <button
+            id="nextSearchPage"
+            onclick="changeSearchPage(1)"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
     <!-- FUNDING -->
     <section id="funding" class="dashboard-section">
       <div class="section-heading">

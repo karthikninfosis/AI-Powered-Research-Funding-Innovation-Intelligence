@@ -1,4 +1,4 @@
-const RESEARCHER_API_BASE = "http://192.168.1.10:8000";
+const RESEARCHER_API_BASE = "http://192.168.1.13:8000";
 
 let currentUser = null;
 let activityChart;
@@ -1414,7 +1414,1536 @@ function refreshScorePreview() {
 
 }
 
+/* =====================================================
+   RESEARCH INTELLIGENCE SEARCH
+===================================================== */
 
+const INTELLIGENCE_API_BASE = "http://192.168.1.13:8000";
+
+let selectedSearchType = "papers";
+let currentSearchPage = 1;
+const SEARCH_PAGE_SIZE = 20;
+let currentSearchTerm = "";
+
+
+/* =====================================================
+   SELECT SEARCH TYPE
+===================================================== */
+
+function selectSearchType(type, button) {
+
+    selectedSearchType = type;
+    currentSearchPage = 1;
+
+    document
+        .querySelectorAll(".search-type-button")
+        .forEach(item => {
+            item.classList.remove("active");
+        });
+
+    if (button) {
+        button.classList.add("active");
+    }
+
+    const input = document.getElementById(
+        "intelligenceSearchInput"
+    );
+
+    if (!input) {
+        return;
+    }
+
+    if (type === "papers") {
+        input.placeholder =
+            "Search research papers, topics, authors, keywords...";
+    }
+
+    if (type === "funding") {
+        input.placeholder =
+            "Search funding opportunities, programs, topics...";
+    }
+
+    if (type === "patents") {
+        input.placeholder =
+            "Search patents, technologies, inventions...";
+    }
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+async function searchIntelligence(page = 1) {
+
+    const input = document.getElementById(
+        "intelligenceSearchInput"
+    );
+
+    const resultsContainer = document.getElementById(
+        "intelligenceSearchResults"
+    );
+
+    const status = document.getElementById(
+        "intelligenceSearchStatus"
+    );
+
+    const searchButton = document.getElementById(
+        "intelligenceSearchButton"
+    );
+
+
+    if (!input || !resultsContainer) {
+
+        console.error(
+            "Intelligence search HTML elements are missing."
+        );
+
+        return;
+    }
+
+
+    const search = input.value.trim();
+
+
+    if (!search) {
+
+        resultsContainer.innerHTML = `
+            <div class="search-empty">
+
+                <div class="search-empty-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Enter a search term
+                </h3>
+
+                <p>
+                    Please enter a topic, keyword or technology.
+                </p>
+
+            </div>
+        `;
+
+        if (status) {
+            status.textContent =
+                "Please enter something to search.";
+
+            status.style.color =
+                "#bd5050";
+        }
+
+        input.focus();
+
+        return;
+    }
+
+
+    currentSearchTerm = search;
+    currentSearchPage = page;
+
+
+    /* -------------------------------------------------
+       LOADING
+    ------------------------------------------------- */
+
+    if (searchButton) {
+
+        searchButton.disabled = true;
+
+        searchButton.textContent =
+            "Searching...";
+    }
+
+
+    if (status) {
+
+        status.textContent =
+            "Searching...";
+
+        status.style.color =
+            "#7d8999";
+    }
+
+
+    resultsContainer.innerHTML = `
+        <div class="search-loading">
+
+            <div class="search-loading-spinner">
+                ⏳
+            </div>
+
+            Searching for
+            <strong>
+                ${escapeHTML(search)}
+            </strong>
+
+        </div>
+    `;
+
+
+    /* -------------------------------------------------
+       SELECT ENDPOINT
+    ------------------------------------------------- */
+
+    let endpoint = "";
+
+
+    if (selectedSearchType === "papers") {
+
+        endpoint =
+            "/api/datasets-data/search";
+
+    }
+
+    else if (selectedSearchType === "funding") {
+
+        endpoint =
+            "/api/grants-data/search";
+
+    }
+
+    else if (selectedSearchType === "patents") {
+
+        endpoint =
+            "/api/patents-data/search";
+
+    }
+
+    else {
+
+        if (status) {
+            status.textContent =
+                "Invalid search type.";
+        }
+
+        return;
+    }
+
+
+    try {
+
+        /* ---------------------------------------------
+           BUILD URL
+        --------------------------------------------- */
+
+        const params =
+            new URLSearchParams();
+
+        params.set(
+            "search",
+            search
+        );
+
+        params.set(
+            "page",
+            String(page)
+        );
+
+        params.set(
+            "page_size",
+            String(SEARCH_PAGE_SIZE)
+        );
+
+
+        const url =
+            `${INTELLIGENCE_API_BASE}${endpoint}?${params.toString()}`;
+
+
+        console.log(
+            "===================================="
+        );
+
+        console.log(
+            "INTELLIGENCE SEARCH REQUEST"
+        );
+
+        console.log(
+            "Type:",
+            selectedSearchType
+        );
+
+        console.log(
+            "Search:",
+            search
+        );
+
+        console.log(
+            "Page:",
+            page
+        );
+
+        console.log(
+            "URL:",
+            url
+        );
+
+        console.log(
+            "===================================="
+        );
+
+
+        /* ---------------------------------------------
+           API REQUEST
+        --------------------------------------------- */
+
+        const response =
+            await fetch(
+                url,
+                {
+                    method: "GET",
+                    credentials: "include"
+                }
+            );
+
+
+        console.log(
+            "Response status:",
+            response.status
+        );
+
+
+        /* ---------------------------------------------
+           READ RESPONSE
+        --------------------------------------------- */
+
+        const text =
+            await response.text();
+
+
+        let data;
+
+
+        try {
+
+            data =
+                JSON.parse(text);
+
+        }
+
+        catch (error) {
+
+            data =
+                text;
+
+        }
+
+
+        console.log(
+            "RAW API RESPONSE:",
+            data
+        );
+
+
+        /* ---------------------------------------------
+           ERROR
+        --------------------------------------------- */
+
+        if (!response.ok) {
+
+            throw new Error(
+                extractAPIError(
+                    data,
+                    response.status
+                )
+            );
+        }
+
+
+        /* ---------------------------------------------
+           IMPORTANT
+           
+           YOUR API RETURNS:
+
+           {
+               page: 1,
+               page_size: 20,
+               total_matches: 100,
+               records: [...]
+           }
+
+        --------------------------------------------- */
+
+        const records =
+            getResearchIntelligenceRecords(
+                data
+            );
+
+
+        const total =
+            getResearchIntelligenceTotal(
+                data
+            );
+
+
+        console.log(
+            "SEARCH RECORDS:",
+            records
+        );
+
+        console.log(
+            "RECORD COUNT:",
+            records.length
+        );
+
+        console.log(
+            "TOTAL MATCHES:",
+            total
+        );
+
+
+        /* ---------------------------------------------
+           RENDER
+        --------------------------------------------- */
+
+        renderResearchIntelligenceResults(
+            data
+        );
+
+
+        /* ---------------------------------------------
+           STATUS
+        --------------------------------------------- */
+
+        if (status) {
+
+            if (records.length > 0) {
+
+                const start =
+                    ((page - 1) *
+                        SEARCH_PAGE_SIZE) + 1;
+
+                const end =
+                    start +
+                    records.length -
+                    1;
+
+
+                status.textContent =
+                    `Showing ${start}-${end} of ${total} results`;
+
+                status.style.color =
+                    "#25835a";
+
+            }
+
+            else {
+
+                status.textContent =
+                    "No matching results found.";
+
+                status.style.color =
+                    "#7d8999";
+            }
+        }
+
+
+        /* ---------------------------------------------
+           PAGINATION
+        --------------------------------------------- */
+
+        updateSearchPagination(
+            data
+        );
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "Intelligence search error:",
+            error
+        );
+
+
+        resultsContainer.innerHTML = `
+            <div class="search-error">
+
+                <strong>
+                    Search failed
+                </strong>
+
+                <br><br>
+
+                ${escapeHTML(
+                    error.message
+                )}
+
+            </div>
+        `;
+
+
+        if (status) {
+
+            status.textContent =
+                "Unable to complete search.";
+
+            status.style.color =
+                "#bd5050";
+        }
+
+
+        const pagination =
+            document.getElementById(
+                "intelligencePagination"
+            );
+
+
+        if (pagination) {
+
+            pagination.classList.add(
+                "hidden"
+            );
+        }
+
+    }
+
+
+    finally {
+
+        if (searchButton) {
+
+            searchButton.disabled =
+                false;
+
+            searchButton.textContent =
+                "Search";
+        }
+
+    }
+
+}
+
+
+/* =====================================================
+   GET SEARCH RECORDS
+===================================================== */
+
+function getResearchIntelligenceRecords(data) {
+
+    if (!data) {
+        return [];
+    }
+
+
+    /*
+     * PRIMARY FORMAT
+     *
+     * {
+     *     page: 1,
+     *     page_size: 20,
+     *     total_matches: 100,
+     *     records: [...]
+     * }
+     */
+
+    if (
+        Array.isArray(
+            data.records
+        )
+    ) {
+
+        return data.records;
+    }
+
+
+    /* ---------------------------------------------
+       ARRAY RESPONSE
+    --------------------------------------------- */
+
+    if (Array.isArray(data)) {
+
+        return data;
+    }
+
+
+    /* ---------------------------------------------
+       NESTED RECORDS
+    --------------------------------------------- */
+
+    if (
+        data.data &&
+        Array.isArray(
+            data.data.records
+        )
+    ) {
+
+        return data.data.records;
+    }
+
+
+    /* ---------------------------------------------
+       OTHER FALLBACKS
+    --------------------------------------------- */
+
+    if (
+        data.data &&
+        Array.isArray(data.data)
+    ) {
+
+        return data.data;
+    }
+
+
+    if (
+        Array.isArray(
+            data.results
+        )
+    ) {
+
+        return data.results;
+    }
+
+
+    if (
+        Array.isArray(
+            data.items
+        )
+    ) {
+
+        return data.items;
+    }
+
+
+    if (
+        Array.isArray(
+            data.documents
+        )
+    ) {
+
+        return data.documents;
+    }
+
+
+    /* ---------------------------------------------
+       STRING JSON
+    --------------------------------------------- */
+
+    if (
+        typeof data === "string"
+    ) {
+
+        try {
+
+            const parsed =
+                JSON.parse(data);
+
+
+            if (
+                parsed &&
+                Array.isArray(
+                    parsed.records
+                )
+            ) {
+
+                return parsed.records;
+            }
+
+
+            if (
+                parsed &&
+                Array.isArray(
+                    parsed.results
+                )
+            ) {
+
+                return parsed.results;
+            }
+
+        }
+
+        catch (error) {
+
+            console.warn(
+                "Unable to parse response string."
+            );
+        }
+    }
+
+
+    return [];
+}
+
+
+/* =====================================================
+   GET TOTAL MATCHES
+===================================================== */
+
+function getResearchIntelligenceTotal(data) {
+
+    if (!data) {
+        return 0;
+    }
+
+
+    if (
+        typeof data.total_matches ===
+        "number"
+    ) {
+
+        return data.total_matches;
+    }
+
+
+    if (
+        data.data &&
+        typeof data.data.total_matches ===
+        "number"
+    ) {
+
+        return data.data.total_matches;
+    }
+
+
+    return getResearchIntelligenceRecords(
+        data
+    ).length;
+}
+
+
+/* =====================================================
+   RENDER SEARCH RESULTS
+===================================================== */
+
+function renderResearchIntelligenceResults(
+    data
+) {
+
+    const container =
+        document.getElementById(
+            "intelligenceSearchResults"
+        );
+
+
+    if (!container) {
+
+        console.error(
+            "intelligenceSearchResults element not found."
+        );
+
+        return;
+    }
+
+
+    const records =
+        getResearchIntelligenceRecords(
+            data
+        );
+
+
+    console.log(
+        "Rendering:",
+        records.length,
+        "records"
+    );
+
+
+    /* ---------------------------------------------
+       NO RESULTS
+    --------------------------------------------- */
+
+    if (!records.length) {
+
+        container.innerHTML = `
+            <div class="search-empty">
+
+                <div class="search-empty-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    No results found
+                </h3>
+
+                <p>
+                    Try another keyword or search term.
+                </p>
+
+            </div>
+        `;
+
+        updateSearchPagination(
+            data
+        );
+
+        return;
+    }
+
+
+    /* ---------------------------------------------
+       CLEAR RESULTS
+    --------------------------------------------- */
+
+    container.innerHTML = "";
+
+
+    /* ---------------------------------------------
+       CREATE CARDS
+    --------------------------------------------- */
+
+    records.forEach(
+        (item, index) => {
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "intelligence-result-card";
+
+
+            card.innerHTML =
+                buildResearchIntelligenceCard(
+                    item,
+                    index
+                );
+
+
+            container.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   BUILD RESULT CARD
+===================================================== */
+
+function buildResearchIntelligenceCard(
+    item,
+    index
+) {
+
+    let title =
+        "Untitled";
+
+    let description =
+        "";
+
+    let metadata =
+        [];
+
+    let link =
+        "";
+
+
+    /* =================================================
+       RESEARCH PAPERS
+    ================================================= */
+
+    if (
+        selectedSearchType ===
+        "papers"
+    ) {
+
+        title =
+            item.title ||
+            "Untitled Research Paper";
+
+
+        description =
+            item.abstract ||
+            "No abstract available.";
+
+
+        metadata = [
+
+            item.authors
+                ? `Authors: ${formatResearchValue(
+                    item.authors
+                )}`
+                : "",
+
+            item.venue
+                ? `Venue: ${formatResearchValue(
+                    item.venue
+                )}`
+                : "",
+
+            item.year
+                ? `Year: ${formatResearchValue(
+                    item.year
+                )}`
+                : "",
+
+            item.n_citation !== undefined &&
+            item.n_citation !== null
+                ? `Citations: ${item.n_citation}`
+                : ""
+
+        ].filter(Boolean);
+
+
+        link =
+            item.url ||
+            item.link ||
+            "";
+    }
+
+
+    /* =================================================
+       FUNDING
+    ================================================= */
+
+    else if (
+        selectedSearchType ===
+        "funding"
+    ) {
+
+        title =
+            item.opportunity_title ||
+            "Untitled Funding Opportunity";
+
+
+        description =
+            item.category_of_funding_activity ||
+            item.opportunity_category ||
+            "Funding opportunity";
+
+
+        metadata = [
+
+            item.opportunity_number
+                ? `Opportunity: ${formatResearchValue(
+                    item.opportunity_number
+                )}`
+                : "",
+
+            item.agency_name
+                ? `Agency: ${formatResearchValue(
+                    item.agency_name
+                )}`
+                : "",
+
+            item.funding_instrument_type
+                ? `Instrument: ${formatResearchValue(
+                    item.funding_instrument_type
+                )}`
+                : "",
+
+            item.eligible_applicants
+                ? `Eligible: ${formatResearchValue(
+                    item.eligible_applicants
+                )}`
+                : "",
+
+            item.post_date
+                ? `Posted: ${formatResearchValue(
+                    item.post_date
+                )}`
+                : "",
+
+            item.close_date
+                ? `Closes: ${formatResearchValue(
+                    item.close_date
+                )}`
+                : "",
+
+            item.award_ceiling !== undefined &&
+            item.award_ceiling !== null
+                ? `Award Ceiling: ${formatResearchValue(
+                    item.award_ceiling
+                )}`
+                : ""
+
+        ].filter(Boolean);
+
+
+        link =
+            item.url ||
+            item.source_url ||
+            "";
+    }
+
+
+    /* =================================================
+       PATENTS
+    ================================================= */
+
+    else if (
+        selectedSearchType ===
+        "patents"
+    ) {
+
+        title =
+            item.title ||
+            "Untitled Patent";
+
+
+        description =
+            item.abstract ||
+            item.description ||
+            "Patent information";
+
+
+        metadata = [
+
+            item.patent_number
+                ? `Patent: ${formatResearchValue(
+                    item.patent_number
+                )}`
+                : "",
+
+            item.country
+                ? `Country: ${formatResearchValue(
+                    item.country
+                )}`
+                : "",
+
+            item.assignee
+                ? `Assignee: ${formatResearchValue(
+                    item.assignee
+                )}`
+                : "",
+
+            item.grant_year
+                ? `Year: ${formatResearchValue(
+                    item.grant_year
+                )}`
+                : "",
+
+            item.times_cited !== undefined &&
+            item.times_cited !== null
+                ? `Citations: ${item.times_cited}`
+                : "",
+
+            item.status
+                ? `Status: ${formatResearchValue(
+                    item.status
+                )}`
+                : ""
+
+        ].filter(Boolean);
+
+
+        link =
+            item.url ||
+            "";
+    }
+
+
+    /* =================================================
+       DESCRIPTION LIMIT
+    ================================================= */
+
+    description =
+        formatResearchValue(
+            description
+        );
+
+
+    if (
+        description.length > 600
+    ) {
+
+        description =
+            description.substring(
+                0,
+                600
+            ) + "...";
+    }
+
+
+    /* =================================================
+       METADATA HTML
+    ================================================= */
+
+    const metadataHTML =
+        metadata.length
+            ? `
+                <div class="result-card-meta">
+
+                    ${metadata
+                        .map(
+                            value => `
+                                <span class="result-meta-item">
+                                    ${escapeHTML(
+                                        value
+                                    )}
+                                </span>
+                            `
+                        )
+                        .join("")
+                    }
+
+                </div>
+            `
+            : "";
+
+
+    /* =================================================
+       LINK HTML
+    ================================================= */
+
+    const linkHTML =
+        link
+            ? `
+                <a
+                    href="${escapeAttribute(
+                        link
+                    )}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="result-link"
+                >
+                    View source →
+                </a>
+            `
+            : "";
+
+
+    /* =================================================
+       TYPE LABEL
+    ================================================= */
+
+    let typeLabel =
+        "RESULT";
+
+
+    if (
+        selectedSearchType ===
+        "papers"
+    ) {
+
+        typeLabel =
+            "RESEARCH PAPER";
+
+    }
+
+    else if (
+        selectedSearchType ===
+        "funding"
+    ) {
+
+        typeLabel =
+            "FUNDING OPPORTUNITY";
+
+    }
+
+    else if (
+        selectedSearchType ===
+        "patents"
+    ) {
+
+        typeLabel =
+            "PATENT";
+    }
+
+
+    /* =================================================
+       FINAL CARD
+    ================================================= */
+
+    return `
+
+        <div class="result-card-top">
+
+            <div class="result-card-number">
+                ${index + 1}
+            </div>
+
+
+            <div class="result-card-main">
+
+                <div class="result-card-type">
+                    ${typeLabel}
+                </div>
+
+
+                <h3 class="result-card-title">
+                    ${escapeHTML(
+                        title
+                    )}
+                </h3>
+
+
+                ${
+                    description
+                        ? `
+                            <p class="result-card-description">
+                                ${escapeHTML(
+                                    description
+                                )}
+                            </p>
+                        `
+                        : ""
+                }
+
+
+                ${metadataHTML}
+
+
+                ${linkHTML}
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+
+/* =====================================================
+   FORMAT VALUE
+===================================================== */
+
+function formatResearchValue(
+    value
+) {
+
+    if (
+        value === undefined ||
+        value === null
+    ) {
+
+        return "";
+    }
+
+
+    if (
+        Array.isArray(value)
+    ) {
+
+        return value
+            .map(
+                item =>
+                    formatResearchValue(
+                        item
+                    )
+            )
+            .join(", ");
+    }
+
+
+    if (
+        typeof value === "object"
+    ) {
+
+        try {
+
+            return JSON.stringify(
+                value
+            );
+
+        }
+
+        catch (error) {
+
+            return String(value);
+        }
+    }
+
+
+    return String(value);
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+function updateSearchPagination(
+    data
+) {
+
+    const pagination =
+        document.getElementById(
+            "intelligencePagination"
+        );
+
+    const pageNumber =
+        document.getElementById(
+            "searchPageNumber"
+        );
+
+    const previous =
+        document.getElementById(
+            "previousSearchPage"
+        );
+
+    const next =
+        document.getElementById(
+            "nextSearchPage"
+        );
+
+
+    if (
+        !pagination ||
+        !pageNumber ||
+        !previous ||
+        !next
+    ) {
+
+        return;
+    }
+
+
+    const totalMatches =
+        getResearchIntelligenceTotal(
+            data
+        );
+
+
+    const totalPages =
+        Math.ceil(
+            totalMatches /
+            SEARCH_PAGE_SIZE
+        );
+
+
+    /* ---------------------------------------------
+       ONLY ONE PAGE
+    --------------------------------------------- */
+
+    if (
+        totalPages <= 1
+    ) {
+
+        pagination.classList.add(
+            "hidden"
+        );
+
+        return;
+    }
+
+
+    /* ---------------------------------------------
+       SHOW PAGINATION
+    --------------------------------------------- */
+
+    pagination.classList.remove(
+        "hidden"
+    );
+
+
+    pageNumber.textContent =
+        `Page ${currentSearchPage} of ${totalPages}`;
+
+
+    previous.disabled =
+        currentSearchPage <= 1;
+
+
+    next.disabled =
+        currentSearchPage >= totalPages;
+}
+
+
+/* =====================================================
+   CHANGE PAGE
+===================================================== */
+
+function changeSearchPage(
+    direction
+) {
+
+    const newPage =
+        currentSearchPage +
+        direction;
+
+
+    if (
+        newPage < 1
+    ) {
+
+        return;
+    }
+
+
+    if (
+        !currentSearchTerm
+    ) {
+
+        return;
+    }
+
+
+    const input =
+        document.getElementById(
+            "intelligenceSearchInput"
+        );
+
+
+    if (input) {
+
+        input.value =
+            currentSearchTerm;
+    }
+
+
+    searchIntelligence(
+        newPage
+    );
+}
+
+
+/* =====================================================
+   API ERROR
+===================================================== */
+
+function extractAPIError(
+    data,
+    status
+) {
+
+    if (
+        typeof data === "string" &&
+        data.trim()
+    ) {
+
+        return data;
+    }
+
+
+    if (
+        data &&
+        typeof data.detail === "string"
+    ) {
+
+        return data.detail;
+    }
+
+
+    if (
+        data &&
+        data.message
+    ) {
+
+        return data.message;
+    }
+
+
+    return (
+        `Server returned status ${status}`
+    );
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(
+    value
+) {
+
+    if (
+        value === undefined ||
+        value === null
+    ) {
+
+        return "";
+    }
+
+
+    return String(value)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+}
+
+
+/* =====================================================
+   ESCAPE ATTRIBUTE
+===================================================== */
+
+function escapeAttribute(
+    value
+) {
+
+    if (
+        value === undefined ||
+        value === null
+    ) {
+
+        return "";
+    }
+
+
+    return String(value)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        );
+}
+
+
+/* =====================================================
+   ENTER KEY SEARCH
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const input =
+            document.getElementById(
+                "intelligenceSearchInput"
+            );
+
+
+        if (!input) {
+            return;
+        }
+
+
+        input.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Enter"
+                ) {
+
+                    event.preventDefault();
+
+                    searchIntelligence(
+                        1
+                    );
+                }
+
+            }
+        );
+
+    }
+);
 /* =========================================================
    UPDATE SCORE DISPLAY
 ========================================================= */

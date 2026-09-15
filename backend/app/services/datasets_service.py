@@ -1,3 +1,4 @@
+import csv
 import pandas as pd
 from pathlib import Path
 
@@ -28,26 +29,48 @@ def get_dataset_path(dataset: str):
     return path
 
 
+# =========================================================
+# CSV COUNT
+# =========================================================
+
 def get_csv_count(path: Path) -> int:
+
     count = 0
 
-    for chunk in pd.read_csv(
+    with open(
         path,
-        chunksize=10000,
-        low_memory=False,
-        encoding="latin1"
-    ):
-        count += len(chunk)
+        "r",
+        encoding="latin1",
+        errors="replace",
+        newline=""
+    ) as file:
+
+        reader = csv.reader(file)
+
+        # Skip header
+        next(reader, None)
+
+        for _ in reader:
+            count += 1
 
     return count
 
+
+# =========================================================
+# EXCEL COUNT
+# =========================================================
 
 def get_excel_count(path: Path) -> int:
     df = pd.read_excel(path)
     return len(df)
 
 
+# =========================================================
+# DATASET COUNT
+# =========================================================
+
 def get_dataset_count(dataset: str) -> int:
+
     path = get_dataset_path(dataset)
 
     if path.suffix.lower() == ".csv":
@@ -59,78 +82,88 @@ def get_dataset_count(dataset: str) -> int:
     raise ValueError("Unsupported dataset format")
 
 
-def search_csv(path: Path, search: str = None, page: int = 1, page_size: int = 100):
+# =========================================================
+# CSV SEARCH
+# =========================================================
+
+def search_csv(
+    path: Path,
+    search: str = None,
+    page: int = 1,
+    page_size: int = 20
+):
+
     start = (page - 1) * page_size
+
     results = []
-    matched_count = 0
+    total_matches = 0
 
-    for chunk in pd.read_csv(
+    search_lower = search.lower() if search else None
+
+    with open(
         path,
-        chunksize=10000,
-        low_memory=False,
-        encoding="latin1"
-    ):
-        if search:
-            search_lower = search.lower()
+        "r",
+        encoding="latin1",
+        errors="replace",
+        newline=""
+    ) as file:
 
-            mask = chunk.astype(str).apply(
-                lambda row: row.str.lower().str.contains(
-                    search_lower,
-                    na=False,
-                    regex=False
-                ).any(),
-                axis=1
-            )
+        reader = csv.DictReader(file)
 
-            chunk = chunk[mask]
+        for row in reader:
 
-        matched_count += len(chunk)
+            # Search
+            if search_lower:
 
-        if matched_count > start and len(results) < page_size:
+                found = False
 
-            chunk_start = max(
-                0,
-                start - (matched_count - len(chunk))
-            )
+                for value in row.values():
 
-            chunk_end = min(
-                len(chunk),
-                chunk_start + page_size - len(results)
-            )
+                    if value is not None:
 
-            selected = chunk.iloc[chunk_start:chunk_end]
+                        if search_lower in str(value).lower():
+                            found = True
+                            break
 
-            # Convert NaN / NaT to None
-            selected = selected.astype(object).where(
-                pd.notna(selected),
-                None
-            )
+                if not found:
+                    continue
 
-            results.extend(
-                selected.to_dict(orient="records")
-            )
+            total_matches += 1
+
+            # Pagination
+            if total_matches > start and len(results) < page_size:
+                results.append(row)
 
     return {
         "page": page,
         "page_size": page_size,
-        "total_matches": matched_count,
+        "total_matches": total_matches,
         "records": results
     }
+
+
+# =========================================================
+# EXCEL SEARCH
+# =========================================================
+
 def search_excel(
     path: Path,
     search: str = None,
     page: int = 1,
     page_size: int = 20
 ):
+
     df = pd.read_excel(path)
 
     if search:
+
         search_lower = search.lower()
 
         mask = df.astype(str).apply(
             lambda row: row.str.lower().str.contains(
                 search_lower,
-                na=False
+                na=False,
+                regex=False
             ).any(),
             axis=1
         )
@@ -144,7 +177,6 @@ def search_excel(
 
     selected = df.iloc[start:end]
 
-# Convert NaN/NaT values to None for valid JSON
     selected = selected.astype(object).where(
         pd.notna(selected),
         None
@@ -162,15 +194,21 @@ def search_excel(
     }
 
 
+# =========================================================
+# SEARCH DATASET
+# =========================================================
+
 def search_dataset(
     dataset: str,
     search: str = None,
     page: int = 1,
     page_size: int = 20
 ):
+
     path = get_dataset_path(dataset)
 
     if path.suffix.lower() == ".csv":
+
         return search_csv(
             path,
             search,
@@ -179,6 +217,7 @@ def search_dataset(
         )
 
     if path.suffix.lower() in [".xlsx", ".xls"]:
+
         return search_excel(
             path,
             search,

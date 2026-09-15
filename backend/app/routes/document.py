@@ -2,19 +2,6 @@ from fastapi import APIRouter, UploadFile, File, HTTPException, Form
 from typing import Optional
 
 from app.services.document_service import DocumentService
-from fastapi import (
-    APIRouter,
-    UploadFile,
-    File,
-    HTTPException,
-    Form
-)
-
-from typing import Optional
-
-from app.services.document_service import (
-    DocumentService
-)
 
 
 router = APIRouter(
@@ -23,275 +10,174 @@ router = APIRouter(
 )
 
 
+# ============================================================
+# UPLOAD DOCUMENT
+# ============================================================
+
 @router.post("")
 async def upload_document(
     file: UploadFile = File(...),
-    entity_type: str = Form(...),
-    entity_id: Optional[str] = Form(None)
+    user_id: str = Form(...),
+    document_type: str = Form("other")
 ):
-    file_bytes = await file.read()
-
-    document = await DocumentService.upload_document(
-        file_bytes,
-        file.filename,
-        file.content_type,
-        entity_type,
-        entity_id
-    )
-
-    return document
-
-
-@router.get("")
-async def get_documents(entity_type: Optional[str] = None, entity_id: Optional[str] = None):
-    return await DocumentService.get_documents(entity_type, entity_id)
-
-
-@router.get("/{document_id}")
-async def get_document(document_id: str):
-
-    document = await DocumentService.get_document(document_id)
-
-    if not document:
-        raise HTTPException(404, "Document not found")
-
-    return document
-
-
-@router.put("/{document_id}")
-async def update_document(document_id: str, file: UploadFile = File(...)):
-
-    file_bytes = await file.read()
-
-    document = await DocumentService.update_document(
-        document_id,
-        file_bytes,
-        file.filename,
-        file.content_type
-    )
-
-    if not document:
-        raise HTTPException(404, "Document not found")
-# =========================================================
-# Upload PDF
-# =========================================================
-@router.post("")
-async def upload_document(
-
-    file: UploadFile = File(...),
-
-    entity_type: str = Form(...),
-
-    entity_id: Optional[str] = Form(None),
-
-    user_id: Optional[str] = Form(None),
-
-    profile_id: Optional[str] = Form(None)
-
-):
-
     try:
-
-        # Read PDF
         file_bytes = await file.read()
 
         if not file_bytes:
-
             raise HTTPException(
-
                 status_code=400,
-
                 detail="Uploaded file is empty"
             )
 
-        # Process PDF
-        document = (
-            await DocumentService.upload_document(
-
-                file_bytes=file_bytes,
-
-                file_name=file.filename,
-
-                content_type=file.content_type,
-
-                entity_type=entity_type,
-
-                entity_id=entity_id,
-
-                user_id=user_id,
-
-                profile_id=profile_id
-            )
+        document = await DocumentService.upload_document(
+            file_bytes=file_bytes,
+            file_name=file.filename,
+            content_type=file.content_type,
+            user_id=user_id,
+            document_type=document_type
         )
 
         return document
 
     except HTTPException:
-
         raise
 
     except Exception as e:
-
         raise HTTPException(
-
             status_code=500,
-
-            detail=(
-                f"Document processing failed: {str(e)}"
-            )
+            detail=f"Document processing failed: {str(e)}"
         )
 
 
-# =========================================================
-# Get all documents
-# =========================================================
+# ============================================================
+# GET ALL DOCUMENTS / FILTER BY USER / DOCUMENT TYPE
+# ============================================================
+
 @router.get("")
 async def get_documents(
-
-    entity_type: Optional[str] = None,
-
-    entity_id: Optional[str] = None
-
+    user_id: Optional[str] = None,
+    document_type: Optional[str] = None
 ):
-
     try:
 
-        return await DocumentService.get_documents(
-
-            entity_type=entity_type,
-
-            entity_id=entity_id
+        documents = await DocumentService.get_documents(
+            user_id=user_id,
+            document_type=document_type
         )
 
+        return documents
+
     except Exception as e:
-
         raise HTTPException(
-
             status_code=500,
-
             detail=f"Failed to get documents: {str(e)}"
         )
 
 
-# =========================================================
-# Get document by ID
-# =========================================================
+# ============================================================
+# GET SINGLE DOCUMENT
+# ============================================================
+
 @router.get("/{document_id}")
-async def get_document(
-
-    document_id: str
-
-):
-
-    document = (
-        await DocumentService.get_document(
-            document_id
-        )
-    )
-
-    if not document:
-
-        raise HTTPException(
-
-            status_code=404,
-
-            detail="Document not found"
-        )
-
-    return document
-
-
-# =========================================================
-# Update document
-# =========================================================
-@router.put("/{document_id}")
-async def update_document(
-
-    document_id: str,
-
-    file: UploadFile = File(...)
-
-):
+async def get_document(document_id: str):
 
     try:
 
-        file_bytes = await file.read()
-
-        if not file_bytes:
-
-            raise HTTPException(
-
-                status_code=400,
-
-                detail="Uploaded file is empty"
-            )
-
-        document = (
-            await DocumentService.update_document(
-
-                document_id=document_id,
-
-                file_bytes=file_bytes,
-
-                file_name=file.filename,
-
-                content_type=file.content_type
-            )
+        document = await DocumentService.get_document(
+            document_id
         )
 
         if not document:
-
             raise HTTPException(
-
                 status_code=404,
-
                 detail="Document not found"
             )
 
         return document
 
     except HTTPException:
-
         raise
 
     except Exception as e:
-
         raise HTTPException(
-
             status_code=500,
+            detail=f"Failed to get document: {str(e)}"
+        )
 
+
+# ============================================================
+# UPDATE DOCUMENT
+# ============================================================
+
+@router.put("/{document_id}")
+async def update_document(
+    document_id: str,
+    file: UploadFile = File(...)
+):
+
+    try:
+
+        file_bytes = await file.read()
+
+        if not file_bytes:
+            raise HTTPException(
+                status_code=400,
+                detail="Uploaded file is empty"
+            )
+
+        document = await DocumentService.update_document(
+            document_id=document_id,
+            file_bytes=file_bytes,
+            file_name=file.filename,
+            content_type=file.content_type
+        )
+
+        if not document:
+            raise HTTPException(
+                status_code=404,
+                detail="Document not found"
+            )
+
+        return document
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
             detail=f"Document update failed: {str(e)}"
         )
 
 
-# =========================================================
-# Delete document
-# =========================================================
+# ============================================================
+# DELETE DOCUMENT
+# ============================================================
+
 @router.delete("/{document_id}")
-async def delete_document(
+async def delete_document(document_id: str):
 
-    document_id: str
+    try:
 
-):
-
-    success = (
-        await DocumentService.delete_document(
+        success = await DocumentService.delete_document(
             document_id
         )
-    )
 
-    if not success:
+        if not success:
+            raise HTTPException(
+                status_code=404,
+                detail="Document not found"
+            )
 
+        return {
+            "message": "Document deleted successfully"
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
         raise HTTPException(
-
-            status_code=404,
-
-            detail="Document not found"
+            status_code=500,
+            detail=f"Document deletion failed: {str(e)}"
         )
-
-    return {
-
-        "message":
-            "Document deleted successfully"
-    }
-

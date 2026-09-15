@@ -63,95 +63,319 @@ document.getElementById("loginForm").onsubmit = async (e) => {
 
     e.preventDefault();
 
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value;
+    const email =
+        document.getElementById("loginEmail")
+            .value
+            .trim();
 
-    const emailError = document.getElementById("emailError");
-    const passwordError = document.getElementById("passwordError");
-    const loginMessage = document.getElementById("loginMessage");
+    const password =
+        document.getElementById("loginPassword")
+            .value;
+
+    const emailError =
+        document.getElementById("emailError");
+
+    const passwordError =
+        document.getElementById("passwordError");
+
+    const loginMessage =
+        document.getElementById("loginMessage");
+
+
+    /* Clear old messages */
 
     emailError.textContent = "";
     passwordError.textContent = "";
     loginMessage.textContent = "";
 
-    // Frontend validation
+
+    /* =========================================
+       VALIDATION
+    ========================================= */
+
     if (!email) {
-        emailError.textContent = "Enter your email.";
+
+        emailError.textContent =
+            "Enter your email.";
+
         return;
+
     }
 
+
     if (!password) {
-        passwordError.textContent = "Enter your password.";
+
+        passwordError.textContent =
+            "Enter your password.";
+
         return;
+
     }
+
 
     try {
 
-        loginMessage.textContent = "Logging in...";
+        loginMessage.textContent =
+            "Logging in...";
 
-        const response = await fetch(
-<<<<<<< HEAD
-            "http://192.168.1.10:8000/api/auth/login",
-=======
-            "http://127.0.0.1:8000/api/auth/login",
->>>>>>> 236792483dc5e29de5d5850d3c985e871938f9c0
-            {
-                method: "POST",
+        loginMessage.style.color =
+            "#25835a";
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
 
-                credentials: "include",
+        /* =========================================
+           LOGIN API
+        ========================================= */
 
-                body: JSON.stringify({
-                    email: email,
-                    password: password
-                })
-            }
-        );
+        const response =
+            await fetch(
+                "http://192.168.1.13:8000/api/auth/login",
+                {
 
-        const data = await response.json();
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    credentials: "include",
+
+                    body: JSON.stringify({
+
+                        email: email,
+
+                        password: password
+
+                    })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        /* =========================================
+           LOGIN FAILED
+        ========================================= */
 
         if (!response.ok) {
 
             loginMessage.textContent =
-                data.detail || "Invalid email or password.";
+                typeof data.detail === "string"
+                    ? data.detail
+                    : "Invalid email or password.";
 
-            loginMessage.style.color = "#c65353";
+            loginMessage.style.color =
+                "#c65353";
 
             return;
+
         }
 
+
+        console.log(
+            "Login response:",
+            data
+        );
+
+
+        /* =========================================
+           GET LOGGED-IN USER
+        ========================================= */
+
+        const loggedInUser =
+            data.user;
+
+
+        if (!loggedInUser) {
+
+            loginMessage.textContent =
+                "Login successful, but user information was not returned.";
+
+            loginMessage.style.color =
+                "#c65353";
+
+            return;
+
+        }
+
+
+        console.log(
+            "Logged-in user:",
+            loggedInUser
+        );
+
+
+        console.log(
+            "User role ID:",
+            loggedInUser.role_id
+        );
+
+
+        /* =========================================
+           GET ALL ROLES
+        ========================================= */
+
         loginMessage.textContent =
-            "Login successful! Welcome to InnovFund.";
+            "Checking account role...";
 
-        loginMessage.style.color = "#25835a";
 
-        console.log("Login response:", data);
+        const rolesResponse =
+            await fetch(
+                "http://192.168.1.13:8000/api/roles/get",
+                {
 
-        // Go to dashboard
-<<<<<<< HEAD
-        // setTimeout(() => {
-        //     window.location.href = "/dashboard/adminDashboard/";
-        // }, 1000);
-=======
-        setTimeout(() => {
-            window.location.href = "http://localhost:3000/";
-        }, 1000);
->>>>>>> 236792483dc5e29de5d5850d3c985e871938f9c0
+                    method: "GET",
 
-    } catch (error) {
+                    credentials: "include"
 
-        console.error("Login error:", error);
+                }
+            );
+
+
+        if (!rolesResponse.ok) {
+
+            throw new Error(
+                "Unable to load user roles."
+            );
+
+        }
+
+
+        const roles =
+            await rolesResponse.json();
+
+
+        console.log(
+            "Available roles:",
+            roles
+        );
+
+
+        /* =========================================
+           FIND USER ROLE
+        ========================================= */
+
+        const userRole =
+            roles.find(
+                role =>
+                    String(role._id) ===
+                    String(loggedInUser.role_id)
+            );
+
+
+        if (!userRole) {
+
+            loginMessage.textContent =
+                "Unable to identify your account role.";
+
+            loginMessage.style.color =
+                "#c65353";
+
+            return;
+
+        }
+
+
+        console.log(
+            "Matched role:",
+            userRole
+        );
+
+
+        /* =========================================
+           CHECK ADMIN
+        ========================================= */
+
+        const isAdmin =
+
+            String(
+                userRole.name || ""
+            )
+            .toLowerCase()
+            .trim() === "admin"
+
+            ||
+
+            String(
+                userRole.code || ""
+            )
+            .toLowerCase()
+            .trim() === "admin";
+
+
+        console.log(
+            "Is Admin:",
+            isAdmin
+        );
+
+
+        /* =========================================
+           SUCCESS MESSAGE
+        ========================================= */
+
+        loginMessage.textContent =
+            `Login successful! Welcome to InnovFund.`;
+
+        loginMessage.style.color =
+            "#25835a";
+
+
+        /* =========================================
+           REDIRECT
+        ========================================= */
+
+        setTimeout(
+            () => {
+
+                if (isAdmin) {
+
+                    /*
+                     * ADMIN
+                     */
+
+                    window.location.href =
+                        "http://192.168.1.13:5500/dashboard/admin/overview.html";
+
+                }
+
+                else {
+
+                    /*
+                     * ALL OTHER ROLES
+                     */
+
+                    window.location.href =
+                        "http://192.168.1.13:5500/dashboard/researcherDashboard/researcherDashboard.html";
+
+                }
+
+            },
+            700
+        );
+
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Login error:",
+            error
+        );
+
 
         loginMessage.textContent =
             "Unable to connect to the server.";
 
-        loginMessage.style.color = "#c65353";
-    }
-};
+        loginMessage.style.color =
+            "#c65353";
 
+    }
+
+};
 
 // document.getElementById("registerForm").onsubmit = (e) => {
 
@@ -224,11 +448,7 @@ document.getElementById("registerForm").onsubmit = async (e) => {
         registerMessage.style.color = "#25835a";
 
         const response = await fetch(
-<<<<<<< HEAD
-            "http://192.168.1.10:8000/api/users/",
-=======
-            "http://127.0.0.1:8000/api/users/",
->>>>>>> 236792483dc5e29de5d5850d3c985e871938f9c0
+            "http://192.168.1.13:8000/api/users/",
             {
                 method: "POST",
 

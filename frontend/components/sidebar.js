@@ -1,4 +1,4 @@
-const SIDEBAR_API_BASE = "http://192.168.1.10:8000";
+const SIDEBAR_API_BASE = "http://192.168.1.13:8000";
 
 let sidebarUser = null;
 
