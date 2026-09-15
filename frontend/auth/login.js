@@ -90,7 +90,11 @@ document.getElementById("loginForm").onsubmit = async (e) => {
         loginMessage.textContent = "Logging in...";
 
         const response = await fetch(
+<<<<<<< HEAD
             "http://192.168.1.10:8000/api/auth/login",
+=======
+            "http://127.0.0.1:8000/api/auth/login",
+>>>>>>> 236792483dc5e29de5d5850d3c985e871938f9c0
             {
                 method: "POST",
 
@@ -127,9 +131,15 @@ document.getElementById("loginForm").onsubmit = async (e) => {
         console.log("Login response:", data);
 
         // Go to dashboard
+<<<<<<< HEAD
         // setTimeout(() => {
         //     window.location.href = "/dashboard/adminDashboard/";
         // }, 1000);
+=======
+        setTimeout(() => {
+            window.location.href = "http://localhost:3000/";
+        }, 1000);
+>>>>>>> 236792483dc5e29de5d5850d3c985e871938f9c0
 
     } catch (error) {
 
@@ -214,7 +224,11 @@ document.getElementById("registerForm").onsubmit = async (e) => {
         registerMessage.style.color = "#25835a";
 
         const response = await fetch(
+<<<<<<< HEAD
             "http://192.168.1.10:8000/api/users/",
+=======
+            "http://127.0.0.1:8000/api/users/",
+>>>>>>> 236792483dc5e29de5d5850d3c985e871938f9c0
             {
                 method: "POST",
 

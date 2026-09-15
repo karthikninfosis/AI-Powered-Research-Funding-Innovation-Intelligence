@@ -38,7 +38,6 @@ class RoleService:
         for role in cursor:
             role["_id"] = str(role["_id"])
             roles.append(role)
-
         return roles
 
 

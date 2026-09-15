@@ -12,9 +12,6 @@ pydantic-settings
 python-multipart
 email-validator
 httpx
-<<<<<<< HEAD
-supabase
-=======
 supabase
 scikit-learn
->>>>>>> 9b979c833469edb76902072bd60696f1905a7497
+pypdf

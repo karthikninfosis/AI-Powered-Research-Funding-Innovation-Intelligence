@@ -36,6 +36,7 @@ from app.routes.patents import router as patents_router
 from app.routes.patent_analysis import router as patent_analysis_router
 from app.services.patent_service import ensure_patent_indexes
 from app.routes.commercialization import router as commercialization_router
+from app.routes.grants_data import router as grants_data_router
 
 app = FastAPI(title="Research Platform API")
 
@@ -69,6 +70,7 @@ app.include_router(patents_router)
 app.include_router(patent_analysis_router)
 app.include_router(innovation_scores_router)
 app.include_router(commercialization_router)
+app.include_router(grants_data_router)
 
 
 @app.on_event("startup")
