@@ -10,7 +10,7 @@ DATASET_PATHS = {
     "datasets": DATA_DIR / "datasets.csv",
     "grants": DATA_DIR / "grants.csv",
     "patents": DATA_DIR / "patentbrief-patents.csv",
-    "technology": DATA_DIR / "technology_dataset.xlsx",
+    "technology": DATA_DIR / "technology_dataset.csv",
 }
 
 
@@ -34,7 +34,8 @@ def get_csv_count(path: Path) -> int:
     for chunk in pd.read_csv(
         path,
         chunksize=10000,
-        low_memory=False
+        low_memory=False,
+        encoding="latin1"
     ):
         count += len(chunk)
 
@@ -58,22 +59,16 @@ def get_dataset_count(dataset: str) -> int:
     raise ValueError("Unsupported dataset format")
 
 
-def search_csv(
-    path: Path,
-    search: str = None,
-    page: int = 1,
-    page_size: int = 20
-):
+def search_csv(path: Path, search: str = None, page: int = 1, page_size: int = 100):
     start = (page - 1) * page_size
-    end = start + page_size
-
     results = []
     matched_count = 0
 
     for chunk in pd.read_csv(
         path,
         chunksize=10000,
-        low_memory=False
+        low_memory=False,
+        encoding="latin1"
     ):
         if search:
             search_lower = search.lower()
@@ -81,7 +76,8 @@ def search_csv(
             mask = chunk.astype(str).apply(
                 lambda row: row.str.lower().str.contains(
                     search_lower,
-                    na=False
+                    na=False,
+                    regex=False
                 ).any(),
                 axis=1
             )
@@ -90,7 +86,8 @@ def search_csv(
 
         matched_count += len(chunk)
 
-        if matched_count > start:
+        if matched_count > start and len(results) < page_size:
+
             chunk_start = max(
                 0,
                 start - (matched_count - len(chunk))
@@ -101,25 +98,24 @@ def search_csv(
                 chunk_start + page_size - len(results)
             )
 
-            selected = chunk.iloc[
-                chunk_start:chunk_end
-            ]
+            selected = chunk.iloc[chunk_start:chunk_end]
+
+            # Convert NaN / NaT to None
+            selected = selected.astype(object).where(
+                pd.notna(selected),
+                None
+            )
 
             results.extend(
                 selected.to_dict(orient="records")
             )
 
-        if len(results) >= page_size:
-            break
-
     return {
         "page": page,
         "page_size": page_size,
         "total_matches": matched_count,
-        "records": results[:page_size]
+        "records": results
     }
-
-
 def search_excel(
     path: Path,
     search: str = None,
@@ -146,7 +142,15 @@ def search_excel(
     start = (page - 1) * page_size
     end = start + page_size
 
-    records = df.iloc[start:end].to_dict(
+    selected = df.iloc[start:end]
+
+# Convert NaN/NaT values to None for valid JSON
+    selected = selected.astype(object).where(
+        pd.notna(selected),
+        None
+    )
+
+    records = selected.to_dict(
         orient="records"
     )
 
