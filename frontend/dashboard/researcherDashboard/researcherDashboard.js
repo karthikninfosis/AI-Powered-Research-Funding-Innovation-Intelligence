@@ -569,7 +569,7 @@ async function verifyResearcher() {
       error
     );
 
-    window.location.href = "../login.html";
+    window.location.href = "/auth/login.html";
   }
 }
 

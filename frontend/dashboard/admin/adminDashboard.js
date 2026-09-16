@@ -54,7 +54,7 @@ async function verifyAdminAccess() {
         if (!meResponse.ok) {
 
             window.location.href =
-                "../../auth/login.html";
+                "/auth/login.html";
 
             return;
 

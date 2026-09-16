@@ -87,7 +87,7 @@ async function getCurrentUser() {
 
     if (!meResponse.ok) {
 
-        window.location.href = "../login.html";
+        window.location.href = "/auth/login.html";
 
         throw new Error(
             "Authentication failed"
@@ -1619,7 +1619,7 @@ function showProfileMessage(
 }
 
 
-/* =========================================================
+/* ========================================================
    LOGOUT
 ========================================================= */
 
@@ -1648,7 +1648,7 @@ async function logoutUser() {
     } finally {
 
         window.location.href =
-            "../login.html";
+            "/auth/login.html";
 
     }
 }
