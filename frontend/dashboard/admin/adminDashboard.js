@@ -1,5 +1,5 @@
 const ADMIN_API_BASE =
-    "http://192.168.1.13:8000";
+    API_BASE_URL;
 
 
 /* =====================================================
@@ -350,6 +350,8 @@ async function loadAdminData() {
 
         renderAdminsTable();
 
+        loadDatasetCounts();
+
     }
 
     catch (error) {
@@ -363,6 +365,67 @@ async function loadAdminData() {
         showDataError(
             error.message
         );
+
+    }
+
+}
+
+
+/* =====================================================
+   DATASET COUNTS
+===================================================== */
+
+async function loadDatasetCounts() {
+
+    const endpoints = [
+        { key: "countTechnologies", url: `${ADMIN_API_BASE}/api/technology-data/count` },
+        { key: "countPatents", url: `${ADMIN_API_BASE}/api/patents-data/count` },
+        { key: "countDatasets", url: `${ADMIN_API_BASE}/api/datasets-data/count` },
+        { key: "countGrants", url: `${ADMIN_API_BASE}/api/grants-data/count` }
+    ];
+
+    for (const item of endpoints) {
+
+        try {
+
+            const response = await fetch(
+                item.url,
+                {
+                    method: "GET",
+                    credentials: "include"
+                }
+            );
+
+            if (!response.ok) {
+                continue;
+            }
+
+            const data = await response.json();
+
+            const el = document.getElementById(item.key);
+
+            if (!el) {
+                continue;
+            }
+
+            const total =
+                data.total_records ??
+                data.total ??
+                data.count ??
+                0;
+
+            el.textContent =
+                Number(total).toLocaleString();
+
+        }
+        catch (error) {
+
+            console.error(
+                `Failed to load dataset count (${item.key}):`,
+                error
+            );
+
+        }
 
     }
 

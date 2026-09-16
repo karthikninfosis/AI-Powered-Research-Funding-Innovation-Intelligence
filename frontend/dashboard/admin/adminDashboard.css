@@ -143,6 +143,12 @@ body {
     padding: 30px 35px 50px;
 }
 
+#sidebar {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+}
+
 
 /* =====================================================
    HEADER

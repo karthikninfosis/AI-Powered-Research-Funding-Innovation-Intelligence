@@ -6,6 +6,7 @@
 <title>Admin Dashboard | Innovation Intelligence</title>
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="/components/sidebar.css">
+<script src="/config.js"></script>
 <style>
   .auth-loading, .auth-denied {
     min-height: 100vh;
@@ -29,6 +30,11 @@
   .auth-box h2 { margin-top: 0; }
   .auth-error { color: #ff7676; margin-top: 12px; }
   .hidden { display: none !important; }
+  #sidebar { position: fixed !important; left: 0; top: 0; }
+  #dashboard .dashboard-shell { margin-left: 260px; }
+  @media (max-width: 800px) {
+    #dashboard .dashboard-shell { margin-left: 220px; }
+  }
 </style>
 </head>
 
@@ -88,7 +94,7 @@
 </div>
 
 <script>
-const API_BASE = "http://192.168.1.13:8000";
+const API_BASE = API_BASE_URL;
 
 const pages = {
   overview: {
@@ -107,6 +113,22 @@ const pages = {
         <article class="stat-card">
           <div class="stat-value orange">24</div>
           <div class="stat-label">Pending reviews</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value green" id="adminCountTechnologies">—</div>
+          <div class="stat-label">Technologies</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value cyan" id="adminCountPatents">—</div>
+          <div class="stat-label">Patents</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value purple" id="adminCountDatasets">—</div>
+          <div class="stat-label">Research Datasets</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-value orange" id="adminCountGrants">—</div>
+          <div class="stat-label">Grants</div>
         </article>
       </div>
 
@@ -262,7 +284,31 @@ function renderPage(pageName) {
 
 document.getElementById("pageSelect").addEventListener("change", function () {
   renderPage(this.value);
+  loadDatasetCounts();
 });
+
+async function loadDatasetCounts() {
+  const endpoints = [
+    { key: "adminCountTechnologies", url: `${API_BASE}/api/technology-data/count` },
+    { key: "adminCountPatents", url: `${API_BASE}/api/patents-data/count` },
+    { key: "adminCountDatasets", url: `${API_BASE}/api/datasets-data/count` },
+    { key: "adminCountGrants", url: `${API_BASE}/api/grants-data/count` }
+  ];
+
+  for (const item of endpoints) {
+    try {
+      const response = await fetch(item.url, { method: "GET", credentials: "include" });
+      if (!response.ok) continue;
+      const data = await response.json();
+      const el = document.getElementById(item.key);
+      if (!el) continue;
+      const total = data.total_records ?? data.total ?? data.count ?? 0;
+      el.textContent = Number(total).toLocaleString();
+    } catch (error) {
+      console.error(`Failed to load dataset count (${item.key}):`, error);
+    }
+  }
+}
 
 async function verifyAdminAccess() {
     try {
@@ -345,6 +391,7 @@ async function verifyAdminAccess() {
 
         showDashboard(user);
         renderPage("overview");
+        loadDatasetCounts();
 
     } catch (error) {
         console.error("AUTH ERROR:", error);

@@ -19,6 +19,12 @@ body {
   min-height: 100vh;
 }
 
+#sidebar {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+}
+
 .page-header {
   display: flex;
   justify-content: space-between;

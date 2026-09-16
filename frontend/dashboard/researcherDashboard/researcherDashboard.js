@@ -1,4 +1,4 @@
-const RESEARCHER_API_BASE = "http://192.168.1.13:8000";
+const RESEARCHER_API_BASE = API_BASE_URL;
 
 let currentUser = null;
 let activityChart;
@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupCharts();
     setupFunding();
     setupInnovationScore();
+    setupDocuments();
 
     await loadPublications();
     await loadPatents();
+    await loadDocuments();
 });
 /* =========================================================
    PUBLICATIONS
@@ -1418,7 +1420,7 @@ function refreshScorePreview() {
    RESEARCH INTELLIGENCE SEARCH
 ===================================================== */
 
-const INTELLIGENCE_API_BASE = "http://192.168.1.13:8000";
+const INTELLIGENCE_API_BASE = API_BASE_URL;
 
 let selectedSearchType = "papers";
 let currentSearchPage = 1;
@@ -3102,4 +3104,504 @@ function escapeHTML(
       "&#039;"
     );
 
+}
+
+
+/* =========================================================
+   DOCUMENTS (RESEARCH PAPERS / PATENTS / OTHER)
+========================================================= */
+
+function setupDocuments() {
+
+    const uploadButton =
+        document.getElementById("uploadDocButton");
+
+    const fileInput =
+        document.getElementById("documentFile");
+
+    const filterSelect =
+        document.getElementById("documentFilter");
+
+    if (fileInput) {
+
+        fileInput.addEventListener(
+            "change",
+            () => {
+
+                const selectedFile =
+                    document.getElementById("selectedDocFile");
+
+                const file = fileInput.files[0];
+
+                if (!selectedFile) {
+                    return;
+                }
+
+                selectedFile.textContent = file
+                    ? `Selected: ${file.name}`
+                    : "";
+            }
+        );
+
+    }
+
+    if (uploadButton) {
+
+        uploadButton.addEventListener(
+            "click",
+            () => {
+                uploadDocument();
+            }
+        );
+
+    }
+
+    if (filterSelect) {
+
+        filterSelect.addEventListener(
+            "change",
+            () => {
+                loadDocuments(filterSelect.value);
+            }
+        );
+
+    }
+
+}
+
+
+async function uploadDocument() {
+
+    const message =
+        document.getElementById("documentMessage");
+
+    const fileInput =
+        document.getElementById("documentFile");
+
+    const typeSelect =
+        document.getElementById("documentType");
+
+    if (message) {
+        message.textContent = "";
+    }
+
+    if (!currentUser || !currentUser.user_id) {
+
+        if (message) {
+            message.textContent =
+                "User session is not available.";
+            message.style.color = "#c65353";
+        }
+
+        return;
+    }
+
+    const file = fileInput && fileInput.files[0];
+
+    if (!file) {
+
+        if (message) {
+            message.textContent =
+                "Please choose a PDF file to upload.";
+            message.style.color = "#c65353";
+        }
+
+        return;
+    }
+
+    if (file.type !== "application/pdf") {
+
+        if (message) {
+            message.textContent =
+                "Only PDF files are supported.";
+            message.style.color = "#c65353";
+        }
+
+        return;
+    }
+
+    const uploadButton =
+        document.getElementById("uploadDocButton");
+
+    if (message) {
+        message.textContent = "Uploading document...";
+        message.style.color = "#25835a";
+    }
+
+    if (uploadButton) {
+        uploadButton.disabled = true;
+    }
+
+    try {
+
+        const formData = new FormData();
+
+        formData.append("file", file);
+        formData.append("user_id", currentUser.user_id);
+        formData.append(
+            "document_type",
+            typeSelect ? typeSelect.value : "research_paper"
+        );
+
+        const response = await fetch(
+            `${RESEARCHER_API_BASE}/api/documents`,
+            {
+                method: "POST",
+                credentials: "include",
+                body: formData
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            const detail =
+                typeof data.detail === "string"
+                    ? data.detail
+                    : "Document upload failed.";
+
+            throw new Error(detail);
+        }
+
+        console.log(
+            "Uploaded document:",
+            data
+        );
+
+        if (message) {
+            message.textContent =
+                "Document uploaded successfully.";
+            message.style.color = "#25835a";
+        }
+
+        if (fileInput) {
+            fileInput.value = "";
+        }
+
+        const selectedFile =
+            document.getElementById("selectedDocFile");
+
+        if (selectedFile) {
+            selectedFile.textContent = "";
+        }
+
+        await loadDocuments("");
+
+    } catch (error) {
+
+        console.error(
+            "Document upload error:",
+            error
+        );
+
+        if (message) {
+            message.textContent = error.message;
+            message.style.color = "#c65353";
+        }
+
+    } finally {
+
+        if (uploadButton) {
+            uploadButton.disabled = false;
+        }
+
+    }
+
+}
+
+
+async function loadDocuments(documentType) {
+
+    const container =
+        document.getElementById("documentList");
+
+    if (!container) {
+        return;
+    }
+
+    if (!currentUser || !currentUser.user_id) {
+        return;
+    }
+
+    try {
+
+        let url =
+            `${RESEARCHER_API_BASE}/api/documents?user_id=` +
+            encodeURIComponent(currentUser.user_id);
+
+        if (documentType) {
+            url +=
+                "&document_type=" +
+                encodeURIComponent(documentType);
+        }
+
+        const response = await fetch(
+            url,
+            {
+                method: "GET",
+                credentials: "include"
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                "Unable to fetch documents"
+            );
+        }
+
+        const documents =
+            await response.json();
+
+        console.log(
+            "User documents:",
+            documents
+        );
+
+        renderDocuments(
+            Array.isArray(documents)
+                ? documents
+                : []
+        );
+
+        const overviewElement =
+            document.getElementById("overviewDocuments");
+
+        if (overviewElement) {
+
+            const filterValue =
+                document.getElementById("documentFilter");
+
+            if (!filterValue || !filterValue.value) {
+                overviewElement.textContent =
+                    String(Array.isArray(documents) ? documents.length : 0);
+            }
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Document loading error:",
+            error
+        );
+
+        container.innerHTML = `
+            <div class="empty-state">
+                Unable to load documents.
+            </div>
+        `;
+    }
+
+}
+
+
+function renderDocuments(
+    documents
+) {
+
+    const container =
+        document.getElementById(
+            "documentList"
+        );
+
+    if (!container) {
+        return;
+    }
+
+    if (!documents.length) {
+
+        container.innerHTML = `
+            <div class="empty-state">
+                No documents found. Upload a research paper or patent to get started.
+            </div>
+        `;
+
+        return;
+    }
+
+    const documentTypeLabels = {
+        research_paper: "Research Paper",
+        patent: "Patent",
+        other: "Other"
+    };
+
+    container.innerHTML =
+        documents
+            .map(
+                (document, index) => {
+
+                    const title =
+                        document.title ||
+                        document.file_information?.original_filename ||
+                        `Document ${index + 1}`;
+
+                    const authors =
+                        Array.isArray(document.authors)
+                            ? document.authors.join(", ")
+                            : "";
+
+                    const keywords =
+                        Array.isArray(document.keywords)
+                            ? document.keywords.join(", ")
+                            : "";
+
+                    const type =
+                        document.document_type ||
+                        "other";
+
+                    const typeLabel =
+                        documentTypeLabels[type] ||
+                        "Other";
+
+                    const created =
+                        document.created_at
+                            ? formatDateTime(document.created_at)
+                            : "";
+
+                    const fileUrl =
+                        document.file_information?.file_url ||
+                        "";
+
+                    return `
+                        <div class="publication-card">
+
+                            <div class="publication-number">
+                                ${index + 1}
+                            </div>
+
+                            <div class="publication-content">
+
+                                <h4>
+                                    ${escapeHTML(title)}
+                                </h4>
+
+                                <div class="publication-meta">
+                                    ${
+                                        authors
+                                            ? `Authors: ${escapeHTML(authors)}`
+                                            : "No authors detected"
+                                    }
+                                </div>
+
+                                ${
+                                    document.abstract
+                                        ? `<p>${escapeHTML(document.abstract)}</p>`
+                                        : ""
+                                }
+
+                                ${
+                                    document.research_domain
+                                        ? `
+                                            <span class="publication-year">
+                                                ${escapeHTML(document.research_domain)}
+                                            </span>
+                                          `
+                                        : ""
+                                }
+
+                                <span class="publication-year">
+                                    ${escapeHTML(typeLabel)}
+                                </span>
+
+                                ${
+                                    document.year
+                                        ? `
+                                            <span class="publication-year">
+                                                ${escapeHTML(document.year)}
+                                            </span>
+                                          `
+                                        : ""
+                                }
+
+                                <div style="margin-top:8px;">
+
+                                    ${
+                                        keywords
+                                            ? `<small>${escapeHTML(keywords)}</small>`
+                                            : ""
+                                    }
+
+                                    ${
+                                        created
+                                            ? `<small style="display:block;margin-top:4px;">Added: ${escapeHTML(created)}</small>`
+                                            : ""
+                                    }
+
+                                    ${
+                                        fileUrl
+                                            ? `<a href="${fileUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:#202d42;text-decoration:none;">Open PDF Γåù</a>`
+                                            : ""
+                                    }
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    `;
+                }
+            )
+            .join("");
+
+}
+
+
+/* =====================================================
+   FORMAT DATE
+===================================================== */
+
+function formatDate(
+    value
+) {
+
+    if (!value) {
+        return "";
+    }
+
+    const date = new Date(value);
+
+    if (isNaN(date.getTime())) {
+        return String(value);
+    }
+
+    return date.toLocaleDateString(
+        "en-US",
+        {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+        }
+    );
+}
+
+
+/* =====================================================
+   FORMAT DATE TIME
+===================================================== */
+
+function formatDateTime(
+    value
+) {
+
+    if (!value) {
+        return "";
+    }
+
+    const date = new Date(value);
+
+    if (isNaN(date.getTime())) {
+        return String(value);
+    }
+
+    return date.toLocaleString(
+        "en-US",
+        {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        }
+    );
 }

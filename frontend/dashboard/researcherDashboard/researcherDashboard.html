@@ -6,6 +6,7 @@
   <title>Researcher Dashboard | InnovFund</title>
   <link rel="stylesheet" href="/components/sidebar.css">
   <link rel="stylesheet" href="./researcherDashboard.css">
+  <script src="/config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 
@@ -319,6 +320,11 @@
           <span class="stat-label">Patents</span>
           <strong id="overviewPatents">8</strong>
           <span class="stat-note">Sample analytics</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Documents</span>
+          <strong id="overviewDocuments">0</strong>
+          <span class="stat-note">Uploaded documents</span>
         </div>
       </div>
 
@@ -960,6 +966,63 @@
           </div>
           <div class="score-breakdown" id="scoreBreakdown">
             <p>Enter all five scores to calculate the overall result.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY RESEARCH DOCUMENTS -->
+    <section id="documents" class="dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>My Research Documents</h2>
+          <p>Upload and manage your research papers, patents and other documents.</p>
+        </div>
+      </div>
+
+      <div class="innovation-layout">
+        <div class="panel">
+          <form id="documentUploadForm">
+            <div class="upload-box">
+              <input id="documentFile" type="file" accept=".pdf">
+              <div>
+                <strong>Upload Research Paper</strong>
+                <p>PDF files only</p>
+              </div>
+            </div>
+
+            <div id="selectedDocFile" class="selected-file"></div>
+
+            <div class="research-id-row">
+              <div class="field-wide">
+                <label for="documentType">Document Type</label>
+                <select id="documentType" style="width:100%;padding:11px 12px;border:1px solid #dce2ea;border-radius:9px;font:inherit;background:#fff;">
+                  <option value="research_paper">Research Paper</option>
+                  <option value="patent">Patent</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <button type="button" class="primary-btn" id="uploadDocButton">
+                Upload Document
+              </button>
+            </div>
+
+            <div id="documentMessage" class="message"></div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <h3>Document List</h3>
+            <select id="documentFilter" style="padding:8px 10px;border:1px solid #dce2ea;border-radius:7px;font:inherit;font-size:12px;background:#fff;">
+              <option value="">All Documents</option>
+              <option value="research_paper">Research Papers</option>
+              <option value="patent">Patents</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div id="documentList" class="publication-list">
+            <div class="empty-state">Loading documents...</div>
           </div>
         </div>
       </div>

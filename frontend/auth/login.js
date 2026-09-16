@@ -128,7 +128,7 @@ document.getElementById("loginForm").onsubmit = async (e) => {
 
         const response =
             await fetch(
-                "http://192.168.1.13:8000/api/auth/login",
+                `${API_BASE_URL}/api/auth/login`,
                 {
 
                     method: "POST",
@@ -224,7 +224,7 @@ document.getElementById("loginForm").onsubmit = async (e) => {
 
         const rolesResponse =
             await fetch(
-                "http://192.168.1.13:8000/api/roles/get",
+                `${API_BASE_URL}/api/roles/get`,
                 {
 
                     method: "GET",
@@ -337,7 +337,7 @@ document.getElementById("loginForm").onsubmit = async (e) => {
                      */
 
                     window.location.href =
-                        "http://192.168.1.13:5500/dashboard/admin/overview.html";
+                        `${FRONTEND_BASE_URL}/dashboard/admin/overview.html`;
 
                 }
 
@@ -348,7 +348,7 @@ document.getElementById("loginForm").onsubmit = async (e) => {
                      */
 
                     window.location.href =
-                        "http://192.168.1.13:5500/dashboard/researcherDashboard/researcherDashboard.html";
+                        `${FRONTEND_BASE_URL}/dashboard/researcherDashboard/researcherDashboard.html`;
 
                 }
 
@@ -448,7 +448,7 @@ document.getElementById("registerForm").onsubmit = async (e) => {
         registerMessage.style.color = "#25835a";
 
         const response = await fetch(
-            "http://192.168.1.13:8000/api/users/",
+            `${API_BASE_URL}/api/users/`,
             {
                 method: "POST",
 
@@ -459,6 +459,8 @@ document.getElementById("registerForm").onsubmit = async (e) => {
                 body: JSON.stringify({
                     name: name,
                     email: email,
+                    role_id: "6a7320aa595b3d20c5bfaf96",
+                    is_active: true,
                     password: password
                 })
             }

@@ -840,7 +840,7 @@
 ========================================================= */
 
 #sidebar {
-    position: relative;
+    position: fixed;
     z-index: 1000;
 }
 
