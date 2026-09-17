@@ -42,7 +42,7 @@ async function verifyAdminAccess() {
          */
 
         const meResponse =
-            await fetch(
+            await authFetch(
                 `${ADMIN_API_BASE}/api/auth/me`,
                 {
                     method: "GET",
@@ -70,7 +70,7 @@ async function verifyAdminAccess() {
          */
 
         const userResponse =
-            await fetch(
+            await authFetch(
                 `${ADMIN_API_BASE}/api/users/email/${encodeURIComponent(meUser.email)}`,
                 {
                     method: "GET",
@@ -99,7 +99,7 @@ async function verifyAdminAccess() {
          */
 
         const rolesResponse =
-            await fetch(
+            await authFetch(
                 `${ADMIN_API_BASE}/api/roles/get`,
                 {
                     method: "GET",
@@ -388,7 +388,7 @@ async function loadDatasetCounts() {
 
         try {
 
-            const response = await fetch(
+            const response = await authFetch(
                 item.url,
                 {
                     method: "GET",
@@ -2029,7 +2029,7 @@ document
                  */
 
                 const response =
-                    await fetch(
+                    await authFetch(
                         `${ADMIN_API_BASE}/api/users/${encodeURIComponent(objectId)}`,
                         {
 

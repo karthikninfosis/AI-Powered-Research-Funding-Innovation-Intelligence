@@ -36,7 +36,7 @@ async function loadPublications() {
             return;
         }
 
-        const response = await fetch(
+        const response = await authFetch(
             `${RESEARCHER_API_BASE}/api/publications`,
             {
                 method: "GET",
@@ -259,7 +259,7 @@ async function loadPatents() {
 
 
         const response =
-            await fetch(
+            await authFetch(
                 `${RESEARCHER_API_BASE}/api/patents`,
                 {
                     method: "GET",
@@ -498,7 +498,7 @@ function renderPatents(
 
 async function verifyResearcher() {
   try {
-    const meResponse = await fetch(
+    const meResponse = await authFetch(
       `${RESEARCHER_API_BASE}/api/auth/me`,
       {
         credentials: "include"
@@ -512,7 +512,7 @@ async function verifyResearcher() {
 
     const me = await meResponse.json();
 
-    const userResponse = await fetch(
+    const userResponse = await authFetch(
       `${RESEARCHER_API_BASE}/api/users/email/${encodeURIComponent(me.email)}`,
       {
         credentials: "include"
@@ -526,7 +526,7 @@ async function verifyResearcher() {
     currentUser = await userResponse.json();
 
     /* Get roles */
-    const rolesResponse = await fetch(
+    const rolesResponse = await authFetch(
       `${RESEARCHER_API_BASE}/api/roles/get`,
       {
         credentials: "include"
@@ -848,7 +848,7 @@ function setupFunding() {
       try {
 
         const response =
-          await fetch(
+          await authFetch(
             `${RESEARCHER_API_BASE}/funding/recommend`,
             {
 
@@ -1111,7 +1111,7 @@ function setupInnovationScore() {
           file
         );
 
-        const response = await fetch(
+        const response = await authFetch(
           "YOUR_DOCUMENT_ANALYSIS_API",
           {
             method: "POST",
@@ -1213,7 +1213,7 @@ function setupInnovationScore() {
       try {
 
         const response =
-          await fetch(
+          await authFetch(
             `${RESEARCHER_API_BASE}/api/innovation-scores`,
             {
 
@@ -1691,7 +1691,7 @@ async function searchIntelligence(page = 1) {
         --------------------------------------------- */
 
         const response =
-            await fetch(
+            await authFetch(
                 url,
                 {
                     method: "GET",
@@ -3243,7 +3243,7 @@ async function uploadDocument() {
             typeSelect ? typeSelect.value : "research_paper"
         );
 
-        const response = await fetch(
+        const response = await authFetch(
             `${RESEARCHER_API_BASE}/api/documents`,
             {
                 method: "POST",
@@ -3336,7 +3336,7 @@ async function loadDocuments(documentType) {
                 encodeURIComponent(documentType);
         }
 
-        const response = await fetch(
+        const response = await authFetch(
             url,
             {
                 method: "GET",

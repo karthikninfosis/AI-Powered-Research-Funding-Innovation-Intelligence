@@ -182,6 +182,15 @@ document.getElementById("loginForm").onsubmit = async (e) => {
 
 
         /* =========================================
+           STORE TOKEN (cross-domain auth)
+        ========================================= */
+
+        if (data.token) {
+            localStorage.setItem("access_token", data.token);
+        }
+
+
+        /* =========================================
            GET LOGGED-IN USER
         ========================================= */
 
@@ -229,6 +238,7 @@ document.getElementById("loginForm").onsubmit = async (e) => {
 
                     method: "GET",
 
+                    headers: authHeaders(),
                     credentials: "include"
 
                 }

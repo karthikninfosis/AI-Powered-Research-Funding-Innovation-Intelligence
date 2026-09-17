@@ -77,7 +77,7 @@ async function getCurrentUser() {
        1. AUTH USER
     ----------------------------------------- */
 
-    const meResponse = await fetch(
+    const meResponse = await authFetch(
         `${SIDEBAR_API_BASE}/api/auth/me`,
         {
             method: "GET",
@@ -102,7 +102,7 @@ async function getCurrentUser() {
        2. FULL USER INFORMATION
     ----------------------------------------- */
 
-    const userResponse = await fetch(
+    const userResponse = await authFetch(
         `${SIDEBAR_API_BASE}/api/users/email/${encodeURIComponent(meUser.email)}`,
         {
             method: "GET",
@@ -138,7 +138,7 @@ async function getCurrentUser() {
     if (user.user_id) {
 
         const profileResponse =
-            await fetch(
+            await authFetch(
                 `${SIDEBAR_API_BASE}/api/research-profiles/${encodeURIComponent(user.user_id)}`,
                 {
                     method: "GET",
@@ -193,7 +193,7 @@ async function getCurrentUser() {
     ----------------------------------------- */
 
     const rolesResponse =
-        await fetch(
+        await authFetch(
             `${SIDEBAR_API_BASE}/api/roles/get`,
             {
                 method: "GET",
@@ -1304,7 +1304,7 @@ async function saveProfile(event) {
 
 
         const userUpdateResponse =
-            await fetch(
+            await authFetch(
                 `${SIDEBAR_API_BASE}/api/users/${encodeURIComponent(sidebarUser._id)}`,
                 {
 
@@ -1436,7 +1436,7 @@ async function saveProfile(event) {
         if (!sidebarUser.researchProfile) {
 
             const createResponse =
-                await fetch(
+                await authFetch(
                     `${SIDEBAR_API_BASE}/api/research-profiles`,
                     {
 
@@ -1627,7 +1627,7 @@ async function logoutUser() {
 
     try {
 
-        await fetch(
+        await authFetch(
             `${SIDEBAR_API_BASE}/api/auth/logout`,
             {
 
@@ -1646,6 +1646,8 @@ async function logoutUser() {
         );
 
     } finally {
+
+        localStorage.removeItem("access_token");
 
         window.location.href =
             "/auth/login.html";

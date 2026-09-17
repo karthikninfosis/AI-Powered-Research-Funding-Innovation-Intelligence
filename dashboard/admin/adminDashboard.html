@@ -314,7 +314,7 @@ async function verifyAdminAccess() {
     try {
         console.log("1. Checking /api/auth/me...");
 
-        const meResponse = await fetch(
+        const meResponse = await authFetch(
             `${API_BASE}/api/auth/me`,
             {
                 method: "GET",
@@ -340,7 +340,7 @@ async function verifyAdminAccess() {
 
         console.log("4. Checking /api/roles/get...");
 
-        const rolesResponse = await fetch(
+        const rolesResponse = await authFetch(
             `${API_BASE}/api/roles/get`,
             {
                 method: "GET",
@@ -404,6 +404,7 @@ async function verifyAdminAccess() {
 
 verifyAdminAccess();
 </script>
+<script src="/js/auth.js"></script>
 <script src="/components/sidebar.js"></script>
 </body>
 </html>
