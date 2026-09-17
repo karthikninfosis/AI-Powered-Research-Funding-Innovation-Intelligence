@@ -1,3 +1,1058 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d1c4ad63c47da25b9c7c58c8bcd19c2ff7195e05e7791e005e732e01f7458cfc
-size 196124
+patent_number,country,title,assignee,grant_year,times_cited,status,url
+4683195,US,How to Make Billions of Copies of a DNA Segment,Cetus Corp,1987,6231,public domain,https://patentbrief.org/patent/us/4683195/pcr-polymerase-chain-reaction
+8697359,US,How to Edit Genes in Human Cells Using an Engineered CRISPR System,Massachusetts Institute of Technology,2014,1268,active,https://patentbrief.org/patent/us/8697359/crispr-gene-editing
+7657849,US,How the iPhone's Slide-to-Unlock Gesture Works,Apple Inc,2010,1269,public domain,https://patentbrief.org/patent/us/7657849/slide-to-unlock
+4733665,US,How Doctors Implant a Permanent Stent Using a Balloon,Expandable Grafts Partnership,1988,2425,public domain,https://patentbrief.org/patent/us/4733665/palmaz-balloon-expandable-stent
+4965188,US,How to Make Many Copies of a DNA Piece with Heat,Cetus Corp,1990,2132,public domain,https://patentbrief.org/patent/us/4965188/taq-polymerase-for-pcr
+4235871,US,How to Encapsulate Active Materials in Lipid Bubbles Efficiently,Individual,1980,1862,public domain,https://patentbrief.org/patent/us/4235871/hepatitis-b-vaccine-recombivax
+4405829,US,How RSA Public-Key Encryption Keeps Digital Messages Secret,Massachusetts Institute of Technology,1983,1015,public domain,https://patentbrief.org/patent/us/4405829/rsa-encryption
+4575330,US,How 3D Printers Build Objects Layer by Layer from Liquid,UVP Inc,1986,1094,public domain,https://patentbrief.org/patent/us/4575330/stereolithography-3d-printing
+4683202,US,How to Make Many Copies of a Specific DNA Segment,Cetus Corp,1987,7558,public domain,https://patentbrief.org/patent/us/4683202/pcr-polymerase-chain-reaction-mullis
+4376110,US,How Two Special Antibodies Find Substances in Body Fluids,Hybritech Inc,1983,1572,public domain,https://patentbrief.org/patent/us/4376110/psa-test-for-prostate-cancer
+3953566,US,"Making Strong, Porous PTFE: The Gore-Tex Process",WL Gore and Associates Inc,1976,1364,public domain,https://patentbrief.org/patent/us/3953566/gore-tex-expanded-ptfe
+5121329,US,How Machines Build 3D Objects Layer by Layer from Melting Plastic,Stratasys Inc,1992,793,public domain,https://patentbrief.org/patent/us/5121329/fdm-3d-printing-stratasys
+7479949,US,How Touchscreens Understand Your Finger Swipes and Scrolls,Apple Inc,2009,1120,active,https://patentbrief.org/patent/us/7479949/iphone-multi-touch
+5347632,US,Prodigy's System for Interactive Online Information and Shopping,Prodigy Services Co,1994,808,public domain,https://patentbrief.org/patent/us/5347632/java-programming-language
+5521184,US,New Pyrimidine Chemical Compounds for Treating Tumors,Ciba Geigy Corp,1996,564,public domain,https://patentbrief.org/patent/us/5521184/gleevec-imatinib
+4528643,US,How Stores Make Custom Products On-Demand with Remote Approval,FPDC Inc,1985,498,public domain,https://patentbrief.org/patent/us/4528643/digital-distribution-point-of-sale
+10452978,US,How AI Models Understand Language Using 'Attention',Google LLC,2019,45,active,https://patentbrief.org/patent/us/10452978/transformer-attention-mechanism
+3906166,US,How Early Cell Phones Handled Calls Across Different Towers,Motorola Inc,1975,206,public domain,https://patentbrief.org/patent/us/3906166/cellular-mobile-phone-radio-telephone
+4703008,US,How to Make Human Erythropoietin (EPO) Using Engineered DNA,Kirin Amgen Inc,1987,346,public domain,https://patentbrief.org/patent/us/4703008/neupogen-g-csf-filgrastim
+4727064,US,How Special Sugars Make Medicines Dissolve Better,US Department of Health and Human Services,1988,341,public domain,https://patentbrief.org/patent/us/4727064/azt-zidovudine
+6285999,US,How Websites Get Ranked by Importance,Leland Stanford Junior University,2001,818,public domain,https://patentbrief.org/patent/us/6285999/google-pagerank
+7469381,US,How Touchscreens Show and Snap Back When You Scroll Past an Edge,Apple Inc,2008,402,active,https://patentbrief.org/patent/us/7469381/iphone-rubberbanding
+4665913,US,How Lasers Correct Vision by Reshaping the Eye's Front Surface,LRI LP,1987,381,public domain,https://patentbrief.org/patent/us/4665913/laser-eye-surgery-lesperance
+5210015,US,How an Enzyme Helps Find Specific DNA in a Sample,Hoffmann La Roche Inc,1993,1183,public domain,https://patentbrief.org/patent/us/5210015/hcv-pcr-detection
+5960411,US,How Amazon's One-Click Ordering Works for Online Purchases,Amazon com Inc,1999,1636,public domain,https://patentbrief.org/patent/us/5960411/amazon-one-click
+5471515,US,How a Modern Camera Sensor Captures Light and Converts It to Data,California Institute of Technology,1995,620,public domain,https://patentbrief.org/patent/us/5471515/cmos-active-pixel-image-sensor
+4816567,US,Making Hybrid Antibodies from Different Animals,Genentech Inc,1989,8214,public domain,https://patentbrief.org/patent/us/4816567/recombinant-antibody-production-in-cho-cells
+4063220,US,How Multiple Computers Share a Network Cable Without Crashing,Xerox Corp,1977,301,public domain,https://patentbrief.org/patent/us/4063220/ethernet-packet-network
+4522811,US,Boosting Anti-Infective Activity with Muramyldipeptides and Liposomes,Syntex USA LLC,1985,2340,public domain,https://patentbrief.org/patent/us/4522811/human-growth-hormone-protropin
+3778614,US,How Early CT Scans Created Detailed Body Images,EMI Ltd,1973,163,public domain,https://patentbrief.org/patent/us/3778614/ct-scanner-hounsfield
+7669123,US,Displaying Friends' Activities in a Social Network Feed,Facebook Inc,2010,231,public domain,https://patentbrief.org/patent/us/7669123/facebook-news-feed-social-network
+7653883,US,How Phones Sense Your Finger Hovering Without Touching the Screen,Apple Inc,2010,860,public domain,https://patentbrief.org/patent/us/7653883/multi-touch-trackpad-gestures
+4200770,US,How to Create a Secret Code Key Without Meeting First,Leland Stanford Junior University,1980,708,public domain,https://patentbrief.org/patent/us/4200770/diffie-hellman-public-key-exchange
+9548050,US,How a Digital Assistant Launches Apps Using Your Voice,Apple Inc,2017,211,active,https://patentbrief.org/patent/us/9548050/continuity-handoff
+RE47218,US,How Medical Monitors Adapt Oxygen Alarms to Reduce False Alerts,Masimo Corp,2019,251,active,https://patentbrief.org/patent/us/RE47218/tysabri-dosing
+5825352,US,Logitech's Method for Using Two Fingers on a Touchpad,Logitech Inc,1998,1577,public domain,https://patentbrief.org/patent/us/5825352/apple-pinch-to-zoom
+4558302,US,How Computers Compress Data Using Dictionary Building,Sperry Corp,1985,347,public domain,https://patentbrief.org/patent/us/4558302/lzw-compression
+7527791,US,How Engineered Antibodies Target TGF-beta Proteins to Fight Cancer,Genentech Inc,2009,756,public domain,https://patentbrief.org/patent/us/7527791/ipilimumab-yervoy
+11204787,US,How Digital Assistants Control Apps and Ask for More Information,Apple Inc,2021,48,active,https://patentbrief.org/patent/us/11204787/github-copilot-code-generation-ai
+10878335,US,How Computers Find Similar Text Using Compact Data Structures,Amazon Technologies Inc,2020,18,active,https://patentbrief.org/patent/us/10878335/bert-bidirectional-encoder-representations
+3691140,US,"Sticky, Tiny Plastic Balls Made from Acrylates",Individual,1972,382,public domain,https://patentbrief.org/patent/us/3691140/post-it-repositionable-adhesive
+5487069,US,CSIRO's High-Frequency Wireless Network Technology,Commonwealth Scientific and Industrial Research Organization CSIRO,1996,120,public domain,https://patentbrief.org/patent/us/5487069/wifi-csiro-wireless-lan
+5325765,US,How Keurig's Original Single-Serve Coffee Pod System Works,Keurig Inc,1994,359,public domain,https://patentbrief.org/patent/us/5325765/keurig-single-serve-coffee-pod
+RE49155,US,Electric or Natural Gas Blending and Pumping for Oil Wells,Halliburton Energy Services Inc,2022,34,active,https://patentbrief.org/patent/us/RE49155/connected-exercise-bike
+7957762,US,How Your Phone Knows When It's Against Your Ear,Apple Inc,2011,368,active,https://patentbrief.org/patent/us/7957762/ios-app-store
+3803463,US,Weapon That Shoots Wires to Deliver Electric Shocks,Individual,1974,152,public domain,https://patentbrief.org/patent/us/3803463/taser-stun-gun-cover
+8675084,US,Controlling a Camera on Your Phone with a Separate Gadget,Apple Inc,2014,210,active,https://patentbrief.org/patent/us/8675084/facetime-video-calling
+5273995,US,How a Cholesterol-Lowering Drug Molecule Was Patented,Warner Lambert Co LLC,1993,519,public domain,https://patentbrief.org/patent/us/5273995/viagra-sildenafil
+6323846,US,How a Multi-Touch Screen Detects Multiple Fingers and Palms,University of Delaware,2001,2641,public domain,https://patentbrief.org/patent/us/6323846/aqua-user-interface
+4195637,US,Catheter System for Opening and Closing Body Passages,Schneider Medintag AG,1980,256,public domain,https://patentbrief.org/patent/us/4195637/balloon-angioplasty-catheter-gruentzig
+8887212,US,Device for Receiving and Processing TV Signals from Cables and Wireless Sources,Individual,2014,170,active,https://patentbrief.org/patent/us/8887212/netflix-content-delivery-network-open-connect
+4009052,US,Early Lithium-Ion Battery Design Using Chalcogenides,Exxon Research and Engineering Co,1977,93,public domain,https://patentbrief.org/patent/us/4009052/rechargeable-lithium-battery
+4237224,US,How Scientists First Made DNA Replicate in New Cells,Leland Stanford Junior University,1980,346,public domain,https://patentbrief.org/patent/us/4237224/cohen-boyer-recombinant-dna
+4683194,US,Detecting Genetic Differences Using DNA Probes and Enzymes,Cetus Corp,1987,289,public domain,https://patentbrief.org/patent/us/4683194/pcr-process
+10909459,US,Teaching Computers to Understand Document Similarity Using AI,Cognizant Technology Solutions US Corp,2021,53,active,https://patentbrief.org/patent/us/10909459/federated-learning
+4356429,US,How Organic Diodes Make Light Using Special Molecules,Eastman Kodak Co,1982,1031,public domain,https://patentbrief.org/patent/us/4356429/oled-organic-light-emitting-diode
+5961804,US,Tiny Capsules for Electronic Paper Displays,Massachusetts Institute of Technology,1999,508,public domain,https://patentbrief.org/patent/us/5961804/e-ink-electronic-paper-display
+5272135,US,Preventing Protein Damage with Extra Methionine,Chiron Ophthalmics Inc,1993,63,public domain,https://patentbrief.org/patent/us/5272135/lipitor-atorvastatin
+10133995,US,Square's System for Predicting Orders and Guiding Couriers,Square Inc,2018,63,active,https://patentbrief.org/patent/us/10133995/airbnb-host-guest-messaging
+4736866,US,Mice Engineered to Develop Cancer for Research,Harvard University,1988,644,public domain,https://patentbrief.org/patent/us/4736866/harvard-oncomouse
+8606792,US,How Google's Patent Scores Authors and Posts on Messaging Systems,Google LLC,2013,150,active,https://patentbrief.org/patent/us/8606792/facebook-timeline
+3789832,US,Using Nuclear Magnetic Resonance to Detect Cancer in Tissue,Individual,1974,83,public domain,https://patentbrief.org/patent/us/3789832/mri-magnetic-resonance-imaging
+10102356,US,Securing Data Storage Commands with Passcodes,EMC IP Holding Co LLC,2018,89,active,https://patentbrief.org/patent/us/10102356/macos-dark-mode
+4723129,US,How Canon's Bubble Jet Printers Make Ink Droplets,Canon Inc,1988,1806,public domain,https://patentbrief.org/patent/us/4723129/inkjet-bubble-jet-printing
+8372396,US,How Specific Antibody Drugs Are Stabilized for Storage and Use,Genetech Inc,2013,35,active,https://patentbrief.org/patent/us/8372396/tysabri-natalizumab
+9280591,US,How Databases Keep Read-Only Copies Up-to-Date,Amazon Technologies Inc,2016,108,active,https://patentbrief.org/patent/us/9280591/amazon-emr-elastic-mapreduce
+3672155,US,Hamilton's Early Digital Watch with LED Display,Hamilton Watch Co,1972,118,public domain,https://patentbrief.org/patent/us/3672155/digital-watch-pulsar
+6090382,US,Antibodies That Block Tumor Necrosis Factor Alpha (TNFα),BASF SE,2000,361,public domain,https://patentbrief.org/patent/us/6090382/humira-adalimumab
+9349016,US,Preventing Sensitive Data Leaks from Company Communications,Dell Software Inc,2016,174,active,https://patentbrief.org/patent/us/9349016/windows-hello-biometric-login
+7158878,US,How Digital Maps Are Built From Small Image Pieces,Google LLC,2007,399,public domain,https://patentbrief.org/patent/us/7158878/google-maps-directions
+9332078,US,How Amazon Delivers Content Faster Using Local Servers,Amazon Technologies Inc,2016,75,active,https://patentbrief.org/patent/us/9332078/facebook-memories
+8171128,US,How Facebook's News Feed Picks Stories You'll Like,Facebook Inc,2012,134,public domain,https://patentbrief.org/patent/us/8171128/facebook-social-graph
+8990235,US,Google's System for Auto-Searching Text on Your Device,Google LLC,2015,189,active,https://patentbrief.org/patent/us/8990235/bing-image-search
+3761682,US,Early Automatic Cash Dispenser Using Credit Cards,Docutel Corp,1973,36,public domain,https://patentbrief.org/patent/us/3761682/atm-cash-dispenser
+7782297,US,Detecting When Gamers Stop Playing to Save Power,Sony Computer Entertainment America LLC,2010,42,public domain,https://patentbrief.org/patent/us/7782297/wii-remote
+11436484,US,Nvidia's Method for Training Self-Driving Car AI in Simulations,Nvidia Corp,2022,17,active,https://patentbrief.org/patent/us/11436484/alphazero
+10147076,US,Central Bank Digital Currency for Phones and Watches,Individual,2018,35,active,https://patentbrief.org/patent/us/10147076/airbnb-experiences
+9202233,US,How IMDb Knew If You'd Go to a Movie or Concert,IMDb com Inc,2015,62,active,https://patentbrief.org/patent/us/9202233/amazon-payments
+5075216,US,Using Heat-Resistant Enzymes to Read DNA Sequences Faster,Cetus Corp,1991,146,public domain,https://patentbrief.org/patent/us/5075216/modified-taq-polymerase
+4681893,US,"The Chemical Formula for Atorvastatin, the Active Ingredient in Lipitor",Warner Lambert Co LLC,1987,340,public domain,https://patentbrief.org/patent/us/4681893/prozac-fluoxetine
+7434177,US,How the Apple Mac Dock Magnifies Icons,Apple Inc,2008,232,public domain,https://patentbrief.org/patent/us/7434177/itunes-digital-music-store
+6054297,US,How to Redesign Mouse Antibodies for Safe Use in Humans,Genentech Inc,2000,1161,public domain,https://patentbrief.org/patent/us/6054297/rituxan-chop-chemotherapy
+8285656,US,How a Smart System Verifies and Updates Customer Data,Consumerinfo com Inc,2012,102,active,https://patentbrief.org/patent/us/8285656/cortana-virtual-assistant
+6267958,US,Making High-Concentration Antibody Medicines Stable for Injection,Genentech Inc,2001,878,public domain,https://patentbrief.org/patent/us/6267958/rituxan-chop
+9544394,US,How CDNs Use Client-Side Code to Speed Up Web Downloads,Amazon Technologies Inc,2017,69,active,https://patentbrief.org/patent/us/9544394/aws-cloudtrail
+8423408,US,How Phones Store and Rotate Ads Locally by Breaking Rules,Sprint Communications Co LP,2013,119,public domain,https://patentbrief.org/patent/us/8423408/amazon-advertising
+5176995,US,Using PCR to Detect Viruses in Blood and Tissue Samples,Hoffmann La Roche Inc,1993,122,public domain,https://patentbrief.org/patent/us/5176995/hiv-pcr-detection
+6682736,US,How Human Antibodies Block the Immune System's Off-Switch,Abgenix Inc,2004,500,public domain,https://patentbrief.org/patent/us/6682736/enbrel-etanercept
+6590928,US,How Bluetooth Creates Wireless Networks with Unique Addresses,Telefonaktiebolaget LM Ericsson AB,2003,131,public domain,https://patentbrief.org/patent/us/6590928/bluetooth-frequency-hopping
+5585089,US,How Scientists Create Human-Friendly Antibodies for Medicine,Protein Design Labs Inc,1996,4274,public domain,https://patentbrief.org/patent/us/5585089/remicade-infliximab
+7930393,US,How Amazon Optimizes Website Loading Speeds by Managing Domain Requests,Amazon Technologies Inc,2011,123,active,https://patentbrief.org/patent/us/7930393/amazon-cloudfront-cdn
+9939279,US,How Uber Calculates Ride-Pooling Times to Keep Detours Reasonable,Uber Technologies Inc,2018,49,active,https://patentbrief.org/patent/us/9939279/uber-eta-prediction
+6233389,US,How TiVo Pauses and Rewinds Live Television,Tivo Inc,2001,798,public domain,https://patentbrief.org/patent/us/6233389/dvr-trick-play
+4131919,US,The First Digital Camera's Core Technology,Eastman Kodak Co,1978,106,public domain,https://patentbrief.org/patent/us/4131919/digital-camera-electronic-still
+5774670,US,How Websites Remember You Using Stored Data,Netscape Communications Corp,1998,508,public domain,https://patentbrief.org/patent/us/5774670/http-cookie-browser-state
+2297691,US,Chester Carlson's Original Xerography Patent,Individual,1942,737,public domain,https://patentbrief.org/patent/us/2297691/xerography-electrophotography-photocopier
+3819587,US,The Molecular Structure of Kevlar High-Strength Fiber,EI Du Pont de Nemours and Co,1974,141,public domain,https://patentbrief.org/patent/us/3819587/kevlar-aramid-fiber-kwolek
+RE46310,US,How Devices Predict Your Next Move Using Gestures and History,Blanding Hovenweep LLC,2017,34,active,https://patentbrief.org/patent/us/RE46310/google-drive
+4259444,US,How Scientists Created Bacteria That Eat Oil Spills,General Electric Co,1981,28,public domain,https://patentbrief.org/patent/us/4259444/chakrabarty-genetically-modified-bacteria
+9083770,US,How Apps Automatically Switch Between Video Call Connection Methods,Snapchat Inc,2015,156,active,https://patentbrief.org/patent/us/9083770/facebook-reactions
+6370526,US,Smart Ranking of Emails and Files Based on How You Click,International Business Machines Corp,2002,135,public domain,https://patentbrief.org/patent/us/6370526/google-adwords-pay-per-click
+8898564,US,How Devices Give Haptic Feedback While You Hover Your Finger,Immersion Corp,2014,11,active,https://patentbrief.org/patent/us/8898564/siri-intelligent-automated-assistant
+3659285,US,How the First Home Video Game Console Worked,Sanders Associates Inc,1972,44,public domain,https://patentbrief.org/patent/us/3659285/video-game-console-magnavox
+8125456,US,How Touchscreens Save Battery by Sleeping Between Touches,Apple Inc,2012,21,active,https://patentbrief.org/patent/us/8125456/multi-touch-capacitive-scanning
+8600430,US,How Smartphones Use Light Sensors to Detect When You Are Talking,Apple Inc,2013,59,active,https://patentbrief.org/patent/us/8600430/imessage
+5563422,US,How Nichia Created the First Practical Blue LED Electrodes,Nichia Chemical Industries Ltd,1996,251,public domain,https://patentbrief.org/patent/us/5563422/blue-led-gallium-nitride
+8214768,US,How the iPhone Switches and Adds Mobile Web Browser Tabs,Apple Inc,2012,88,active,https://patentbrief.org/patent/us/8214768/ios-notification-center
+6523026,US,How Computers Find Hidden Connections Between Different Fields of Knowledge,Huntsman International LLC,2003,456,public domain,https://patentbrief.org/patent/us/6523026/google-search-query-processing
+5726435,US,How the QR Code Works,Toyota Central R&D Labs Inc,1998,250,public domain,https://patentbrief.org/patent/us/5726435/qr-code-two-dimensional-barcode
+8429565,US,How Touchscreen Gestures Use Physics to Feel Real,Google LLC,2013,63,active,https://patentbrief.org/patent/us/8429565/windows-8-charms-bar
+5303388,US,How 3D Icons Rotate to Show More Information,Apple Computer Inc,1994,257,public domain,https://patentbrief.org/patent/us/5303388/macintosh-finder
+4166152,US,The Sticky Microscopic Beads Behind Post-it Notes,Minnesota Mining and Manufacturing Co,1979,278,public domain,https://patentbrief.org/patent/us/4166152/post-it-note-adhesive
+6884879,US,How Genentech Created Antibodies to Stop Tumor Growth,Genentech Inc,2005,308,public domain,https://patentbrief.org/patent/us/6884879/anti-vegf-antibodies
+10275117,US,How the Apple Watch Uses the Digital Crown to Flip Objects,Apple Inc,2019,18,active,https://patentbrief.org/patent/us/10275117/apple-watch-heart-rate-sensor
+10373050,US,How to Make AI Run Faster on Smaller Computer Chips,Qualcomm Inc,2019,17,active,https://patentbrief.org/patent/us/10373050/tensor-processing-unit-tpu
+4267420,US,How Microwave Crisping Sleeves Work,General Mills Inc,1981,234,public domain,https://patentbrief.org/patent/us/4267420/microwave-popcorn-susceptor
+3946398,US,How Piezoelectric Inkjet Printing Works,SILONICS Inc,1976,448,public domain,https://patentbrief.org/patent/us/3946398/drop-on-demand-inkjet
+11377237,US,How Rockets Catch Up to Satellites Faster Using Out-of-Plane Steering,United Launch Alliance LLC,2022,9,active,https://patentbrief.org/patent/us/11377237/starship-heat-shield-tiles
+11858662,US,How Delivery Drones Self-Calibrate and Pass Safety Checks Before Takeoff,United Parcel Service of America Inc,2024,9,active,https://patentbrief.org/patent/us/11858662/starlink-aviation
+8291344,US,How Mobile Devices Switch Between Open Apps Using Gestures,Apple Inc,2012,70,active,https://patentbrief.org/patent/us/8291344/ios-autocorrect-keyboard
+11905044,US,How Solar Sails Use Moving Vanes to Steer in Space,LGarde Inc,2024,7,active,https://patentbrief.org/patent/us/11905044/starlink-rv-roaming
+4231938,US,The Discovery of Lovastatin for Lowering Cholesterol,Merck and Co Inc,1980,490,public domain,https://patentbrief.org/patent/us/4231938/statin-cholesterol-lovastatin
+8410274,US,Making Ivacaftor Easier for the Body to Absorb,Vertex Pharmaceuticals Inc,2013,50,active,https://patentbrief.org/patent/us/8410274/kalydeco-ivacaftor
+8914392,US,How Facebook Ranks Search Results Based on Your Friends' Activity,Facebook Inc,2014,66,active,https://patentbrief.org/patent/us/8914392/facebook-events
+8423911,US,How Smartphones Organize Apps into Folders,Apple Inc,2013,48,active,https://patentbrief.org/patent/us/8423911/ios-control-center
+11706521,US,How Smartphones Automatically Adjust Camera Settings in Low Light,Apple Inc,2023,4,active,https://patentbrief.org/patent/us/11706521/dynamic-island
+5639476,US,How to Make Pill Coatings That Keep Medicine Stable Over Time,Euro Celtique SA,1997,1092,public domain,https://patentbrief.org/patent/us/5639476/nicoderm-nicotine-patch
+4669140,US,Interchangeable Blades for Folding Pocket Tools,Individual,1987,57,public domain,https://patentbrief.org/patent/us/4669140/leatherman-multitool
+7812826,US,How Multi-Touch Gestures Like Pinch-to-Zoom Work on Smartphones,Apple Inc,2010,163,public domain,https://patentbrief.org/patent/us/7812826/iphone-software-keyboard
+10002199,US,How Smartphones Suggest Apps Based on Where You Are,Apple Inc,2018,16,active,https://patentbrief.org/patent/us/10002199/uber-driver-incentives
+8074172,US,How Smartphones Suggest and Correct Words While You Type,Apple Inc,2011,58,active,https://patentbrief.org/patent/us/8074172/ios-springboard-home-screen
+4490728,US,How Thermal Inkjet Printers Use Two-Step Heating to Shoot Ink,Hewlett Packard Co,1984,329,public domain,https://patentbrief.org/patent/us/4490728/thermal-inkjet-printing
+10127595,US,How Apps Compare Local Prices and Ratings for Specific Items,Square Inc,2018,20,active,https://patentbrief.org/patent/us/10127595/airbnb-dynamic-pricing-smart-pricing
+9268820,US,How Google Displays Knowledge Panels Next to Search Results,Google LLC,2016,25,active,https://patentbrief.org/patent/us/9268820/onedrive-cloud-storage
+5305919,US,How the Super Soaker's Pinch-Trigger and Built-In Tank Work,Individual,1994,27,public domain,https://patentbrief.org/patent/us/5305919/super-soaker-water-gun
+8399514,US,Using Dimethyl Fumarate to Treat Multiple Sclerosis,Biogen Idec MA Inc,2013,52,active,https://patentbrief.org/patent/us/8399514/gilenya-fingolimod
+7387788,US,A Gel That Helps Nicotine Absorb Through Your Skin,Antares Pharma IPL AG,2008,25,public domain,https://patentbrief.org/patent/us/7387788/soliris-eculizumab
+11840398,US,"How Titan Trailers Builds Stronger, Smoother Cargo Containers",Titan Trailers Inc,2023,3,active,https://patentbrief.org/patent/us/11840398/starship-mars-configuration
+10050760,US,How Uber Manages Data Connections for Self-Driving Car Fleets,Uber Technologies Inc,2018,36,active,https://patentbrief.org/patent/us/10050760/uber-eats
+11809700,US,How Folders With Multiple Pages Work on Touchscreens,Apple Inc,2023,3,active,https://patentbrief.org/patent/us/11809700/vision-pro-eye-tracking
+RE45701,US,How Cochlear Implants Use Free-Spinning Magnets to Survive MRI Scans,MED EL Elektromedizinische Geraete GmbH,2015,24,active,https://patentbrief.org/patent/us/RE45701/bladeless-fan-air-multiplier
+8831529,US,How Smartphones Calibrate Their Radio Power Across Different Temperatures,Apple Inc,2014,47,active,https://patentbrief.org/patent/us/8831529/airplay-wireless-streaming
+8448084,US,How Pull-to-Refresh Works on Your Smartphone,Twitter Inc,2013,22,active,https://patentbrief.org/patent/us/8448084/pull-to-refresh-gesture
+10184000,US,How to Engineer Antibodies to Better Target and Destroy Disease,Xencor Inc,2019,12,active,https://patentbrief.org/patent/us/10184000/libtayo-cemiplimab
+10472419,US,How Novartis Engineered Antibodies to Block the TIM-3 Immune Checkpoint,Novartis AG,2019,10,active,https://patentbrief.org/patent/us/10472419/keytruda-pembrolizumab
+10564770,US,How Touchscreens Predict Where Your Finger Will Land Before You Touch,Apple Inc,2020,8,active,https://patentbrief.org/patent/us/10564770/airpods-wireless-earbuds
+6355623,US,Personalized Dosing for Crohn's Disease Drugs Using Blood Tests,Centre Hospitalier Universitaire Saint Justine,2002,75,public domain,https://patentbrief.org/patent/us/6355623/spinraza-nusinersen
+8732039,US,How Amazon Optimizes Where to Store Products to Avoid Stockouts,Amazon Technologies Inc,2014,41,active,https://patentbrief.org/patent/us/8732039/amazon-subscribe-save
+10013058,US,How Apple Embeds Haptic Actuators Directly Into Device Layers,Apple Inc,2018,18,active,https://patentbrief.org/patent/us/10013058/face-id
+8521818,US,How Software Detects What You Want Based on Your Social Media Posts,Solariat Inc,2013,34,active,https://patentbrief.org/patent/us/8521818/facebook-share-button
+10169761,US,How Banks Dynamically Adjust Security Questions Based on Your Behavior,Consumerinfo com Inc,2019,13,active,https://patentbrief.org/patent/us/10169761/stripe-atlas
+8688813,US,How to Verify Anonymous Users Using Third-Party Identity Services,Oracle International Corp,2014,39,public domain,https://patentbrief.org/patent/us/8688813/kindle-fire-tablet
+5199424,US,How CPAP Machines Gradually Increase Air Pressure for Sleeping Patients,Individual,1993,231,public domain,https://patentbrief.org/patent/us/5199424/cpap-sleep-apnea-sullivan
+9845355,US,How Genentech's Antibody Targets Cancerous B Cells,Genentech Inc,2017,13,active,https://patentbrief.org/patent/us/9845355/tecentriq-atezolizumab
+4687200,US,How the Nintendo D-Pad Works,Nintendo Co Ltd,1987,129,public domain,https://patentbrief.org/patent/us/4687200/nintendo-d-pad-directional
+4356270,US,How Scientists Taught Bacteria to Make Human Hormones,Genentech Inc,1982,86,public domain,https://patentbrief.org/patent/us/4356270/recombinant-dna-cloning-genentech
+9405582,US,How Computers Automatically Adjust Tasks to Run Faster in Data Centers,International Business Machines Corp,2016,32,active,https://patentbrief.org/patent/us/9405582/aws-elastic-beanstalk
+11615208,US,How Cloud Systems Automatically Create and Train AI Data Models,Capital One Services LLC,2023,4,active,https://patentbrief.org/patent/us/11615208/dall-e-text-to-image-generation
+8701014,US,How Apps Automatically Link Multiple User Accounts,Facebook Inc,2014,26,public domain,https://patentbrief.org/patent/us/8701014/office-365-co-authoring
+7355593,US,How Large Interactive Whiteboards Track Fingers Across Multiple Sensors,Smart Technologies ULC,2008,84,public domain,https://patentbrief.org/patent/us/7355593/xbox-360-controller
+10466883,US,How Apple Watches Use a Rotating Dial to Navigate Menus,Apple Inc,2019,8,active,https://patentbrief.org/patent/us/10466883/apple-arcade
+7136875,US,How Google Ads Detect Which Web Page You Are Viewing,Google LLC,2006,427,public domain,https://patentbrief.org/patent/us/7136875/google-maps
+10318574,US,How Google Automatically Groups Photos and Contextual Data into Moments,Google LLC,2019,12,active,https://patentbrief.org/patent/us/10318574/arkit
+9965247,US,How Sonos Speakers Use Personalized Wake Words to Recognize Different Users,Sonos Inc,2018,15,active,https://patentbrief.org/patent/us/9965247/icloud-drive
+9672117,US,How to Keep Data Safe During a Site Failover,EMC IP Holding Co LLC,2017,21,active,https://patentbrief.org/patent/us/9672117/aws-codedeploy
+5397703,US,Using Insect Cells to Create Antibodies for Human Diseases,Cetus Oncology Corp,1995,25,public domain,https://patentbrief.org/patent/us/5397703/hepatitis-c-virus-genome-discovery
+3713148,US,How Radio Frequency Identification (RFID) Tags Were Invented,Communications Services Corp Inc,1973,185,public domain,https://patentbrief.org/patent/us/3713148/rfid-transponder-cardullo
+8700540,US,How Eventbrite Recommends Events Based on Your Social Network,Eventbrite Inc,2014,51,active,https://patentbrief.org/patent/us/8700540/facebook-messenger
+9492534,US,Using Genetically Modified Viruses to Target and Treat Cancer,Genelux Corp,2016,15,active,https://patentbrief.org/patent/us/9492534/yescarta-axicabtagene-ciloleucel
+3655201,US,How the 2x2x2 Magnetic Puzzle Cube Works,Moleculon Research Corp,1972,75,public domain,https://patentbrief.org/patent/us/3655201/rotating-cube-puzzle
+4302518,US,How Lithium-Cobalt Battery Cathodes Were Invented,Individual,1981,90,public domain,https://patentbrief.org/patent/us/4302518/lithium-ion-battery-cathode
+4173796,US,How Jarvik's Artificial Heart Uses Electric Motors to Pump Blood,University of Utah,1979,68,public domain,https://patentbrief.org/patent/us/4173796/jarvik-artificial-heart
+8216583,US,How to Keep Humira Stable in a Liquid Medicine Bottle,Abbott Biotech Ltd Bermuda,2012,58,public domain,https://patentbrief.org/patent/us/8216583/humira-dosing-regimen
+3693535,US,How a Coffee Maker Uses a Floating Valve to Heat Water,Individual,1972,26,public domain,https://patentbrief.org/patent/us/3693535/mr-coffee-drip-coffee-maker
+7509588,US,How the iPhone's Jiggling App Icons Work,Apple Inc,2009,148,public domain,https://patentbrief.org/patent/us/7509588/os-x-spotlight-search
+2708656,US,How the First Nuclear Reactor Works,Individual,1955,232,public domain,https://patentbrief.org/patent/us/2708656/nuclear-reactor-fermi-szilard
+10402750,US,How Facebook Uses Deep Learning to Predict What You Might Like,Facebook Inc,2019,8,active,https://patentbrief.org/patent/us/10402750/automl-neural-architecture-search
+9607103,US,How Computers Match and Join Messy Data from Different Sources,Ab Initio Technology LLC,2017,15,active,https://patentbrief.org/patent/us/9607103/amazon-athena
+11685554,US,How Spacecraft Servicing Pods Maneuver and Refuel Other Satellites,Northrop Grumman Systems Corp,2023,2,active,https://patentbrief.org/patent/us/11685554/starship-upper-stage
+RE48170,US,How Automatic Rotating Curling Irons Capture and Wind Hair,Kiss Nail Products Inc,2020,5,active,https://patentbrief.org/patent/us/RE48170/airwrap-styler
+11062228,US,How AI Learns New Tasks Using Old Data Labels,Microsoft Technology Licensing LLC,2021,4,active,https://patentbrief.org/patent/us/11062228/gpt-3-few-shot-learning
+8580275,US,Using Yeast Cell Walls to Deliver Genetic Medicine,University of Massachusetts Amherst,2013,4,active,https://patentbrief.org/patent/us/8580275/car-t-cell-therapy
+7222127,US,How Google Distributed Machine Learning Across Many Computers,Google LLC,2007,72,public domain,https://patentbrief.org/patent/us/7222127/google-adsense
+2130523,US,How Wallace Carothers Invented Nylon,EI Du Pont de Nemours and Co,1938,299,public domain,https://patentbrief.org/patent/us/2130523/nylon-polyamide-carothers
+9479807,US,How Home Gateways Manage Video Streaming Traffic to Prevent Buffering,Arris Enterprises LLC,2016,24,active,https://patentbrief.org/patent/us/9479807/netflix-interactive-content-bandersnatch
+10832138,US,How to Automatically Expand Neural Networks by Adding New Nodes,Samsung Electronics Co Ltd,2020,3,active,https://patentbrief.org/patent/us/10832138/gpt-language-model-pre-training
+8592397,US,How Gilead Made a Stable HIV Pill Combining Two Medicines,Gilead Sciences Inc,2013,19,active,https://patentbrief.org/patent/us/8592397/truvada-tdf-ftc-for-prep
+7111231,US,How Dynamic Web Applications Use Templates to Fetch Data,Intellisync LLC,2006,78,public domain,https://patentbrief.org/patent/us/7111231/microsoft-word-docx-format
+9677869,US,How to Create Wide-Field Images of Tissue Using OCT Scanners,Perimeter Medical Imaging Inc,2017,9,active,https://patentbrief.org/patent/us/9677869/autonomous-spaceport-drone-ship-asds
+3826068,US,How the String Trimmer (Weed Eater) Actually Cuts Grass,Individual,1974,86,public domain,https://patentbrief.org/patent/us/3826068/weed-eater-string-trimmer
+10019297,US,How Salesforce Speeds Up Data Processing Using Bulk Message Handling,Salesforce com Inc,2018,7,active,https://patentbrief.org/patent/us/10019297/power-bi
+3819921,US,How Texas Instruments Invented the Handheld Electronic Calculator,Texas Instruments Inc,1974,18,public domain,https://patentbrief.org/patent/us/3819921/barcode-upc-scanner
+11921980,US,How Smartphones Manage Multiple Notifications on a Locked Screen,Apple Inc,2024,1,active,https://patentbrief.org/patent/us/11921980/vision-pro-optic-id
+12008152,US,How Snap's AR Tech Measures Distance for Virtual Button Presses,Snap Inc,2024,2,active,https://patentbrief.org/patent/us/12008152/vision-pro-persona
+12431234,US,How Apps Use Timed Content to Enforce Health Behavior Changes,McNeil AB,2025,1,active,https://patentbrief.org/patent/us/12431234/raptor-cost
+6195698,US,How Websites Use Distorted Text Riddles to Stop Bots,Compaq Computer Corp,2001,219,public domain,https://patentbrief.org/patent/us/6195698/google-search-engine
+10192220,US,How Square Syncs Inventory Between Physical Shops and Online Stores,Square Inc,2019,6,active,https://patentbrief.org/patent/us/10192220/square-capital
+7070775,US,How Engineered Antibodies Block Inflammation-Causing Proteins,Centocor Inc,2006,77,public domain,https://patentbrief.org/patent/us/7070775/humira-formulation
+RE45905,US,How Nintendo's Wii Remote Tracks Motion and Infrared Light,Nintendo Co Ltd,2016,11,active,https://patentbrief.org/patent/us/RE45905/walkman-portable-cassette-player
+6567533,US,How Digital Images Hide Invisible Markers to Track Rotation and Scaling,Digimarc Corp,2003,136,public domain,https://patentbrief.org/patent/us/6567533/playstation-2-emotion-engine
+9538220,US,How Networks Keep Video Streams Smooth During Busy Times,WiLAN Labs Inc,2017,9,active,https://patentbrief.org/patent/us/9538220/netflix-a-b-testing-framework
+6424946,US,How Computers Automatically Label Different Speakers in Audio Recordings,International Business Machines Corp,2002,75,public domain,https://patentbrief.org/patent/us/6424946/amazon-personalized-recommendations
+8775328,US,How Nextdoor Verifies Neighbors and Limits Online Social Circles,Individual,2014,14,active,https://patentbrief.org/patent/us/8775328/facebook-graph-search
+10223653,US,How Online Work Platforms Manage New Freelancer Onboarding,Elance Inc,2019,6,active,https://patentbrief.org/patent/us/10223653/shopify-pos
+3668658,US,How the Floppy Disk's Protective Jacket Cleans the Disk,International Business Machines Corp,1972,79,public domain,https://patentbrief.org/patent/us/3668658/floppy-disk-diskette
+11492143,US,How Space Taxis and Locomotives Move Satellites Between Orbits,Atomos Nuclear and Space Corp,2022,2,active,https://patentbrief.org/patent/us/11492143/catching-super-heavy-booster
+10217092,US,How Digital Receipts Turn One-Time Payments Into Ongoing Customer Relationships,Square Inc,2019,7,active,https://patentbrief.org/patent/us/10217092/shopify-shipping
+11623768,US,How Satellite Swarms Keep Their Solar Panels and Antennas Pointed Correctly,AST and Science LLC,2023,1,active,https://patentbrief.org/patent/us/11623768/super-heavy-booster
+9535948,US,How Software Automatically Translates Database Queries for Different Storage Systems,Amazon Technologies Inc,2017,11,active,https://patentbrief.org/patent/us/9535948/facebook-watch
+11958662,US,How a Refillable Capsule Plug Seals Cleaning Concentrates,Conopco Inc,2024,2,active,https://patentbrief.org/patent/us/11958662/starlink-gen-3
+11608181,US,How High-Altitude Parafoils Use Spring-Loaded Rods to Open Automatically,World View Enterprises Inc,2023,4,active,https://patentbrief.org/patent/us/11608181/starship-orbital-launch-mount
+11651227,US,How to Force AI to Follow Logical Rules During Training,SRI International Inc,2023,2,active,https://patentbrief.org/patent/us/11651227/muzero
+7672870,US,How American Express Tracks Your Spending Habits Across Different Stores,American Express Travel Related Services Co Inc,2010,36,public domain,https://patentbrief.org/patent/us/7672870/amazon-prime
+RE40324,US,How a Handheld Thumb-Controlled Computer Mouse Works,Dhol New Ventures LLC,2008,43,public domain,https://patentbrief.org/patent/us/RE40324/playstation-dualshock-controller
+2981877,US,How Robert Noyce Invented the Modern Integrated Circuit,Fairchild Semiconductor Corp,1961,165,public domain,https://patentbrief.org/patent/us/2981877/noyce-planar-integrated-circuit
+8825660,US,How eBay Uses Image Fingerprints to Search for Products,eBay Inc,2014,12,active,https://patentbrief.org/patent/us/8825660/sql-server
+10198731,US,How Square Uses Your Phone's Location to Verify Credit Card Payments,Square Inc,2019,9,active,https://patentbrief.org/patent/us/10198731/shopify-e-commerce-platform
+3220960,US,How Soft Contact Lenses Were Invented Using Hydrogels,Individual,1965,228,public domain,https://patentbrief.org/patent/us/3220960/soft-contact-lens-hydrogel
+3492131,US,The Discovery of Aspartame as a Sugar Substitute,GD Searle LLC,1970,228,public domain,https://patentbrief.org/patent/us/3492131/aspartame-sweetener
+9760393,US,How Virtual Machines Keep Their Data Separate on Shared Storage,VMware LLC,2017,12,active,https://patentbrief.org/patent/us/9760393/azure-machine-learning
+8983975,US,How Software Automatically Ranks and Manages Online Customer Feedback,Individual,2015,27,active,https://patentbrief.org/patent/us/8983975/facebook-news-feed-ranking
+9516045,US,How to Clean Files by Rebuilding Them Instead of Scanning Them,Glasswall IP Ltd,2016,7,active,https://patentbrief.org/patent/us/9516045/azure-active-directory
+9330167,US,How Groupon Automatically Categorizes Merchant Services Using Text Analysis,Groupon Inc,2016,25,active,https://patentbrief.org/patent/us/9330167/amazon-rds
+6458360,US,How to Create Lab-Made Proteins That Stop Immune System Overreaction,Johns Hopkins University,2002,27,public domain,https://patentbrief.org/patent/us/6458360/hpv-vaccine-gardasil
+7169901,US,How Genentech Engineered Antibodies to Starve Tumors of Blood,Genentech Inc,2007,76,public domain,https://patentbrief.org/patent/us/7169901/avastin-bevacizumab
+RE39497,US,How to Store Fragile Biological Materials Without Refrigeration,Nektar Therapeutics,2007,11,public domain,https://patentbrief.org/patent/us/RE39497/epogen-epoetin-alfa
+11708181,US,How Boeing Stacks Electric Space Vehicles for Launch,Boeing Co,2023,2,active,https://patentbrief.org/patent/us/11708181/mechazilla-catch-tower
+9430664,US,How Microsoft Protects Corporate Data on Employee Devices,Microsoft Technology Licensing LLC,2016,10,active,https://patentbrief.org/patent/us/9430664/windows-defender-antivirus
+6816710,US,How GPS Receivers See Weak Signals by Combining Data,SnapTrack Inc,2004,76,public domain,https://patentbrief.org/patent/us/6816710/reusable-launch-vehicle-falcon-9-booster-landing
+12497890,US,How Oil Wells Send Acoustic Signals Using Mechanical Hammers,Weatherford Technology Holdings LLC,2025,0,active,https://patentbrief.org/patent/us/12497890/spacex-avionics-philosophy
+8112476,US,How Software Automatically Collects and Organizes Data from Multiple Websites,Confluence Commons Inc,2012,18,active,https://patentbrief.org/patent/us/8112476/amazon-ec2-elastic-compute-cloud
+2569347,US,The Invention of the Junction Transistor,Bell Telephone Laboratories Inc,1951,145,public domain,https://patentbrief.org/patent/us/2569347/junction-transistor
+2524035,US,The Invention of the Transistor,Bell Telephone Laboratories Inc,1950,130,public domain,https://patentbrief.org/patent/us/2524035/point-contact-transistor
+3387286,US,How Robert Dennard Invented the One-Transistor DRAM Memory Cell,International Business Machines Corp,1968,191,public domain,https://patentbrief.org/patent/us/3387286/dram-memory-dennard
+3005282,US,How the Modern LEGO Brick Design Works,Interlego AG,1961,374,public domain,https://patentbrief.org/patent/us/3005282/lego-toy-brick
+9881277,US,How Amazon Tracks Warehouse Workers' Hands Using Radio Waves,Amazon Technologies Inc,2018,7,active,https://patentbrief.org/patent/us/9881277/amazon-robotics-kiva-systems
+RE48900,US,How LG's Steam Closet Organizes Its Internal Components,LG Electronics Inc,2022,1,active,https://patentbrief.org/patent/us/RE48900/cftr-modulator-combinations
+11593558,US,How eBay Uses AI to Identify Brands in Search Queries,eBay Inc,2023,2,active,https://patentbrief.org/patent/us/11593558/no-language-left-behind-nllb
+RE50567,US,How Enzymes Help Turn Corn Into Ethanol More Efficiently,Novozymes North America Inc,2025,0,public domain,https://patentbrief.org/patent/us/RE50567/io-electric-toothbrush
+RE50510,US,How to Embed Tiny Optical Components Directly into Circuit Boards,Sony Group Corp,2025,0,active,https://patentbrief.org/patent/us/RE50510/gemini-bard
+10106579,US,How Synthetic Peptides Block Immune System Overreaction,Ra Pharmaceuticals Inc,2018,8,active,https://patentbrief.org/patent/us/10106579/orkambi-lumacaftor-ivacaftor
+12365678,US,How to Manufacture a Complex Cancer-Fighting Drug Molecule,AstraZeneca AB,2025,0,active,https://patentbrief.org/patent/us/12365678/raptor-production
+3792322,US,How Buried Channel CCDs Move Data Deep Inside Silicon Chips,Individual,1974,22,public domain,https://patentbrief.org/patent/us/3792322/ccd-image-sensor
+9483121,US,How Apps Pass Touch Gestures Between Each Other,Apple Inc,2016,6,active,https://patentbrief.org/patent/us/9483121/force-touch-3d-touch
+2929922,US,How the First Laser Was Invented,Bell Telephone Laboratories Inc,1960,145,public domain,https://patentbrief.org/patent/us/2929922/laser-maser
+5191573,US,How Digital Media Purchases and Downloads Work,Individual,1993,260,public domain,https://patentbrief.org/patent/us/5191573/personal-audio-media-distribution
+8822430,US,Chemical Compounds for Treating Hepatitis C Virus,Gilead Pharmasset LLC,2014,11,active,https://patentbrief.org/patent/us/8822430/epclusa-sofosbuvir-velpatasvir
+3142599,US,How Bubble Wrap Is Manufactured,Sealed Air Corp,1964,185,public domain,https://patentbrief.org/patent/us/3142599/bubble-wrap-cushioning
+D504889,US,The Design Patent for the Original iPod Mini,Apple Computer Inc,2005,573,public domain,https://patentbrief.org/patent/us/D504889/ipod-click-wheel-design
+RE50301,US,How to Make Long-Lasting Injections for Multiple Sclerosis Treatment,Mapi Pharma Ltd,2025,0,active,https://patentbrief.org/patent/us/RE50301/temperature-controlled-mug
+10303266,US,How Screens Change What They Show Based on Your Hand Distance,Quickstep Technologies LLC,2019,3,active,https://patentbrief.org/patent/us/10303266/apple-pencil
+5838906,US,How Web Browsers Run Embedded Programs Inside Documents,University of California San Diego UCSD,1998,576,public domain,https://patentbrief.org/patent/us/5838906/microsoft-internet-browser
+9874914,US,How Devices Negotiate Power Sharing When Connected Together,Microsoft Technology Licensing LLC,2018,6,active,https://patentbrief.org/patent/us/9874914/hololens-mixed-reality-display
+9477524,US,How to Split Computer Tasks Between Different Types of Processors,NEODANA Inc,2016,11,active,https://patentbrief.org/patent/us/9477524/aws-cloudformation
+12200123,US,Using Transcendental Math to Generate Better Random Numbers,Mesinja Pty Ltd,2025,0,active,https://patentbrief.org/patent/us/12200123/starship-orbital-test-flight
+11023780,US,How AI Automatically Labels Images and Checks Its Own Work,Superb AI Co Ltd,2021,1,active,https://patentbrief.org/patent/us/11023780/siri-on-device-speech-recognition
+11544573,US,How Projection Neural Networks Speed Up AI Predictions,Google LLC,2023,1,active,https://patentbrief.org/patent/us/11544573/llama-large-language-model-architecture
+10402375,US,How Operating Systems Display Cloud File Status Icons,Microsoft Technology Licensing LLC,2019,4,active,https://patentbrief.org/patent/us/10402375/microsoft-365-subscription
+3867571,US,How Laser Printers Use Rotating Mirrors to Write Information,Xerox Corp,1975,22,public domain,https://patentbrief.org/patent/us/3867571/laser-printer-starkweather
+9811430,US,How to Keep Backup Data in the Correct Order,Veritas Technologies LLC,2017,4,active,https://patentbrief.org/patent/us/9811430/aws-codepipeline
+3359678,US,How the Modern Frisbee Design Works,Wham O Manufacturing Co,1967,137,public domain,https://patentbrief.org/patent/us/3359678/frisbee-flying-disc
+2543181,US,How Polaroid's Instant Film Pods Work,Polaroid Corp,1951,119,public domain,https://patentbrief.org/patent/us/2543181/polaroid-instant-camera
+10289962,US,How to Shrink Large AI Models Using Knowledge Distillation,Google LLC,2019,4,active,https://patentbrief.org/patent/us/10289962/deep-q-networks-dqn
+7530026,US,How Widgets Flip Over to Show Settings,Apple Inc,2009,24,public domain,https://patentbrief.org/patent/us/7530026/time-machine-backup
+8176439,US,How to Browse TV Shows Using 3D Virtual Objects,JLB Ventures LLC,2012,18,active,https://patentbrief.org/patent/us/8176439/windows-8-live-tiles
+9998475,US,How Smart Home Devices Automatically Connect to Utility Energy Programs,Google LLC,2018,7,active,https://patentbrief.org/patent/us/9998475/azure-iot-hub
+11919658,US,How Aircraft Automatically Adjust Exterior Lights Using Computer Vision,Goodrich Corp,2024,1,active,https://patentbrief.org/patent/us/11919658/starship-payload-bay
+RE48750,US,How Surgical Robots Create Working Space Inside the Body,Scimed Life Systems Inc,2021,1,active,https://patentbrief.org/patent/us/RE48750/cftr-modulator-screening
+12043450,US,How to Make Waste-Free Plastic Grocery Bags on a Roll,Inteplast Group Corp,2024,0,active,https://patentbrief.org/patent/us/12043450/starship-radiation-protection
+RE50045,US,How Mobile Devices Automatically Manage Data Retransmission Errors,Samsung Electronics Co Ltd,2024,0,active,https://patentbrief.org/patent/us/RE50045/vacuum-insulated-tumbler-quencher
+D670286,US,The Design of the Original Apple iPhone,Apple Inc,2012,117,active,https://patentbrief.org/patent/us/D670286/iphone-4-4s-design
+4031893,US,How Auto-Injectors Adjust Their Dose Using a Simple Spacer,Survival Technology Inc,1977,108,public domain,https://patentbrief.org/patent/us/4031893/epipen-autoinjector-kaplan
+10185946,US,How Banks Attach Extra Transaction Details Using Shortened Web Links,Fiserv Inc,2019,6,active,https://patentbrief.org/patent/us/10185946/square-cash-app
+RE49995,US,How Trampoline Hook Elements Prevent Strap Wear,Bellicon AG,2024,0,active,https://patentbrief.org/patent/us/RE49995/google-meet
+4063048,US,How Early Cochlear Implants Used Digital Signals to Restore Hearing,Individual,1977,55,public domain,https://patentbrief.org/patent/us/4063048/cochlear-implant-hearing
+RE49912,US,How Rohm Designs Compact Semiconductor Packages for Better Heat Management,Rohm Co Ltd,2024,0,active,https://patentbrief.org/patent/us/RE49912/rotomolded-cooler
+10025401,US,How Stylus Ring Electrodes Detect Pen Tilt and Orientation,Apple Inc,2018,3,active,https://patentbrief.org/patent/us/10025401/apple-watch-digital-crown
+RE45254,US,How Servers Automatically Connect Users Based on Mutual Friend Lists,Facebook Inc,2014,7,active,https://patentbrief.org/patent/us/RE45254/google-docs
+11932418,US,How Airport Vehicles Automatically Park Safely Next to Airplanes,TLD EUROPE,2024,0,active,https://patentbrief.org/patent/us/11932418/starship-propellant-transfer
+12442345,US,How an Auxiliary Controller Manages Supplemental Fuel Injection,Individual,2025,0,active,https://patentbrief.org/patent/us/12442345/raptor-mass-production
+9602875,US,How TV Receivers Remind You to Return from Commercial Breaks,EchoStar UK Holdings Ltd,2017,7,active,https://patentbrief.org/patent/us/9602875/netflix-preview-autoplay
+9602605,US,How Facebook's Share Button Works Across Different Websites,Facebook Inc,2017,4,active,https://patentbrief.org/patent/us/9602605/facebook-stories
+8769558,US,How Devices Track Offline Ad Watching and Share Media Recommendations,Sony Computer Entertainment America LLC,2014,20,active,https://patentbrief.org/patent/us/8769558/netflix-adaptive-streaming
+5973252,US,How Real-Time Pitch Correction and Auto-Tune Technology Works,Auburn Audio Technologies Inc,1999,39,public domain,https://patentbrief.org/patent/us/5973252/auto-tune-pitch-correction
+7740842,US,How to Keep High-Concentration Antibody Medicines Stable in Liquid Form,Novartis AG,2010,17,public domain,https://patentbrief.org/patent/us/7740842/herceptin-adjuvant-therapy
+3541541,US,How Douglas Engelbart Invented the Computer Mouse,Stanford Research Institute,1970,162,public domain,https://patentbrief.org/patent/us/3541541/computer-mouse-input-device
+11853535,US,How Apple Devices Securely Display Digital Passes and Tickets,Apple Inc,2023,0,active,https://patentbrief.org/patent/us/11853535/vision-pro-hand-gesture-recognition
+5595721,US,Using Radioactive Antibodies to Treat B-Cell Lymphoma,Coulter Pharmaceutical Inc,1997,232,public domain,https://patentbrief.org/patent/us/5595721/pcr-thermal-cycler
+12354567,US,How Foldable Screens Use Electrochromic Layers to Improve Color and Contrast,HKC Co Ltd,2025,0,active,https://patentbrief.org/patent/us/12354567/sea-level-raptor
+5559942,US,How Digital Sticky Notes Work Inside Computer Programs,Apple Computer Inc,1996,244,public domain,https://patentbrief.org/patent/us/5559942/mac-os-menu-bar
+12321234,US,How to Save Memory Power by Grouping Error-Correction Data,Rambus Inc,2025,0,active,https://patentbrief.org/patent/us/12321234/raptor-2
+2717437,US,How George de Mestral Invented Velcro,Velcro SA,1955,299,public domain,https://patentbrief.org/patent/us/2717437/velcro-hook-and-loop
+12310123,US,How TSMC Makes Advanced Silicon-Based Light Sensors,Taiwan Semiconductor Manufacturing Co TSMC Ltd,2025,0,active,https://patentbrief.org/patent/us/12310123/raptor-1
+RE48492,US,"How to Build Thin, Flat Light-Focusing Panels",S V V Tech Innovations Inc,2021,2,active,https://patentbrief.org/patent/us/RE48492/learning-thermostat
+12299012,US,How to Map Physical Locations to Human-Friendly Web Addresses,Unl Network BV,2025,0,active,https://patentbrief.org/patent/us/12299012/superdraco-engines
+3733309,US,How Plastic Soda Bottles Are Made Stronger Using Stretched Molecules,EI Du Pont de Nemours and Co,1973,170,public domain,https://patentbrief.org/patent/us/3733309/pet-plastic-bottle
+12145678,US,How Bicycle Racks Keep Their Lights Visible While Moving,Kuat Innovations LLC,2024,1,active,https://patentbrief.org/patent/us/12145678/falcon-heavy
+9154532,US,How Websites Get Paid for Referring Video Traffic,Zaron Remote LLC,2015,6,active,https://patentbrief.org/patent/us/9154532/netflix-original-content-recommendation
+12244567,US,How to Monitor Secure Government Computer Networks Automatically,CDW LLC,2025,0,active,https://patentbrief.org/patent/us/12244567/spacex-philosophy
+3322485,US,How Liquid Crystal Displays (LCDs) Were Invented,RCA Corp,1967,90,public domain,https://patentbrief.org/patent/us/3322485/lcd-liquid-crystal-display
+12217035,US,How to Safely Shut Down Microservices Without Breaking Apps,Microsoft Technology Licensing LLC,2025,0,active,https://patentbrief.org/patent/us/12217035/vision-pro-spatial-photos-videos
+12211234,US,How Computers Track the Position and Angle of Multiple Objects,Nippon Telegraph and Telephone Corp,2025,0,active,https://patentbrief.org/patent/us/12211234/rapid-iterative-development
+5002952,US,How to Make Hard-to-Absorb Medicines Easier for the Body to Use,Green Cross Corp Japan,1991,16,public domain,https://patentbrief.org/patent/us/5002952/duragesic-fentanyl-patch
+12453456,US,How Dishwasher Racks Use Articulating Skis to Glide Smoothly,Haier US Appliance Solutions Inc,2025,0,active,https://patentbrief.org/patent/us/12453456/raptor-evolution
+3789409,US,How Passive Satellite Navigation Works Without Sending Signals,Individual,1974,31,public domain,https://patentbrief.org/patent/us/3789409/gps-satellite-navigation
+RE49538,US,How Samsung Makes Better Transistor Gates Using Two-Layer Metal Stacks,Samsung Electronics Co Ltd,2023,0,active,https://patentbrief.org/patent/us/RE49538/instant-pot-multi-cooker
+3585356,US,How the Modern Waterbed Works,Innerspace Environments Inc,1971,70,public domain,https://patentbrief.org/patent/us/3585356/waterbed-liquid-support
+11878818,US,How Tiny Water-Powered Thrusters Steer Small Satellites,Purdue Research Foundation,2024,0,active,https://patentbrief.org/patent/us/11878818/starlink-maritime
+RE49480,US,How Smart Light Networks Coordinate Without a Central Controller,Ideal Industries Lighting LLC,2023,0,active,https://patentbrief.org/patent/us/RE49480/google-assistant
+5920316,US,How the Windows Taskbar Manages Open Programs,Microsoft Corp,1999,124,public domain,https://patentbrief.org/patent/us/5920316/windows-explorer-tree-view
+12112345,US,How Software Automatically Filters Employee Survey Results Based on Management Roles,People Center Inc,2024,0,active,https://patentbrief.org/patent/us/12112345/starship-production-line
+7596761,US,How Apple's Navigation Bar Manages App Screens,Apple Inc,2009,80,public domain,https://patentbrief.org/patent/us/7596761/os-x-dashboard-widgets
+7296016,US,How Search Engines Personalize Results Based on Your Browsing History,Google LLC,2007,24,public domain,https://patentbrief.org/patent/us/7296016/bing-msn-search
+12101428,US,How One Phone Can Remotely Control Another When Nearby,Individual,2024,0,active,https://patentbrief.org/patent/us/12101428/vision-pro-foveated-rendering
+10157378,US,How Square Prepares Digital Tabs for Customers Before They Arrive,Square Inc,2018,3,active,https://patentbrief.org/patent/us/10157378/stripe-connect
+8972477,US,How Servers Prepare Web Pages for You to Read Offline,Amazon Technologies Inc,2015,5,active,https://patentbrief.org/patent/us/8972477/amazon-aurora-database
+2026082,US,How the Board Game Monopoly Works,Parker Brothers Inc,1935,177,public domain,https://patentbrief.org/patent/us/2026082/monopoly-board-game
+5574018,US,Using Vitamin B12 to Help Proteins Survive the Human Digestive System,Amgen Inc,1996,46,public domain,https://patentbrief.org/patent/us/5574018/herceptin-trastuzumab
+4147780,US,Chemical Compounds for Fighting Bacterial and Yeast Infections,Ciba Geigy Corp,1979,17,public domain,https://patentbrief.org/patent/us/4147780/timoptic-timolol
+12277890,US,How to Fix Color Uniformity in Digital Screens Using Math,Kunshan Yunyinggu Electronic Technology Co Ltd,2025,0,active,https://patentbrief.org/patent/us/12277890/kestrel-engine
+8060616,US,How Cloud Storage Providers Automatically Connect Files to Content Delivery Networks,Amazon Technologies Inc,2011,10,active,https://patentbrief.org/patent/us/8060616/amazon-s3-simple-storage-service
+RE49280,US,A Custom-Built Protein to Block TGF-beta Signaling in Disease,University of Texas System,2022,0,active,https://patentbrief.org/patent/us/RE49280/smart-ring-health-tracker
+12255678,US,How Wireless Radios Automatically Adjust to Avoid Signal Overload,Silicon Laboratories Inc,2025,0,active,https://patentbrief.org/patent/us/12255678/falcon-1
+3057356,US,The First Implantable Cardiac Pacemaker,Wilson Greatbatch Technologies Inc,1962,127,public domain,https://patentbrief.org/patent/us/3057356/implantable-cardiac-pacemaker
+3671542,US,How Stephanie Kwolek Invented the Liquid Crystal Solution for Kevlar,EI Du Pont de Nemours and Co,1972,132,public domain,https://patentbrief.org/patent/us/3671542/kevlar-aramid-fiber
+9216996,US,Gilead's Chemical Compounds for Treating HIV Infections,Gilead Sciences Inc,2015,35,active,https://patentbrief.org/patent/us/9216996/genvoya-elvitegravir-cobicistat-taf-ftc
+RE50690,US,How Recessed Wall Wash Lights Reduce Glare Using Angled Lenses,USAI LLC,2025,0,active,https://patentbrief.org/patent/us/RE50690/sonicare-toothbrush
+11449194,US,How Smartphones Let You Rearrange and Organize Your Home Screen Icons,Apple Inc,2022,0,active,https://patentbrief.org/patent/us/11449194/spatial-audio-with-dynamic-head-tracking
+2266401,US,How Pulse Code Modulation Digitizes Analog Signals,International Standard Electric Corp ,1941,181,public domain,https://patentbrief.org/patent/us/2266401/pcm-pulse-code-modulation-reeves
+3927193,US,Using Radioactive Antibodies to Find Tumors Inside the Body,F Hoffmann La Roche AG,1975,66,public domain,https://patentbrief.org/patent/us/3927193/ivermectin
+9075783,US,How Phones Use Your Voice History to Fix Your Typing,Apple Inc,2015,5,active,https://patentbrief.org/patent/us/9075783/alexa-voice-service
+7343566,US,How Computers Automatically Manage Temporary Pop-up Windows,Apple Inc,2008,20,public domain,https://patentbrief.org/patent/us/7343566/os-x-dock
+11521601,US,How AI Cleans Up Irrelevant Topics in Recorded Phone Calls,Invoca Inc,2022,1,active,https://patentbrief.org/patent/us/11521601/stylegan
+6883201,US,How the iRobot Roomba Automatically Cleans Floors Without Falling Down Stairs,iRobot Corp,2005,215,public domain,https://patentbrief.org/patent/us/6883201/roomba-autonomous-vacuum
+8957079,US,How Ibrutinib-like Molecules Block Cancer-Causing Proteins,Pharmacyclics LLC,2015,33,active,https://patentbrief.org/patent/us/8957079/pomalyst-pomalidomide
+12100000,US,How Digital Wallets Pull Data From Multiple Sources for Payments,Paymentus Corp,2024,0,active,https://patentbrief.org/patent/us/12100000/starship-mars-edl
+RE45559,US,How Phones Use Motion Sensors to Change Screen Orientation and Views,Apple Inc,2015,4,public domain,https://patentbrief.org/patent/us/RE45559/cover-flow
+11429864,US,Making Neural Networks Faster by Skipping Unnecessary Calculations,Moffett International Co Ltd Hong Kong,2022,1,active,https://patentbrief.org/patent/us/11429864/dlss-deep-learning-super-sampling
+11170293,US,How AI Systems Learn to Predict and Act Simultaneously,Microsoft Technology Licensing LLC,2021,4,active,https://patentbrief.org/patent/us/11170293/alphago-policy-and-value-networks
+3711262,US,How Corning Invented Modern Fiber Optic Cables,Corning Glass Works,1973,86,public domain,https://patentbrief.org/patent/us/3711262/optical-fiber-waveguide
+11794927,US,How Boeing 3D Prints Strong Lightweight Spacecraft Panels,Boeing Co,2023,0,active,https://patentbrief.org/patent/us/11794927/starship-life-support-system
+RE48965,US,How to Stop Transistors from Wearing Out in Radio Frequency Chips,PSemi Corp,2022,0,active,https://patentbrief.org/patent/us/RE48965/google-play-store
+4136359,US,How Wozniak Made the Apple II Display Color Graphics,Apple Computer Inc,1979,29,public domain,https://patentbrief.org/patent/us/4136359/apple-ii-personal-computer
+7801772,US,How Online Stores Automatically Block Illegal Alcohol and Tobacco Deliveries,IpVenture Inc,2010,11,public domain,https://patentbrief.org/patent/us/7801772/amazon-recommendations
+7877330,US,How to Buy Digital Media Once and Get Multiple Formats,Amazon Technologies Inc,2011,12,active,https://patentbrief.org/patent/us/7877330/kindle-e-reader
+11124318,US,How a Host Spacecraft Refuels Another Satellite Without Using Its Fuel Tank,Northrop Grumman Systems Corp,2021,1,active,https://patentbrief.org/patent/us/11124318/starship-belly-flop-maneuver
+10108619,US,How Streaming Services Automatically Build Custom Radio Stations,Gracenote Inc,2018,3,active,https://patentbrief.org/patent/us/10108619/microsoft-edge-browser
+RE48925,US,How Printers Manage Power States and Sleep Timers,Canon Inc,2022,0,active,https://patentbrief.org/patent/us/RE48925/wrist-worn-activity-tracker
+9934408,US,How a Local Server Decides to Save or Degrade Digital Content,Wistaria Trading Ltd,2018,5,active,https://patentbrief.org/patent/us/9934408/windows-information-protection
+11501192,US,How to Automatically Tune Machine Learning Settings Using Smart Math,University of Toronto,2022,0,active,https://patentbrief.org/patent/us/11501192/alphafold-protein-structure-prediction
+4756529,US,How the Koosh Ball's Design Makes It Easy to Catch,OddzOn Products Inc,1988,62,public domain,https://patentbrief.org/patent/us/4756529/koosh-ball-stillinger
+9154561,US,How Apps Automatically Connect Friends Based on Their Current Location,AOL Inc,2015,10,active,https://patentbrief.org/patent/us/9154561/facebook-pages
+9276922,US,How to Securely Pass Data Packets Within a Trusted Network,Palo Alto Research Center Inc,2016,3,active,https://patentbrief.org/patent/us/9276922/facebook-safety-check
+8069204,US,How Apps Fetch Data in the Background While You Are Offline,Twintech EU LLC,2011,8,public domain,https://patentbrief.org/patent/us/8069204/azure-cloud-platform
+6302230,US,How Self-Balancing Vehicles Warn Users Before They Tip Over,Deka Products LP,2001,172,public domain,https://patentbrief.org/patent/us/6302230/segway-personal-transporter
+5754176,US,How Interactive Pop-up Help Windows Work in Computer Interfaces,AST Research Inc,1998,119,public domain,https://patentbrief.org/patent/us/5754176/windows-taskbar
+11645473,US,How AI Predicts Who Will Speak Next in a Conversation,International Business Machines Corp,2023,0,active,https://patentbrief.org/patent/us/11645473/palm-pathways-language-model
+9699159,US,How Wearable Devices Act as Secure Bridges for Transactions,OLogN Technologies AG,2017,2,active,https://patentbrief.org/patent/us/9699159/microsoft-teams
+11059609,US,How Rocket Lab Secures Satellites Inside Their Launch Dispensers,Rocket Lab USA Inc,2021,2,active,https://patentbrief.org/patent/us/11059609/starlink-inter-satellite-laser-links
+4357215,US,How Lithium-Ion Battery Cathodes Are Made,Individual,1982,41,public domain,https://patentbrief.org/patent/us/4357215/lithium-ion-cathode-goodenough
+RE47420,US,How Chips Save Power by Managing Individual Parts Separately,Advanced Micro Devices Inc,2019,1,active,https://patentbrief.org/patent/us/RE47420/google-translate
+RE49412,US,How a Pitcher Uses Removable Rulers to Measure Beverage Ingredients,Individual,2023,0,active,https://patentbrief.org/patent/us/RE49412/strain-and-recovery-tracking
+3489148,US,How Disposable Diapers Keep Skin Dry Using Porous Plastic Sheets,Procter and Gamble Co,1970,133,public domain,https://patentbrief.org/patent/us/3489148/disposable-diaper-topsheet
+11814186,US,How Jet Engines Use Heat to Automatically Adjust Airflow,General Electric Co,2023,0,active,https://patentbrief.org/patent/us/11814186/starship-lunar-lander-hls
+9830146,US,How Software Developers Keep Track of API Versions Automatically,Microsoft Technology Licensing LLC,2017,8,active,https://patentbrief.org/patent/us/9830146/visual-studio-code
+RE48596,US,How Web Browsers Create Fluid Animations Without Reloading Pages,Intel Corp,2021,0,active,https://patentbrief.org/patent/us/RE48596/nest-protect-smoke-co-detector
+12060178,US,How to Make Carbonated Shampoo Using Chemical Reactions,Individual,2024,0,active,https://patentbrief.org/patent/us/12060178/starship-crew-configuration
+2780765,US,How the First Practical Silicon Solar Cell Works,Bell Telephone Laboratories Inc,1957,59,public domain,https://patentbrief.org/patent/us/2780765/solar-cell-photovoltaic
+11753188,US,How Satellites Use Split Thrusters to Reach Orbit Faster,Boeing Co,2023,0,active,https://patentbrief.org/patent/us/11753188/direct-to-cell-starlink
+4549302,US,How Modems Use Guard Time to Switch Between Data and Commands,Hayes Microcomputer Products Inc,1985,42,public domain,https://patentbrief.org/patent/us/4549302/hayes-modem-escape-sequence
+12266789,US,How to Make Lithium-Sulfur Batteries Last Longer Using Polymer Coatings,Seoul National University R&DB Foundation,2025,0,active,https://patentbrief.org/patent/us/12266789/merlin-engine
+10212148,US,How Online Systems Verify Your Identity Using External Data,Mbr Innovations LLC,2019,1,active,https://patentbrief.org/patent/us/10212148/touch-id
+11488063,US,How AI Helps Pilots Talk to Flight Management Systems,Honeywell International Inc,2022,0,active,https://patentbrief.org/patent/us/11488063/chinchilla-scaling-laws
+RE38800,US,How to Take 3D Pictures Inside Human Tissue Using Near-Infrared Light,Research Foundation of the State University of New York,2005,25,public domain,https://patentbrief.org/patent/us/RE38800/digital-video-recorder-dvr
+12233456,US,How to Improve 3D Printing Using Cold Spray Metal Deposition,Individual,2025,0,active,https://patentbrief.org/patent/us/12233456/mars-colonial-transporter-architecture
+10928980,US,How Apple's Interface Switches Between Music Playlists and Menus,Apple Inc,2021,0,active,https://patentbrief.org/patent/us/10928980/ios-widgets-on-home-screen
+11975868,US,How Aircraft Systems Detect Mechanical Wear by Comparing Real-Time Performance,Textron Innovations Inc,2024,0,active,https://patentbrief.org/patent/us/11975868/starship-point-to-point-earth-transport
+10525078,US,How to Make Stable Solid Dialysis Powder with Less Odor,Tomita Pharmaceutical Co Ltd,2020,0,active,https://patentbrief.org/patent/us/10525078/trikafta-elexacaftor-tezacaftor-ivacaftor
+RE48406,US,How Vehicles Send Data Without Revealing Who Is Driving,Mitsubishi Heavy Industries Machinery Systems Co Ltd,2021,0,active,https://patentbrief.org/patent/us/RE48406/cftr-corrector-compounds
+12464567,US,How Satellites Sync Timing for Faster 5G Internet Connections,Lockheed Martin Corp,2025,0,active,https://patentbrief.org/patent/us/12464567/raptor-future
+9021535,US,How Cable Networks Manage Virtual Ownership of Digital Movies,Time Warner Cable Enterprises LLC,2015,3,active,https://patentbrief.org/patent/us/9021535/netflix-user-profiles
+5110802,US,Using Synthetic DNA Fragments to Block HIV Replication,City of Hope,1992,26,public domain,https://patentbrief.org/patent/us/5110802/crixivan-indinavir
+10543427,US,How Game Controllers Change Button Functions Using Plug-in Accessories,Microsoft Technology Licensing LLC,2020,2,active,https://patentbrief.org/patent/us/10543427/joy-con-motion-controls
+8843528,US,How Social Networks Automatically Create Groups Based on Time and Place,Google LLC,2014,6,active,https://patentbrief.org/patent/us/8843528/facebook-groups
+10204358,US,How Referral-Based Text Message Marketing Systems Work,Zeta Global Corp,2019,3,active,https://patentbrief.org/patent/us/10204358/shopify-payments
+6901559,US,How Handheld Devices Organize Recently Used Files and Contacts,Microsoft Corp,2005,73,public domain,https://patentbrief.org/patent/us/6901559/microsoft-office-ribbon-ui
+RE48232,US,Using Cordless Phones to Send Voice Commands to Smart Home Devices,Panasonic Intellectual Property Corp of America,2020,0,active,https://patentbrief.org/patent/us/RE48232/video-doorbell
+1948384,US,How Ernest Lawrence Invented the Cyclotron Particle Accelerator,Research Corp,1934,114,public domain,https://patentbrief.org/patent/us/1948384/cyclotron-lawrence
+10732795,US,How Messaging Apps Quickly Share Photos and Camera Previews,Apple Inc,2020,0,active,https://patentbrief.org/patent/us/10732795/ios-dark-mode
+2292387,US,Hedy Lamarr and George Antheil's Frequency Hopping Secret Communication System,Individual,1942,82,public domain,https://patentbrief.org/patent/us/2292387/hedy-lamarr-frequency-hopping
+3293513,US,How the First Infrared LED Was Invented,Texas Instruments Inc,1966,54,public domain,https://patentbrief.org/patent/us/3293513/infrared-led-biard-pittman
+RE47935,US,How Digital Audio Compression Saves Space by Copying Frequencies,Dolby International AB,2020,0,active,https://patentbrief.org/patent/us/RE47935/google-chrome-browser
+8710041,US,Using Purified Fish Oil Derivatives to Lower Triglycerides Alongside Statins,Amarin Pharmaceuticals Ireland Ltd,2014,13,active,https://patentbrief.org/patent/us/8710041/imbruvica-ibrutinib-formulation
+10579225,US,How Devices Pair Automatically by Scanning Patterns with a Camera,Apple Inc,2020,0,active,https://patentbrief.org/patent/us/10579225/apple-fitness
+9098533,US,How Voice Commands Help Computers Find Objects in Pictures and Videos,Microsoft Technology Licensing LLC,2015,4,active,https://patentbrief.org/patent/us/9098533/amazon-kinesis
+11609640,US,How Apple's Emoji Search Interface Automatically Adjusts and Filters Results,Apple Inc,2023,0,active,https://patentbrief.org/patent/us/11609640/stage-manager
+223898,US,How Thomas Edison Invented the Practical Incandescent Light Bulb,Individual,1880,28,public domain,https://patentbrief.org/patent/us/223898/edison-incandescent-lamp
+9398340,US,How Cable Systems Automatically Filter Ads for On-Demand Content,Canoe Ventures LLC,2016,2,active,https://patentbrief.org/patent/us/9398340/netflix-skip-intro
+2230654,US,The Discovery of Teflon,KINETIC CHEMICALS Inc,1941,74,public domain,https://patentbrief.org/patent/us/2230654/teflon-ptfe-polymer
+2682235,US,Buckminster Fuller's Geodesic Dome Building Design,Individual,1954,120,public domain,https://patentbrief.org/patent/us/2682235/geodesic-dome-fuller
+8356005,US,How Devices Automatically Tag and Monetize Real-World Events,Individual,2013,4,active,https://patentbrief.org/patent/us/8356005/facebook-photo-tagging
+4492385,US,How Modern Rollerblades Became Adjustable and Interchangeable,Individual,1985,46,public domain,https://patentbrief.org/patent/us/4492385/inline-skates-rollerblade-olson
+3997676,US,How Cup Noodles Are Designed to Cook Perfectly,Nissin Shokuhin KK,1976,22,public domain,https://patentbrief.org/patent/us/3997676/cup-noodles-instant-ramen-ando
+3614954,US,How the First Automatic Implantable Defibrillator Works,Medtronic Inc,1971,71,public domain,https://patentbrief.org/patent/us/3614954/implantable-defibrillator-mirowski
+12031028,US,How LG Chem Makes Plastic Films That Block UV Light,LG Chem Ltd,2024,0,active,https://patentbrief.org/patent/us/12031028/starship-eclss
+9723108,US,How Software Packages Create Independent Windows for Web Content,Individual,2017,1,active,https://patentbrief.org/patent/us/9723108/facebook-portal-smart-display
+10210146,US,How Microsoft Word Suggests Research Content While You Write,Microsoft Technology Licensing LLC,2019,1,active,https://patentbrief.org/patent/us/10210146/fluent-design-system
+9075661,US,How Cloud Systems Automatically Assign Virtual Machines to Servers,Microsoft Technology Licensing LLC,2015,3,active,https://patentbrief.org/patent/us/9075661/hyper-v-virtualization
+9037656,US,How a Server Aggregates Comments from Different Websites About One File,Google Technology Holdings LLC,2015,2,active,https://patentbrief.org/patent/us/9037656/facebook-live-video
+2742437,US,How Eugene Houdry Invented the Modern Catalytic Converter,Oxy Catalyst Inc,1956,55,public domain,https://patentbrief.org/patent/us/2742437/catalytic-converter-houdry
+3102230,US,The Invention of the Modern Field-Effect Transistor,Bell Telephone Laboratories Inc,1963,37,public domain,https://patentbrief.org/patent/us/3102230/mosfet-field-effect-transistor
+RE48399,US,How to Make Electric Motors Run Smoother and Last Longer,Black and Decker Inc,2021,0,active,https://patentbrief.org/patent/us/RE48399/action-camera-waterproof-housing
+10140638,US,How Cloud Services Automatically Switch Providers When One Fails,International Business Machines Corp,2018,1,active,https://patentbrief.org/patent/us/10140638/airbnb-review-system
+12189012,US,Removing Radio Interference from Portable MRI Scans,General Hospital Corp,2025,0,active,https://patentbrief.org/patent/us/12189012/eva-suit
+8204793,US,How Phones Use Photos to Buy or Research Products,Wounder GmbH LLC,2012,4,active,https://patentbrief.org/patent/us/8204793/fulfillment-by-amazon-fba
+10108910,US,How Mobile Apps Connect Drivers to Real-Time Parking Spots,Verizon Patent and Licensing Inc,2018,1,active,https://patentbrief.org/patent/us/10108910/airbnb-booking-platform
+2487400,US,How Earl Tupper Invented the Airtight Plastic Food Container,Individual,1949,116,public domain,https://patentbrief.org/patent/us/2487400/tupperware-airtight-seal
+3388314,US,Gordon Gould's Early Concepts for High-Frequency Radiation Devices,Control Data Corp,1968,53,public domain,https://patentbrief.org/patent/us/3388314/laser-gordon-gould
+3723796,US,How a Single Coil Powers Multiple Motor Armatures Simultaneously,Individual,1973,22,public domain,https://patentbrief.org/patent/us/3723796/mri-cancer-tissue-detection
+10427804,US,How to Launch Spacecraft Using Giant Cannons Instead of Rockets,Quicklaunch Inc,2019,2,active,https://patentbrief.org/patent/us/10427804/starship-stainless-steel-construction
+2988237,US,How George Devol Invented the First Industrial Robot Arm,Individual,1961,93,public domain,https://patentbrief.org/patent/us/2988237/unimate-industrial-robot-devol
+10311112,US,How to Search Through Long Videos Using a Compressed Visual Timeline,Zorroa Corp,2019,1,active,https://patentbrief.org/patent/us/10311112/github-acquisition-integration
+9888087,US,How Uber Updates App Features for Specific Groups of Users,Uber Technologies Inc,2018,2,active,https://patentbrief.org/patent/us/9888087/uber-pool
+3678182,US,How Early Television Systems Isolated Specific Colors for Special Effects,Philips Broadcast Equipment Corp,1972,17,public domain,https://patentbrief.org/patent/us/3678182/chroma-key-green-screen
+12332345,US,How Vehicle Radar Systems Correct Phase Errors for Better Object Detection,HL Klemove Corp,2025,0,active,https://patentbrief.org/patent/us/12332345/raptor-3
+3498798,US,How Pringles Potato Chips Are Stacked and Packaged,Procter and Gamble Co,1970,83,public domain,https://patentbrief.org/patent/us/3498798/pringles-stackable-chips
+2168726,US,Frank Whittle's Early Jet Engine Design,Individual,1939,50,public domain,https://patentbrief.org/patent/us/2168726/jet-engine-whittle
+3138743,US,How Jack Kilby Invented the First Integrated Circuit,Texas Instruments Inc,1964,27,public domain,https://patentbrief.org/patent/us/3138743/kilby-monolithic-integrated-circuit
+4531203,US,How Flash Memory Cells Use an Erase Gate to Clear Data,Tokyo Shibaura Electric Co Ltd,1985,27,public domain,https://patentbrief.org/patent/us/4531203/nand-flash-memory
+9949013,US,How Wireless Earbuds Detect Hand Gestures Using Invisible Light or Sound,Bragi GmbH,2018,1,active,https://patentbrief.org/patent/us/9949013/airpods-charging-case
+8702514,US,How Nintendo's Wii U GamePad Controller Attachment Works,Nintendo Co Ltd,2014,11,active,https://patentbrief.org/patent/us/8702514/wii-balance-board
+10853731,US,How Software Automatically Checks for Configuration Errors in Complex Systems,Oracle International Corp,2020,0,active,https://patentbrief.org/patent/us/10853731/core-ml-on-device-machine-learning
+10521248,US,How to Interact with Background Apps While Using Another App,Samsung Electronics Co Ltd,2019,0,active,https://patentbrief.org/patent/us/10521248/swiftui
+D618677,US,The Design of the Original iPhone 3G,Apple Inc,2010,57,active,https://patentbrief.org/patent/us/D618677/original-iphone-design
+12398901,US,How Air Conditioners Use Radio Signals to Locate Your Remote Control,Mitsubishi Electric Corp,2025,0,active,https://patentbrief.org/patent/us/12398901/raptor-thrust-to-weight
+12387890,US,How Medium Voltage Power Switches Safely Direct Electricity,ABB Schweiz AG,2025,0,active,https://patentbrief.org/patent/us/12387890/raptor-reliability
+7530029,US,How Software Interfaces Shrink to Save Screen Space,Microsoft Corp,2009,34,public domain,https://patentbrief.org/patent/us/7530029/xbox-360-achievements-system
+8249948,US,How Amazon Created a Marketplace for Recommendation Algorithms,Amazon Technologies Inc,2012,3,active,https://patentbrief.org/patent/us/8249948/facebook-like-button
+10357559,US,How to Make Anthrax Vaccines That Survive Freezing,Emergent Product Development Gaithersburg Inc,2019,0,active,https://patentbrief.org/patent/us/10357559/luxturna-voretigene-neparvovec
+3191596,US,How Dr. Forrest Bird's Mechanical Respirator Controls Patient Breathing,Individual,1965,78,public domain,https://patentbrief.org/patent/us/3191596/bird-respirator-ventilator
+11827373,US,How Boeing Shortens Engine Exhaust Fairings to Save Weight,Boeing Co,2023,0,active,https://patentbrief.org/patent/us/11827373/starship-tanker-variant
+1102653,US,Robert Goddard's Early Design for Liquid-Fueled Rocket Engines,Individual,1914,59,public domain,https://patentbrief.org/patent/us/1102653/liquid-fuel-rocket-goddard
+2911759,US,How the Float Glass Process Makes Perfectly Flat Window Panes,Pilkington Brothers Ltd,1959,53,public domain,https://patentbrief.org/patent/us/2911759/float-glass-pilkington
+9741006,US,Managing Who Can Do What in Complex Business Workflows,Oracle International Corp,2017,1,active,https://patentbrief.org/patent/us/9741006/amazon-go-just-walk-out
+12288901,US,How a Battery Automatically Disconnects Itself During Overheating,SAFT Societe des Accumulateurs Fixes et de Traction SA,2025,0,active,https://patentbrief.org/patent/us/12288901/draco-thrusters
+821393,US,How the Wright Brothers Invented Modern Airplane Control,Individual,1906,19,public domain,https://patentbrief.org/patent/us/821393/wright-brothers-flying-machine
+2708722,US,How Wang An Invented the Magnetic Pulse Memory Core,Individual,1955,74,public domain,https://patentbrief.org/patent/us/2708722/magnetic-core-memory-wang
+2541851,US,How to Make Silly Putty Using Silicone and Zinc,General Electric Co,1951,80,public domain,https://patentbrief.org/patent/us/2541851/silly-putty-bouncing-silicone
+10138293,US,How Roche Engineers Antibodies to Target Two Different Diseases Simultaneously,Hoffmann La Roche Inc,2018,6,active,https://patentbrief.org/patent/us/10138293/opdivo-nivolumab
+RE45786,US,How Nielsen Tracks What You Listen to in Your Car,Nielsen Co US LLC,2015,1,active,https://patentbrief.org/patent/us/RE45786/gmail
+12486789,US,How Rondo Energy Stores Electricity as High-Temperature Industrial Heat,Rondo Energy Inc,2025,0,active,https://patentbrief.org/patent/us/12486789/spacex-structures-philosophy
+11188196,US,Using a Phone Display as a Visual Beacon Based on Activity,Apple Inc,2021,0,active,https://patentbrief.org/patent/us/11188196/app-library
+10626109,US,New Chemical Compounds for Protecting Crops from Fungal Diseases,Bayer CropScience AG,2020,0,active,https://patentbrief.org/patent/us/10626109/symdeko-tezacaftor-ivacaftor
+9661085,US,Managing External Network Hardware as if It Were Inside the Switch,Brocade Communications Systems LLC,2017,1,active,https://patentbrief.org/patent/us/9661085/facebook-audience-network
+6824780,US,How Genentech Created Antibodies to Target Prostate Cancer Cells,Genentech Inc,2004,136,public domain,https://patentbrief.org/patent/us/6824780/avastin-dosing
+2929804,US,How Spandex Elastic Fibers Are Chemically Engineered,EI Du Pont de Nemours and Co,1960,71,public domain,https://patentbrief.org/patent/us/2929804/spandex-lycra-elastic-fiber
+8496208,US,How Spacecraft Use Layered Nets to Stop Orbital Debris,Alliant Techsystems Inc,2013,3,active,https://patentbrief.org/patent/us/8496208/grid-fins-for-rocket-control
+3501586,US,How James Russell Invented the Digital Optical Disc,Battelle Development Corp,1970,52,public domain,https://patentbrief.org/patent/us/3501586/optical-digital-recording-russell
+5443036,US,How to Exercise Your Cat Using a Laser Pointer,Individual,1995,35,public domain,https://patentbrief.org/patent/us/5443036/laser-pointer-cat-exercise
+10210529,US,Delivering Targeted Ads and Digital Content to Remote Kiosks,Mediaport Entertainment Inc,2019,0,public domain,https://patentbrief.org/patent/us/10210529/shopify-app-store
+12123456,US,How to Build Stronger Modular Floating Docks Using Internal Channels,Individual,2024,0,active,https://patentbrief.org/patent/us/12123456/starbase-manufacturing-facility
+2741146,US,How Leo Fender's Tremolo Bridge Changes Guitar Pitch,Individual,1956,92,public domain,https://patentbrief.org/patent/us/2741146/fender-stratocaster-tremolo
+12343456,US,How Smart Air Conditioners Target and Disinfect High-Touch Surfaces,Mitsubishi Electric Corp,2025,0,active,https://patentbrief.org/patent/us/12343456/raptor-vacuum
+7503526,US,A Rotating Space Station for Catching and Launching Cargo,Individual,2009,18,public domain,https://patentbrief.org/patent/us/7503526/supersonic-retropropulsion
+RE47150,US,How Bayer's Engineered Antibodies Help Blood Clotting,Bayer Healthcare LLC,2018,0,active,https://patentbrief.org/patent/us/RE47150/cosentyx-secukinumab
+9264471,US,How Digital Media Streams Are Automatically Tagged and Organized,Google Technology Holdings LLC,2016,4,active,https://patentbrief.org/patent/us/9264471/netflix-download-for-offline
+7993644,US,Using Antibodies to Target Tissue Factor Without Stopping Blood Clotting,Purdue Pharma LP,2011,3,active,https://patentbrief.org/patent/us/7993644/stelara-ustekinumab
+10981678,US,How to Rent Out Space on Satellites for Different Customers,Loft Orbital Solutions Inc,2021,0,active,https://patentbrief.org/patent/us/10981678/starlink-satellite-design
+12012230,US,How Aircraft Engine Oil Is Drained and Checked Automatically,Safran Aircraft Engines SAS,2024,0,active,https://patentbrief.org/patent/us/12012230/starship-isru-in-situ-resource-utilization
+9792375,US,How Websites Can Sell Items from Other Sites Without Redirecting Users,PayPal Inc,2017,2,active,https://patentbrief.org/patent/us/9792375/facebook-privacy-checkup
+447918,US,How Almon Strowger Invented the Automatic Telephone Switch,Almon B. Strowger,1891,70,active,https://patentbrief.org/patent/us/447918/strowger-automatic-telephone-exchange
+12222345,US,How Automated Microscopes Use Tags to Focus on Biological Samples,Bio Rad Laboratories Inc,2025,0,active,https://patentbrief.org/patent/us/12222345/vertical-integration-at-starbase
+RE48183,US,How a Specific Eye Drop Formula Treats Glaucoma,Santen Pharmaceutical Co Ltd,2020,1,active,https://patentbrief.org/patent/us/RE48183/trikafta-triple-combination
+11945698,US,How Mobile Cranes Power Their Upper Parts Using The Lower Base,Liebherr Werk Biberach GmbH,2024,0,active,https://patentbrief.org/patent/us/11945698/raptor-3-engine
+3789410,US,How to Calculate Distance to a Radio Signal Using Two Antennas,US Department of Navy,1974,16,public domain,https://patentbrief.org/patent/us/3789410/gps-timation-navigation
+9210222,US,How Websites Use Your Cookie Data to Show Targeted Ads,Adobe Systems Inc,2015,2,active,https://patentbrief.org/patent/us/9210222/facebook-login
+9606820,US,How to Make Software Debugging Consistent Using Object Finalization Control,CA Inc,2017,4,active,https://patentbrief.org/patent/us/9606820/windows-subsystem-for-linux-wsl
+10664744,US,How Computers Use Memory Networks to Answer Questions,Facebook Inc,2020,1,active,https://patentbrief.org/patent/us/10664744/watson-question-answering-system-deepqa
+4810490,US,"How to Make Clear, Waterproof Sunscreen That Doesn't Feel Greasy",Carter Wallace Inc,1989,11,public domain,https://patentbrief.org/patent/us/4810490/tpa-tissue-plasminogen-activator
+8307004,US,How Computers Safely Resume Interrupted Data Backups,Apple Inc,2012,5,active,https://patentbrief.org/patent/us/8307004/amazon-dynamodb
+7836050,US,How Search Engines Rank Images Using User Ratings,Microsoft Corp,2010,46,public domain,https://patentbrief.org/patent/us/7836050/bing-search-ranking
+10266282,US,How Rocket Rings Help Boosters Land Safely,Blue Origin LLC,2019,1,active,https://patentbrief.org/patent/us/10266282/crew-dragon-launch-escape-system
+8862582,US,How Computers Automatically Organize and Search Photos Using Contextual Data,AT&T Intellectual Property I LP,2014,2,active,https://patentbrief.org/patent/us/8862582/amazon-redshift
+6339142,US,How Genentech Purifies Therapeutic Antibodies for Cancer Treatment,Genentech Inc,2002,128,public domain,https://patentbrief.org/patent/us/6339142/rituxan-rituximab
+9721254,US,How Streaming Services Dynamically Insert Targeted Ads Into Videos,Hulu LLC,2017,1,active,https://patentbrief.org/patent/us/9721254/uber-ride-hailing-platform
+8606929,US,How Network Providers Subcontract Data Processing Tasks,AT&T Intellectual Property I LP,2013,3,active,https://patentbrief.org/patent/us/8606929/aws-lambda
+5181252,US,How Bose Prevents Noise-Canceling Headphones From Breaking During Loud Sounds,Bose Corp,1993,54,public domain,https://patentbrief.org/patent/us/5181252/acoustic-noise-cancelling
+10751416,US,Using Antibodies to Block IL-26 for Treating Inflammatory Diseases,Centre Hospitalier Universitaire Vaudois CHUV,2020,1,active,https://patentbrief.org/patent/us/10751416/tagrisso-osimertinib
+12178901,US,How Light-Activated Polymers Deliver Skin Care Ingredients,Conopco Inc,2024,0,active,https://patentbrief.org/patent/us/12178901/dragon-xl
+9744181,US,How Gilead Stabilized the HIV Combination Pill Truvada,Gilead Sciences Inc,2017,0,active,https://patentbrief.org/patent/us/9744181/harvoni-ledipasvir-sofosbuvir
+RE44685,US,How Interactive Television Systems Send Applications Alongside Video Streams,OpenTV Inc,2013,1,public domain,https://patentbrief.org/patent/us/RE44685/noise-cancelling-headphones
+3987163,US,How Polystyrene Sulfonate Helps Treat Dry Eye Symptoms,Burton Parsons and Co Inc,1976,37,public domain,https://patentbrief.org/patent/us/3987163/indomethacin
+12409012,US,"A Modular Dental Tool for Holding Back Lips, Cheeks, and Tongue",Individual,2025,0,active,https://patentbrief.org/patent/us/12409012/raptor-chamber-pressure
+9073647,US,A Modular Launch System with an Expandable Mast for Spacecraft,Biosphere Aerospace LLC,2015,4,active,https://patentbrief.org/patent/us/9073647/propulsive-landing-of-rocket-stages
+2495429,US,How Percy Spencer Invented the Microwave Oven,Raytheon Manufacturing Co,1950,20,public domain,https://patentbrief.org/patent/us/2495429/microwave-oven-cooking
+10176475,US,How a Single Card Can Pay for Transit Using Loyalty Points,American Express Travel Related Services Co Inc,2019,0,active,https://patentbrief.org/patent/us/10176475/square-point-of-sale
+11724824,US,How Multiple Space Projectiles Can Assemble Themselves In Mid-Air,EnergeticxNet LLC,2023,3,active,https://patentbrief.org/patent/us/11724824/starlink-v2-satellite
+10350488,US,A Tactile Mat to Keep VR Users From Walking Into Walls,Individual,2019,0,active,https://patentbrief.org/patent/us/10350488/nintendo-switch
+2620061,US,How a Spring-Loaded Pocket Dispenser Works,Individual,1952,69,public domain,https://patentbrief.org/patent/us/2620061/pez-dispenser
+7225154,US,How Digital Systems Pool Money from Many People for One Goal,First Data Corp,2007,9,public domain,https://patentbrief.org/patent/us/7225154/amazon-marketplace
+2744122,US,The Chemical Discovery Behind the First Oral Contraceptive Pill,Syntex SA,1956,19,public domain,https://patentbrief.org/patent/us/2744122/birth-control-pill-norethindrone
+10003680,US,How Sony's Smart Glasses Share Content During Voice Calls,Sony Corp,2018,0,active,https://patentbrief.org/patent/us/10003680/apple-pay
+10565497,US,How SK Hynix Builds Artificial Synapses for Brain-Like Computer Chips,SK Hynix Inc,2020,0,active,https://patentbrief.org/patent/us/10565497/multi-turn-conversational-ai
+3120606,US,How the ENIAC Computer Processes Data Using Electronic Pulses,Sperry Rand Corp,1964,16,public domain,https://patentbrief.org/patent/us/3120606/eniac-electronic-computer
+11513606,US,How Autonomous Air Taxis Use Hand Gestures and 3D Mapping,Individual,2022,1,active,https://patentbrief.org/patent/us/11513606/universal-control
+7297334,US,How Genentech's Antibodies Stop Tumor Blood Vessel Growth,Genentech Inc,2007,54,public domain,https://patentbrief.org/patent/us/7297334/anti-cd20-antibody-therapy
+9011851,US,Using Antibodies to Block HER3 Proteins in Cancer Cells,Max Planck Gesellschaft zur Foerderung der Wissenschaften eV,2015,5,public domain,https://patentbrief.org/patent/us/9011851/perjeta-pertuzumab
+3778335,US,How Chemically Strengthened Glass Works,Corning Glass Works,1973,52,public domain,https://patentbrief.org/patent/us/3778335/gorilla-glass-chemically-strengthened
+12073418,US,How Apps Can Help You Tweak Your Custom Makeup Colors,Shiseido Co Ltd,2024,0,active,https://patentbrief.org/patent/us/12073418/starship-cargo-configuration
+7807153,US,How Antibodies Can Force Cancer Cells to Self-Destruct,Genentech Inc,2010,2,public domain,https://patentbrief.org/patent/us/7807153/avastin-chemotherapy
+8735372,US,Treating Hepatitis C with Combination Drug Therapy,Gilead Pharmasset LLC,2014,42,active,https://patentbrief.org/patent/us/8735372/sovaldi-sofosbuvir-composition
+8372398,US,How Specialized Nanobodies Block Blood Clotting Proteins,Ablynx NV,2013,9,active,https://patentbrief.org/patent/us/8372398/subcutaneous-herceptin
+12508901,US,How to Adapt Existing Motors to Power New Equipment,TSI Products Inc,2025,0,active,https://patentbrief.org/patent/us/12508901/spacex-software-philosophy
+7750134,US,Isolating Microbial Proteins That Regulate Cellular Protein Stability,Sanford Burnham Prebys Medical Discovery Institute,2010,6,public domain,https://patentbrief.org/patent/us/7750134/imbruvica-ibrutinib
+7404202,US,How External Hardware Keys Secure Digital Purchases and Downloads,Line 6 Inc,2008,16,public domain,https://patentbrief.org/patent/us/7404202/netflix-dvd-by-mail-queue
+3351836,US,How Intermittent Windshield Wipers Work,TANN CO,1967,23,public domain,https://patentbrief.org/patent/us/3351836/intermittent-windshield-wiper-kearns
+3349949,US,The Invention of the Modern Soda Can Pull-Tab,Individual,1967,28,public domain,https://patentbrief.org/patent/us/3349949/pull-tab-pop-top-can
+2514269,US,How a Self-Watering Flowerpot Design Works,VINCENT J SEDLON,1950,21,public domain,https://patentbrief.org/patent/us/2514269/streptomycin
+11511890,US,How Drones Test Their Balance While Flying,Honda Motor Co Ltd,2022,1,active,https://patentbrief.org/patent/us/11511890/starlink-user-terminal-dishy
+12156789,US,Standardizing Sizes for Adult Disposable Underwear,Procter and Gamble Co,2024,0,active,https://patentbrief.org/patent/us/12156789/crew-dragon
+12420123,US,How Drones Use Temperature Maps to Safely Start Controlled Fires,NuTech Ventures Inc,2025,0,active,https://patentbrief.org/patent/us/12420123/raptor-efficiency
+1342885,US,How Edwin Armstrong Invented the Superheterodyne Radio Receiver,Individual,1920,31,public domain,https://patentbrief.org/patent/us/1342885/superheterodyne-radio-armstrong
+8429011,US,How Computers Automatically Target Ads Based on Trending Internet Memes,Salesforce com Inc,2013,8,active,https://patentbrief.org/patent/us/8429011/facebook-ad-targeting
+174465,US,Alexander Graham Bell's Patent for the Telephone,Individual,1876,9,public domain,https://patentbrief.org/patent/us/174465/bell-telephone
+2988008,US,How the Wankel Rotary Engine Works,WANKEL AND NSU MOTORENWERKE AG,1961,45,public domain,https://patentbrief.org/patent/us/2988008/wankel-rotary-engine
+10800552,US,A Solid-State Oxygen Thruster for Spacecraft Propulsion,Fondazione Istituto Italiano di Tecnologia,2020,0,active,https://patentbrief.org/patent/us/10800552/starlink-satellite-constellation
+2390636,US,How Laszlo Biro Invented the Modern Ballpoint Pen,Individual,1945,30,public domain,https://patentbrief.org/patent/us/2390636/ballpoint-pen-biro
+2768109,US,How Super Glue Bonds Acidic Surfaces Like Wood,Eastman Kodak Co,1956,23,public domain,https://patentbrief.org/patent/us/2768109/super-glue-cyanoacrylate
+10618678,US,How Satellites Use Thrusters to Balance Solar Panels,Space Systems Loral LLC,2020,1,active,https://patentbrief.org/patent/us/10618678/raptor-full-flow-staged-combustion-engine
+2820187,US,How Early Numerical Control Systems Automated Industrial Milling Machines,Parsons Corp,1958,44,public domain,https://patentbrief.org/patent/us/2820187/numerical-control-machine-tool-parsons
+1203495,US,How William Coolidge Invented the Modern X-Ray Tube,General Electric Co,1916,32,public domain,https://patentbrief.org/patent/us/1203495/coolidge-x-ray-tube
+3552770,US,How Early Vehicle Airbag Safety Systems Work,Eaton Yale and Towne Inc,1971,26,public domain,https://patentbrief.org/patent/us/3552770/automotive-airbag-safety-device
+3043625,US,How the Modern Three-Point Car Seatbelt Works,Volvo AB,1962,17,public domain,https://patentbrief.org/patent/us/3043625/three-point-seatbelt
+6903756,US,How Virtual Fitting Rooms Work for Online Shopping,Jarbridge Inc,2005,35,public domain,https://patentbrief.org/patent/us/6903756/expos-window-management
+RE46915,US,How Remote Devices Prove They Have Not Been Tampered With,Telit Automotive Solutions NV,2018,0,active,https://patentbrief.org/patent/us/RE46915/google-photos
+1964911,US,How the modern internal menstrual tampon was invented,Individual,1934,36,public domain,https://patentbrief.org/patent/us/1964911/tampon-applicator-haas
+3378274,US,How the Snurfer Invented Modern Snowboarding,Brunswick Corp,1968,42,public domain,https://patentbrief.org/patent/us/3378274/snowboard-snurfer-poppen
+12086666,US,How to Make Reusable Plastic SIM Card Holders,Covestro Deutschland AG,2024,0,active,https://patentbrief.org/patent/us/12086666/starship-depot-variant
+8889135,US,How Dosing Humira for Rheumatoid Arthritis Works,AbbVie Biotechnology Ltd,2014,15,public domain,https://patentbrief.org/patent/us/8889135/humira-biosimilar-barrier
+RE46907,US,Using Plant-Derived Chemicals and Metabolic Drugs to Fight Cancer,Johns Hopkins University,2018,1,active,https://patentbrief.org/patent/us/RE46907/descovy-taf-ftc
+1661058,US,How the Theremin Makes Music Without Touching Anything,FIRM OF M J GOLDBERG und SOHNE,1928,40,public domain,https://patentbrief.org/patent/us/1661058/theremin-leon-theremin
+2089171,US,How the Frying Pan Guitar Created the Electric Guitar,ELECTRO STRING INSTR CORP,1937,24,public domain,https://patentbrief.org/patent/us/2089171/electric-guitar-frying-pan
+RE46290,US,Using the Drug TIC10 to Treat Brain Cancer,Penn State Research Foundation,2017,3,active,https://patentbrief.org/patent/us/RE46290/tecfidera-dimethyl-fumarate
+2012680,US,How the First Modern Kitchen Garbage Disposal Was Invented,Individual,1935,43,public domain,https://patentbrief.org/patent/us/2012680/garbage-disposal-hammes
+2776139,US,How the Wiffle Ball Design Works,Individual,1957,43,public domain,https://patentbrief.org/patent/us/2776139/wiffle-ball-mullany
+RE45965,US,How a Diverter Valve Switches Between Two Extruded Materials,PROCESSING TECHNOLOGIES LLC,2016,0,active,https://patentbrief.org/patent/us/RE45965/hero-camera-eis
+3079728,US,How the Hula Hoop Works,Individual,1963,30,public domain,https://patentbrief.org/patent/us/3079728/hula-hoop-wham-o
+12475678,US,How Computers Automatically Spot Disaster Damage Using Different Types of Images,Kakao Mobility Corp,2025,0,active,https://patentbrief.org/patent/us/12475678/spacex-engine-philosophy
+12167890,US,How a Rectangular Laser Fiber Improves Skin Treatments,BIOS Srl,2024,0,active,https://patentbrief.org/patent/us/12167890/cargo-dragon
+2817025,US,How the First Wireless Television Remote Control Works,Zenith Radio Corp,1957,30,public domain,https://patentbrief.org/patent/us/2817025/tv-remote-control-adler-zenith
+3167440,US,How Play-Doh Was Invented,Rainbow Crafts Inc,1965,29,public domain,https://patentbrief.org/patent/us/3167440/play-doh-modeling-compound
+1994488,US,Igor Sikorsky's Early Design for a Vertical Takeoff Aircraft,Sikorsky Aircraft Corp,1935,16,public domain,https://patentbrief.org/patent/us/1994488/helicopter-sikorsky
+10959744,US,Customizing Surgical Dissectors Using 3D Printing,Ethicon,2021,354,active,https://patentbrief.org/patent/us/10959744/surgical-dissectors-and-manufacturing-techniques
+2415012,US,How the Slinky Toy Works,James Industries Inc,1947,29,public domain,https://patentbrief.org/patent/us/2415012/slinky-toy
+RE42346,US,How Silicon Microphones Use Layers to Shrink Sound Sensors,Epcos Pte Ltd,2011,4,public domain,https://patentbrief.org/patent/us/RE42346/cyclone-vacuum-cleaner
+1956350,US,How Laurens Hammond Invented the Electric Organ,Individual,1934,35,public domain,https://patentbrief.org/patent/us/1956350/hammond-organ
+808897,US,How Willis Carrier Invented the Modern Air Conditioner,Buffalo Forge Co,1906,19,public domain,https://patentbrief.org/patent/us/808897/air-conditioning-carrier
+3055113,US,Early Device for Tracking Objects with a Pen,Individual,1962,31,public domain,https://patentbrief.org/patent/us/3055113/etch-a-sketch
+2982547,US,How the First Modern Water Slide Was Designed,Individual,1961,41,public domain,https://patentbrief.org/patent/us/2982547/slip-n-slide-carrier
+1113371,US,How TinkerToy's Original Wooden Construction Blocks Work,Individual,1914,41,public domain,https://patentbrief.org/patent/us/1113371/tinkertoy-pajeau
+2370990,US,How George Nissen Invented the Modern Trampoline,Individual,1945,37,public domain,https://patentbrief.org/patent/us/2370990/trampoline-nissen
+3023824,US,How Joseph-Armand Bombardier Designed the Modern Snowmobile,Individual,1962,30,public domain,https://patentbrief.org/patent/us/3023824/snowmobile-bombardier
+1480914,US,How the Modern Kitchen Blender Works,ARNOLD ELECTRIC Co,1924,33,public domain,https://patentbrief.org/patent/us/1480914/blender-beverage-mixer-poplawski
+8689253,US,How Remote Servers Automatically Adjust Your TV Settings,Sharp Laboratories of America Inc,2014,4,public domain,https://patentbrief.org/patent/us/8689253/netflix-recommendation-engine
+1781541,US,How Albert Einstein and Leo Szilard Designed a Silent Refrigerator,Electrolux Servel Corp,1930,22,public domain,https://patentbrief.org/patent/us/1781541/einstein-szilard-refrigerator
+2442141,US,How Andrew Moyer Learned to Mass-Produce Penicillin,US Department of Agriculture USDA,1948,13,public domain,https://patentbrief.org/patent/us/2442141/vitamin-b12-isolation
+8495220,US,How Cloud Storage Providers Automatically Connect Files to Content Delivery Networks,Amazon Technologies Inc,2013,0,active,https://patentbrief.org/patent/us/8495220/amazon-cloudfront-streaming
+12134567,US,How to Make Better Ferrite Powder for Industrial Use,Powdertech Co Ltd,2024,0,active,https://patentbrief.org/patent/us/12134567/falcon-9-block-5
+2189285,US,How the View-Master 3D Image Viewer Works,Individual,1940,28,public domain,https://patentbrief.org/patent/us/2189285/view-master-stereoscope
+200521,US,How Thomas Edison Improved Early Phonograph Recording,Thomas A. Edison,1878,9,active,https://patentbrief.org/patent/us/200521/phonograph-edison
+2960558,US,How the Modern Alkaline Battery Was Invented,Union Carbide Corp,1960,25,public domain,https://patentbrief.org/patent/us/2960558/alkaline-battery-dry-cell
+9398104,US,How Facebook Uses User Feedback to Improve Search Results,Facebook Inc,2016,0,active,https://patentbrief.org/patent/us/9398104/facebook-ads-manager
+10152712,US,How to Aggregate Transaction Notifications Using Secure Tokens,PayPal Inc,2018,0,public domain,https://patentbrief.org/patent/us/10152712/stripe-payment-processing-api
+10402038,US,Managing App Screens Across Multiple Displays Simultaneously,Hand Held Products Inc,2019,0,active,https://patentbrief.org/patent/us/10402038/apple-news
+7528115,US,Improving Drug Delivery with Chemical Masks for Thiazolo-Pyrimidine Compounds,Anadys Pharmaceuticals Inc,2009,1,active,https://patentbrief.org/patent/us/7528115/eylea-aflibercept
+8062633,US,Using Bacteria to Kill Food-Poisoning Germs on Kitchen Surfaces,Universidad Austral de Chile,2011,1,active,https://patentbrief.org/patent/us/8062633/actemra-tocilizumab
+10318876,US,How AI Systems Adjust Their Behavior Based on User Mood,International Business Machines Corp,2019,0,active,https://patentbrief.org/patent/us/10318876/neural-architecture-search-with-rl
+RE48450,US,How to Use Air-Gaps to Insulate High-Voltage Semiconductor Chips,Renesas Electronics Corp,2021,0,active,https://patentbrief.org/patent/us/RE48450/android-operating-system
+10241750,US,How to Trick Your Phone Into Muting Its Own Microphone,Columbia Network Security Inc,2019,2,active,https://patentbrief.org/patent/us/10241750/swift-programming-language
+400664,US,How Charles Hall Invented Modern Aluminum Production,Individual,1889,18,public domain,https://patentbrief.org/patent/us/400664/hall-process-aluminum-smelting
+1242872,US,How Clarence Saunders Invented the Modern Self-Service Grocery Store,Individual,1917,22,public domain,https://patentbrief.org/patent/us/1242872/self-service-grocery-store-saunders
+2187888,US,How the 1940 Nachumsohn Cooking Apparatus Works,Individual,1940,31,public domain,https://patentbrief.org/patent/us/2187888/crock-pot-slow-cooker-naxon
+2519859,US,Ralph Teetor's Speed Control Device for Automobiles,Individual,1950,23,public domain,https://patentbrief.org/patent/us/2519859/cruise-control-teetor
+2799449,US,How Alan Turing Designed Early Computer Memory Systems,Nat Res Dev,1957,17,public domain,https://patentbrief.org/patent/us/2799449/turing-computer-data-storage
+11993444,US,How to Build a Shock-Absorbing Shipping Box,Individual,2024,0,active,https://patentbrief.org/patent/us/11993444/starship-mars-base-alpha
+7596798,US,How to Send Cable Internet Signals Over Wireless Links,Arcowv Wireless LLC,2009,2,public domain,https://patentbrief.org/patent/us/7596798/netflix-streaming-service
+1612267,US,The Invention of the Modern Adhesive Bandage,Johnson and Johnson,1926,16,public domain,https://patentbrief.org/patent/us/1612267/band-aid-adhesive-bandage
+723325,US,Leamon Souder's 1903 Design for a Spiral Escalator,Individual,1903,17,public domain,https://patentbrief.org/patent/us/723325/escalator-moving-stairway
+2546078,US,How the Rogallo Flexible Wing Kite Works,Individual,1951,23,public domain,https://patentbrief.org/patent/us/2546078/rogallo-wing-hang-glider
+1505592,US,How the Popsicle Was Invented by Accident,Individual,1924,23,public domain,https://patentbrief.org/patent/us/1505592/popsicle-epperson
+2956114,US,How Ampex Invented Modern Video Recording on Magnetic Tape,Ampex Corp,1960,11,public domain,https://patentbrief.org/patent/us/2956114/videotape-recorder-ampex
+1760820,US,How Richard Drew Invented Modern Transparent Adhesive Tape,Minnesota Mining and Manufacturing Co,1930,20,public domain,https://patentbrief.org/patent/us/1760820/scotch-tape-adhesive-drew
+2133235,US,How Glass Fibers Are Spun for Insulation,Owens Illinois Glass Co,1938,22,public domain,https://patentbrief.org/patent/us/2133235/fiberglass-glass-wool-slayter
+6266060,US,How Browsers Automatically Choose Your Start Page Based on History,International Business Machines Corp,2001,95,public domain,https://patentbrief.org/patent/us/6266060/windows-desktop
+RE36574,US,How Early Video Games Synchronized Gameplay Over Modems,MILTON HAROLD W,2000,16,public domain,https://patentbrief.org/patent/us/RE36574/game-boy
+1219881,US,How Gideon Sundback Invented the Modern Zipper,Hookless Fastener Co,1917,14,public domain,https://patentbrief.org/patent/us/1219881/zipper-separable-fastener
+468226,US,How the Crown Cork Bottle Cap Changed Soda and Beer,William Painter,1892,19,active,https://patentbrief.org/patent/us/468226/bottle-cap-crown-cork-painter
+2058761,US,How Arnold Beckman Invented the Modern pH Meter,Arnold O. Beckman,1936,17,active,https://patentbrief.org/patent/us/2058761/ph-meter-beckman
+3503060,US,How Early Hard Disk Drives Accessed Data Quickly,JOHN J LYNOTT,1970,9,public domain,https://patentbrief.org/patent/us/3503060/hard-disk-drive
+8577894,US,How Human Searchers Unlock Restricted Web Content for Users,ChaCha Search Inc,2013,0,active,https://patentbrief.org/patent/us/8577894/bing-knowledge-graph-satori
+613809,US,Nikola Tesla's Remote Control System for Boats,Individual,1898,15,public domain,https://patentbrief.org/patent/us/613809/tesla-remote-control-teleautomaton
+2331117,US,How the First Aerosol Spray Can Works,CLAUDE R WICKARD,1943,20,public domain,https://patentbrief.org/patent/us/2331117/aerosol-spray-can-goodhue
+RE39833,US,Using Heat to Move Tiny Mirrors for Controlling Light Beams,Southwest Research Institute SwRI,2007,1,public domain,https://patentbrief.org/patent/us/RE39833/tpa-variants
+9605068,US,How to Detect Heart Disease in Cats Using Blood Tests,Antibody Lab GmbH,2017,7,active,https://patentbrief.org/patent/us/9605068/dupixent-dupilumab
+1351086,US,The Invention of Lincoln Logs,Individual,1920,24,public domain,https://patentbrief.org/patent/us/1351086/lincoln-logs-wright
+12376789,US,How Computers Use Brain Maps to Diagnose Alzheimer's Disease,Chosun University Industry Academic Cooperation Foundation,2025,0,active,https://patentbrief.org/patent/us/12376789/raptor-testing
+1773079,US,How Clarence Birdseye Invented Modern Frozen Food,Frosted Foods Co Inc,1930,14,public domain,https://patentbrief.org/patent/us/1773079/frozen-food-birdseye
+3454279,US,How the Game Twister Works,Milton Bradley Co,1969,23,public domain,https://patentbrief.org/patent/us/3454279/twister-game
+608845,US,How Rudolf Diesel's Engine Works,Rudolf Diesel,1898,10,active,https://patentbrief.org/patent/us/608845/diesel-engine
+9402913,US,Combining Cyclosporine A and Steroids into a Single Hybrid Drug,Allergan Inc,2016,1,active,https://patentbrief.org/patent/us/9402913/sovaldi-sofosbuvir
+349611,US,William Stanley Jr.'s Early Alternating Current Transformer System,"William Stanley, Jr.",1886,12,active,https://patentbrief.org/patent/us/349611/transformer-stanley
+1469997,US,A 1920s Design for a Suspended Monorail Transportation System,MAY B CORNWALL,1923,7,public domain,https://patentbrief.org/patent/us/1469997/iletin-insulin
+11715014,US,How Computers Use Neural Networks to Read Messy Handwriting,Kodak Alaris Inc,2023,0,active,https://patentbrief.org/patent/us/11715014/gemini-multimodal-model
+1264128,US,How Early Industrial Food Mixers Used Planetary Gear Systems,Hobart Manfacturing Co,1918,19,public domain,https://patentbrief.org/patent/us/1264128/stand-mixer-kitchenaid-johnston
+775134,US,How King Gillette Invented the Modern Disposable Safety Razor,FED TRUST Co,1904,11,public domain,https://patentbrief.org/patent/us/775134/safety-razor-gillette
+1647,US,How Samuel Morse Patented the Electric Telegraph System,Samuel F. B. Morse,1840,8,active,https://patentbrief.org/patent/us/1647/morse-telegraph
+2118318,US,How the First Coin-Operated Parking Meter Works,DUAL PARKING METER Co,1938,15,public domain,https://patentbrief.org/patent/us/2118318/parking-meter-magee
+RE46627,US,How a Handheld Punch Creates Custom Jewelry Display Cards,Individual,2017,1,active,https://patentbrief.org/patent/us/RE46627/aubagio-teriflunomide
+2485039,US,How the Aqua-Lung Scuba Regulator Works,Individual,1949,12,public domain,https://patentbrief.org/patent/us/2485039/aqualung-scuba-cousteau-gagnan
+1057423,US,Elwood Haynes' Early Stellite Cobalt-Chromium Alloy,Individual,1913,18,public domain,https://patentbrief.org/patent/us/1057423/stellite-cobalt-alloy-haynes
+454622,US,Nikola Tesla's Early System for Electric Lighting,Individual,1891,13,active,https://patentbrief.org/patent/us/454622/tesla-coil-electric-lighting
+RE48036,US,The Design of a Specific Medical Instrument Handle,Gauthier Biomedical Inc,2020,3,active,https://patentbrief.org/patent/us/RE48036/supersonic-hair-dryer
+2196914,US,How Sylvan Goldman Invented the Modern Grocery Shopping Cart,Individual,1940,15,public domain,https://patentbrief.org/patent/us/2196914/shopping-cart-goldman
+9919813,US,How Spacecraft Calculate Maneuvers to Change Orbits Near Another Satellite,US Department of Navy,2018,1,active,https://patentbrief.org/patent/us/9919813/fairing-recovery-system
+6793929,US,"How to Make Stable, High-Water Content Skin Creams",Beiersdorf AG,2004,25,public domain,https://patentbrief.org/patent/us/6793929/herceptin-chemotherapy-combination
+RE48592,US,The Ornamental Design of a Specific Spotlight,Modulex Inc USA,2021,2,active,https://patentbrief.org/patent/us/RE48592/cftr-potentiator-compounds
+5639606,US,How to Measure Gene Activity Using Competitive PCR Kits,University of Rochester,1997,151,public domain,https://patentbrief.org/patent/us/5639606/quantitative-pcr
+7685160,US,How Software Predicts What You Need Based on Your Coworkers,Microsoft Corp,2010,5,public domain,https://patentbrief.org/patent/us/7685160/ntfs-file-system
+20150206070,US,How Computers Group Files Based on Meaning and Context,Individual,,17,active,https://patentbrief.org/patent/us/20150206070/generative-adversarial-networks-gans
+2880132,US,How Chemical Additives Boost the Effectiveness of Rodent Poisons,Morton Chemical Co,1959,4,public domain,https://patentbrief.org/patent/us/2880132/tetracycline
+5891653,US,Using Stress Proteins to Help the Body Accept Organ Transplants,Individual,1999,15,public domain,https://patentbrief.org/patent/us/5891653/hiv-viral-load-test-bdna
+207559,US,How the QWERTY Keyboard Layout Was Originally Designed,Christopher Latham Sholes,1878,7,active,https://patentbrief.org/patent/us/207559/qwerty-typewriter-sholes
+2713176,US,How a Simple Felt-Tip Marker Works,Individual,1955,13,public domain,https://patentbrief.org/patent/us/2713176/magic-marker-permanent-marker-rosenthal
+31128,US,How Elisha Otis Invented the Modern Safety Elevator,Elisha G. Otis,1861,6,active,https://patentbrief.org/patent/us/31128/otis-elevator-safety-brake
+644077,US,How Felix Hoffmann Invented Aspirin,FARBENFABRIKEN OF ELBERFELD Co,1900,6,public domain,https://patentbrief.org/patent/us/644077/aspirin-acetylsalicylic-acid
+1721815,US,How the First Cotton Swabs Were Mass-Produced,Individual,1929,10,public domain,https://patentbrief.org/patent/us/1721815/q-tip-cotton-swab
+2824789,US,How the Breathalyzer Measures Alcohol in Your Breath,Individual,1958,8,public domain,https://patentbrief.org/patent/us/2824789/breathalyzer-borkenstein
+3475623,US,How Robert Moog Used Transistors to Shape Synthesizer Sounds,ROBERT A MOOG,1969,7,public domain,https://patentbrief.org/patent/us/3475623/moog-synthesizer-ladder-filter
+10028963,US,How to Treat Severe Lung Infections Using Ceftolozane and Tazobactam,Merck Sharp and Dohme LLC,2018,0,active,https://patentbrief.org/patent/us/10028963/biktarvy-bictegravir-taf-ftc
+9824092,US,How Microsoft Organizes Data in Multi-Tier Storage Systems,Microsoft Technology Licensing LLC,2017,4,active,https://patentbrief.org/patent/us/9824092/file-storage-system-including-tiers
+10456769,US,How to Sequence DNA from Tiny Samples Using Specialized Plates,Bgi Shenzhen & Bgi Shenzhen Co Ltd,2019,1,active,https://patentbrief.org/patent/us/10456769/method-of-constructing-sequencing-library
+10113167,US,How CRISPR-Cas9 Uses RNA to Edit DNA,Universitaet Wien,2018,49,active,https://patentbrief.org/patent/us/10113167/methods-and-compositions-for-rna-directed-target-dna-modification-and-for-rna-directed-modulation-of-transcription
+11267584,US,How to Build an Aircraft Tail Using One-Shot Composite Curing,Airbus Operations SL,2022,0,active,https://patentbrief.org/patent/us/11267584/orbital-refueling
+3633,US,How Charles Goodyear Invented Modern Vulcanized Rubber,Charles Goodyear,1844,6,active,https://patentbrief.org/patent/us/3633/vulcanized-rubber-goodyear
+9811783,US,How Software Automatically Picks the Best Way to Send Job Ads,Jobvite Inc,2017,2,active,https://patentbrief.org/patent/us/9811783/uber-surge-pricing
+2046343,US,The Invention of the Phillips Head Screw,Phillips Screw Co,1936,8,public domain,https://patentbrief.org/patent/us/2046343/phillips-screw-screwdriver
+10163106,US,How Visa Processes Targeted Discounts on Specific Items During Checkout,Visa International Service Association,2018,1,active,https://patentbrief.org/patent/us/10163106/stripe-radar
+8278036,US,How Modified RNA Tricks Cells Into Making Proteins Without Triggering Attacks,University of Pennsylvania Penn,2012,322,public domain,https://patentbrief.org/patent/us/8278036/rna-containing-modified-nucleosides-and-methods-of-use-thereof
+4302536,US,How to Detect Disease Markers Using Colored Proteins,Individual,1981,27,public domain,https://patentbrief.org/patent/us/4302536/colorimetric-immunoassay-process
+586193,US,How Marconi Patented Early Wireless Telegraphy Signals,Guglielmo Marconi,1897,4,active,https://patentbrief.org/patent/us/586193/radio-wireless-marconi
+1906844,US,How the Iron Lung Artificial Respirator Works,Individual,1933,7,public domain,https://patentbrief.org/patent/us/1906844/iron-lung-respirator-drinker
+36836,US,How the Gatling Gun's Rotating Barrel Mechanism Works,Richard J. Gatling,1862,7,active,https://patentbrief.org/patent/us/36836/gatling-gun
+78317,US,How Alfred Nobel Stabilized Nitroglycerin with Dynamite,Alfred Nobel,1868,5,active,https://patentbrief.org/patent/us/78317/dynamite-nobel
+22186,US,John Mason's 1858 Patent for the Mason Jar Lid,John L. Mason,1858,8,active,https://patentbrief.org/patent/us/22186/mason-jar
+6531124,US,How to Use Modified Cells to Produce Insulin-Regulating Proteins in the Body,Transkaryotic Therapies Inc,2003,2,public domain,https://patentbrief.org/patent/us/6531124/xolair-omalizumab
+1967861,US,How DuPont Invented Neoprene Synthetic Rubber,EI Du Pont de Nemours and Co,1934,7,public domain,https://patentbrief.org/patent/us/1967861/neoprene-synthetic-rubber
+10362429,US,How Wearable Tech Uses 3D Sound to Guide Visually Impaired People,California Institute of Technology,2019,0,active,https://patentbrief.org/patent/us/10362429/find-my-network
+4914603,US,How to Speed Up Neural Network Training Using Momentum,GTE Laboratories Inc,1990,29,public domain,https://patentbrief.org/patent/us/4914603/training-neural-networks
+9965705,US,How AI Uses Question-Guided Attention to Answer Questions About Images,Baidu USA LLC,2018,28,active,https://patentbrief.org/patent/us/9965705/systems-and-methods-for-attention-based-configurable-convolutional-neural-networks-abc-cnn-for-visual-question-answering
+5903495,US,How Multi-Level Cell Memory Stores More Data in Less Space,Toshiba Corp,1999,326,public domain,https://patentbrief.org/patent/us/5903495/semiconductor-device-and-memory-system
+10702600,US,How Moderna's mRNA Vaccine Technology Targets Betacoronaviruses,ModernaTx Inc,2020,46,active,https://patentbrief.org/patent/us/10702600/betacoronavirus-mrna-vaccine
+4677614,US,How Self-Healing Data Loops Automatically Elect a New Master Controller,Process Systems Inc,1987,83,public domain,https://patentbrief.org/patent/us/4677614/data-communication-system-and-method-and-communication-controller-and-method-therefor-having-a-dataclock-synchronizer-and-method
+942699,US,"How Leo Baekeland Invented Bakelite, the First Synthetic Plastic",Individual,1909,4,active,https://patentbrief.org/patent/us/942699/bakelite-synthetic-plastic
+2485586,US,How the Geiger Counter Detects Invisible Radiation,International Standard Electric Corp ,1949,6,public domain,https://patentbrief.org/patent/us/2485586/geiger-counter
+2702035,US,How the First Heart-Lung Machine Oxygenated Blood,JEFFERSON MEDICAL COLLEGE,1955,4,public domain,https://patentbrief.org/patent/us/2702035/heart-lung-machine-gibbon
+375962,US,How the Modern Paper Drinking Straw Was Invented,Marvin C. Stone,1888,7,active,https://patentbrief.org/patent/us/375962/drinking-straw-stone
+743801,US,How Mary Anderson Invented the Windshield Wiper,Individual,1903,5,public domain,https://patentbrief.org/patent/us/743801/windshield-wiper-anderson
+6362826,US,How Intel's Memory Hub Manages Graphics Data Across Different Memory Types,Intel Corp,2002,25,public domain,https://patentbrief.org/patent/us/6362826/method-and-apparatus-for-implementing-dynamic-display-memory
+5401560,US,How to Make Durable Non-Slip Surfaces Using Electron Beam Curing,Norton Co,1995,25,public domain,https://patentbrief.org/patent/us/5401560/polymer-backed-material-with-non-slip-surface-using-e-beam-cured-urethane-binder
+7663607,US,How Multi-Touch Screens Track Multiple Fingers at Once,Apple Inc,2010,1995,public domain,https://patentbrief.org/patent/us/7663607/multipoint-touchscreen
+9839649,US,How to Design Effective siRNA Molecules to Silence Specific Genes,Thermo Fisher Scientific Inc,2017,3,active,https://patentbrief.org/patent/us/9839649/methods-and-compositions-for-selecting-sirna-of-improved-functionality
+7664715,US,How Caterpillar Compresses Heavy Machinery Data Using Neural Networks,Caterpillar Japan Ltd,2010,0,public domain,https://patentbrief.org/patent/us/7664715/apparatus-and-method-for-compressing-data-apparatus-and-method-for-analyzing-data-and-data-management-system
+10824959,US,How to Make Artificial Intelligence Explain Its Own Decisions,Amazon Technologies Inc,2020,37,active,https://patentbrief.org/patent/us/10824959/explainers-for-machine-learning-classifiers
+3333846,US,How the Classic Operation Board Game Works,Glass Marvin and Associates,1967,5,public domain,https://patentbrief.org/patent/us/3333846/operation-game-electric-probe
+3735375,US,How Vacuum Tubes Detect Tiny Changes in High-Resistance Sensors,Central Investment Corp,1973,2,public domain,https://patentbrief.org/patent/us/3735375/smoke-detector-ionization
+382280,US,How Nikola Tesla Invented the Modern AC Electric Motor,Individual,1888,1,active,https://patentbrief.org/patent/us/382280/tesla-ac-motor
+RE46892,US,The Design of a Specialized Pouch for Men's Underwear,0912139 B C Ltd,2018,2,active,https://patentbrief.org/patent/us/RE46892/wireless-speaker-grouping
+5013088,US,How Tamper-Proof Labels That Break Into Pieces Work,Data Tech Services Inc,1991,23,public domain,https://patentbrief.org/patent/us/5013088/disintegratable-masking-label
+10155945,US,How to Build Tiny Lipid Capsules to Deliver Genetic Medicines,Nitto Denko Corp,2018,10,active,https://patentbrief.org/patent/us/10155945/method-of-producing-lipid-nanoparticles-for-drug-delivery
+8046721,US,How the iPhone's Slide-to-Unlock Gesture Works,Apple Inc,2011,141,active,https://patentbrief.org/patent/us/8046721/unlocking-a-device-by-performing-gestures-on-an-unlock-image
+11727263,US,How Samsung Uses Two AI Models to Improve Sentence Generation,Samsung Electronics Co Ltd,2023,1,active,https://patentbrief.org/patent/us/11727263/method-of-updating-sentence-generation-model-and-sentence-generating-apparatus
+37305,US,How James Plimpton Invented the Modern Roller Skate,James L. Plimpton,1863,5,active,https://patentbrief.org/patent/us/37305/roller-skates-plimpton
+1462456,US,How Floyd Smith Designed the Modern Parachute Pack and Harness,FLOYD SMITH AERIAL EQUIPMENT C,1923,5,public domain,https://patentbrief.org/patent/us/1462456/free-fall-parachute-smith-irvin
+9467413,US,How Instant Messaging Apps Open Reply Windows for Social Media Updates,Tencent Technology Shenzhen Co Ltd,2016,0,active,https://patentbrief.org/patent/us/9467413/facebook-marketplace
+879532,US,Lee De Forest's Early Radio Telegraphy System,FOREST RADIO TELEPHONE CO DE,1908,2,public domain,https://patentbrief.org/patent/us/879532/de-forest-audion-vacuum-tube
+139121,US,How Levi Strauss Invented the Copper-Riveted Jean Pocket,Levi Strauss & Co.,1873,2,active,https://patentbrief.org/patent/us/139121/blue-jeans-riveted-levi-strauss
+558393,US,How John Harvey Kellogg Invented Flaked Breakfast Cereals,John Harvey Kellogg,1896,4,active,https://patentbrief.org/patent/us/558393/corn-flakes-kellogg
+157124,US,How Joseph Glidden Invented Modern Barbed Wire,Individual,1874,4,public domain,https://patentbrief.org/patent/us/157124/barbed-wire-glidden
+8080,US,John Gorrie's 1851 Patent for Artificial Ice Production,John Gorrie,1851,3,active,https://patentbrief.org/patent/us/8080/ice-machine-refrigeration-gorrie
+889823,US,How James Spangler Invented the First Portable Electric Vacuum Cleaner,Individual,1908,3,public domain,https://patentbrief.org/patent/us/889823/vacuum-cleaner-spangler
+7512773,US,How Graphics Processors Switch Between Different Tasks Efficiently,Nvidia Corp,2009,6,public domain,https://patentbrief.org/patent/us/7512773/context-switching-using-halt-sequencing-protocol
+5946647,US,How Computers Automatically Detect and Act on Data Like Phone Numbers,Apple Computer Inc,1999,297,public domain,https://patentbrief.org/patent/us/5946647/system-and-method-for-performing-an-action-on-a-structure-in-computer-generated-data
+11295225,US,How D-Wave Clears Magnetic Noise in Quantum Computers,D Wave Systems Inc,2022,13,active,https://patentbrief.org/patent/us/11295225/superconducting-quantum-processor-and-method-of-operating-same
+10607134,US,How AI Learns to Control Game Characters Based on Their Surroundings,Individual,2020,26,active,https://patentbrief.org/patent/us/10607134/artificially-intelligent-systems-devices-and-methods-for-learning-andor-using-an-avatars-circumstances-for-autonomous-avatar-operation
+1788434,US,Leonarde Keeler's Early Mechanical Blood Pressure Recorder,Individual,1931,4,public domain,https://patentbrief.org/patent/us/1788434/polygraph-lie-detector-keeler
+6281,US,How Walter Hunt Invented the Modern Safety Pin,Walter Hunt,1849,4,active,https://patentbrief.org/patent/us/6281/safety-pin-hunt
+1647147,US,How Early Electromagnetic Pumps Moved Liquid Metal Using Magnetic Fields,Individual,1927,7,public domain,https://patentbrief.org/patent/us/1647147/sound-on-film-talking-pictures
+4750,US,How Elias Howe Invented the Modern Lockstitch Sewing Machine,Elias Howe,1846,2,active,https://patentbrief.org/patent/us/4750/sewing-machine-howe
+10400035,US,Using Antibodies to Protect Transplanted Organs from Damage,University of Helsinki,2019,0,active,https://patentbrief.org/patent/us/10400035/ocrevus-ocrelizumab
+1125476,US,How Georges Claude Invented the Neon Light,Individual,1915,3,public domain,https://patentbrief.org/patent/us/1125476/neon-lighting-claude
+5876725,US,How Vaccines Protect Pigs from Respiratory Bacteria,University of Saskatchewan,1999,3,public domain,https://patentbrief.org/patent/us/5876725/synagis-palivizumab
+11361763,US,How Smart Speakers Know You're Talking to Them After a Command,Amazon Technologies,2022,64,active,https://patentbrief.org/patent/us/11361763/detecting-system-directed-speech
+5920821,US,How Phones Automatically Find and Update Network Lists Using CDPD,Bell Atlantic Network Services Inc,1999,179,public domain,https://patentbrief.org/patent/us/5920821/use-of-cellular-digital-packet-data-cdpd-communications-to-convey-system-identification-list-data-to-roaming-cellular-subscriber-stations
+10559047,US,How Mobile Devices Use Tags to Close Restaurant Checks,NCR Corp,2020,1,active,https://patentbrief.org/patent/us/10559047/systems-and-methods-for-facilitating-closing-of-a-check
+1032557,US,How the Modern Disposable Paper Cup Was Invented,Individual,1912,4,public domain,https://patentbrief.org/patent/us/1032557/dixie-cup-disposable-paper-cup
+9266948,US,How Genentech Engineered Antibodies to Block the Bv8 Protein,Genentech Inc,2016,0,active,https://patentbrief.org/patent/us/9266948/kadcyla-t-dm1
+3321037,US,How Hovercrafts Use Flexible Skirts to Ride on Air,Hovercraft Development Ltd,1967,2,public domain,https://patentbrief.org/patent/us/3321037/hovercraft-cockerell
+483166,US,How Joshua Pusey Invented the Paper Matchbook,Joshua Pusey,1892,4,active,https://patentbrief.org/patent/us/483166/matchbook-pusey
+5440632,US,How Cable Boxes Download Software Updates Remotely,Scientific Atlanta LLC,1995,249,public domain,https://patentbrief.org/patent/us/5440632/reprogrammable-subscriber-terminal
+1475024,US,How Garrett Morgan Invented the Three-Position Traffic Signal,Individual,1923,2,public domain,https://patentbrief.org/patent/us/1475024/traffic-signal-morgan
+1304,US,Samuel Colt's Early Revolving Firearm Mechanism,Samuel Colt,1839,2,active,https://patentbrief.org/patent/us/1304/colt-revolver
+1115674,US,How Mary Phelps Jacob Invented the Modern Backless Brassiere,MARY P JACOB,1914,3,public domain,https://patentbrief.org/patent/us/1115674/brassiere-mary-phelps-jacob
+319082,US,How Constantin Fahlberg Discovered Saccharin,Constantin Fahlberg,1885,3,active,https://patentbrief.org/patent/us/319082/saccharin-artificial-sweetener-fahlberg
+387571,US,How the Revolving Door Was Invented,Theophilus Van Kannel,1888,3,active,https://patentbrief.org/patent/us/387571/revolving-door-van-kannel
+2186907,US,How to Make Dried Citrus Fruit Snacks,Individual,1940,6,public domain,https://patentbrief.org/patent/us/2186907/sulfa-drugs-sulfapyridine
+5346778,US,Boosting Fuel Cell Power for Vehicles Using Oxygen Injection,Energy Partners Inc,1994,90,public domain,https://patentbrief.org/patent/us/5346778/electrochemical-load-management-system-for-transportation-applications
+5561631,US,How Xilinx Chips Quickly Check If Memory Is Completely Erased,Xilinx Inc,1996,5,public domain,https://patentbrief.org/patent/us/5561631/high-speed-minimal-logic-self-blank-checking-method-for-programmable-logic-device
+4660166,US,How Hopfield Networks Use Resistors to Mimic Brain-Like Memory,California Institute of Technology,1987,167,public domain,https://patentbrief.org/patent/us/4660166/electronic-network-for-collective-decision-based-on-large-number-of-connections-between-signals
+5455030,US,"How to Build Smaller, Synthetic Antibody-Like Molecules for Medicine",Enzon Labs Inc,1995,440,public domain,https://patentbrief.org/patent/us/5455030/immunotheraphy-using-single-chain-polypeptide-binding-molecules
+5579517,US,How Windows 95 Supported Long Filenames While Staying Compatible,Microsoft Corp,1996,39,public domain,https://patentbrief.org/patent/us/5579517/windows-95-start-menu
+388116,US,How William Burroughs Invented the First Practical Adding Machine,William S. Burroughs,1888,2,active,https://patentbrief.org/patent/us/388116/adding-machine-burroughs
+355139,US,Josephine Cochrane's Mechanical Dishwashing Machine,Josephine G. Cochrane,1886,2,active,https://patentbrief.org/patent/us/355139/dishwasher-cochrane
+1242065,US,How Elmer Sperry Invented the Gyroscopic Compass for Ships,Sperry Gyroscope Co Inc,1917,2,public domain,https://patentbrief.org/patent/us/1242065/gyrocompass-sperry
+259054,US,Henry Seely's 1882 Electric Flatiron,Henry W. Seely,1882,3,active,https://patentbrief.org/patent/us/259054/electric-iron-seely
+10540437,US,How Automated Systems Generate and Track Consumer Dispute Letters,Individual,2020,3,active,https://patentbrief.org/patent/us/10540437/system-and-interface-for-electronic-communication-generation-and-tracking
+6476836,US,How Printers Save Toner by Dropping Light-Colored Pixels,Ricoh Co Ltd,2002,9,public domain,https://patentbrief.org/patent/us/6476836/image-forming-apparatus-having-a-function-of-saving-developing-agent
+10410117,US,How to Save and Reuse Skills Learned by Artificial Intelligence Hardware,BrainChip Inc,2019,1,active,https://patentbrief.org/patent/us/10410117/method-and-a-system-for-creating-dynamic-neural-function-libraries
+7865399,US,How a Centralized Broker Handles Online Shopping Transactions,Google LLC,2011,9,public domain,https://patentbrief.org/patent/us/7865399/distributed-electronic-commerce-system-with-centralized-point-of-purchase
+1721530,US,How Jacob Schick Invented the Modern Magazine-Loading Safety Razor,Individual,1929,2,public domain,https://patentbrief.org/patent/us/1721530/schick-repeating-razor
+1049667,US,How William Burton Invented Modern Gasoline Refining,Standard Oil Co,1913,2,public domain,https://patentbrief.org/patent/us/1049667/petroleum-cracking-burton
+19783,US,How the Pencil and Eraser Became One Tool,Hymen L. Lipman,1858,2,active,https://patentbrief.org/patent/us/19783/pencil-eraser-combination-lipman
+1066809,US,How A.C. Gilbert Designed Early Interlocking Toy Construction Blocks,MYSTO Manufacturing CO,1913,3,public domain,https://patentbrief.org/patent/us/1066809/erector-set-gilbert
+388850,US,George Eastman's Original Box Camera Design,George Eastman,1888,1,active,https://patentbrief.org/patent/us/388850/kodak-roll-film-camera-eastman
+RE45784,US,How Smartphones Use Flashing Barcodes for Secure Ticketing,Panasonic Intellectual Property Management Co Ltd,2015,0,active,https://patentbrief.org/patent/us/RE45784/multi-room-wireless-audio
+1394450,US,How the First Automatic Pop-Up Toaster Works,Individual,1921,2,public domain,https://patentbrief.org/patent/us/1394450/pop-up-toaster-strite
+4064521,US,How Amorphous Silicon Changed Solar Power,RCA Corp,1977,197,public domain,https://patentbrief.org/patent/us/4064521/semiconductor-device-having-a-body-of-amorphous-silicon
+5657390,US,How Netscape Created the Secure Socket Layer (SSL) for Web Security,Netscape Communications Corp,1997,383,public domain,https://patentbrief.org/patent/us/5657390/secure-socket-layer-application-program-apparatus-and-method
+7844915,US,How Touchscreens Handle Scrolling and Rubber-Band Effects,Apple Inc,2010,132,active,https://patentbrief.org/patent/us/7844915/application-programming-interfaces-for-scrolling-operations
+10423875,US,How a Camera-Based System Monitors Artificial Neural Network Creativity,Individual,2019,1,active,https://patentbrief.org/patent/us/10423875/electro-optical-device-and-method-for-identifying-and-inducing-topological-states-formed-among-interconnecting-neural-modules
+4081538,US,Using Specific Steroid Molecules to Block Salt Retention in the Body,Individual,1978,5,public domain,https://patentbrief.org/patent/us/4081538/aldosterone-antagonists
+5682513,US,How IBM's Storage Controllers Keep Data Backups in the Right Order,International Business Machines Corp,1997,145,public domain,https://patentbrief.org/patent/us/5682513/cache-queue-entry-linking-for-dasd-record-updates
+7543038,US,How to Keep Apps Running Without a Constant Internet Connection,International Business Machines Corp,2009,1,public domain,https://patentbrief.org/patent/us/7543038/arrangement-and-method-for-impermanent-connectivity
+98304,US,William Semple's 1869 Patent for Improved Chewing Gum,William F. Semple,1869,2,active,https://patentbrief.org/patent/us/98304/chewing-gum-semple
+88929,US,George Westinghouse's Original Steam-Powered Train Brake,"George Westinghouse, Jr.",1869,1,active,https://patentbrief.org/patent/us/88929/air-brake-westinghouse
+12073180,US,How a Computer System Fact-Checks AI Language Models,Unlikely Artificial Intelligence,2024,12,active,https://patentbrief.org/patent/us/12073180/computer-implemented-methods-for-the-automated-analysis-or-use-of-data-including-12073180
+7577616,US,How Mobile Phones Can Securely Authorize Payments Using Random ID Codes,Individual,2009,17,public domain,https://patentbrief.org/patent/us/7577616/method-and-apparatus-of-secure-authentication-and-electronic-payment-through-mobile-communication-tool
+7352772,US,How Wireless Routers Manage Traffic Between Old and New Devices,Lenovo Singapore Pte Ltd,2008,1,public domain,https://patentbrief.org/patent/us/7352772/minimization-of-performance-impact-in-overlying-80211b-and-80211g-networks
+10282665,US,How AI Agents Learn to Pick the Best Future Actions,Sony Corp,2019,0,active,https://patentbrief.org/patent/us/10282665/action-selection-with-a-reward-estimator-applied-to-machine-learning
+11311959,US,Building Metal Parts Without Melting: Solid-State 3D Printing System,Meld Manufacturing,2022,18,active,https://patentbrief.org/patent/us/11311959/solid-state-additive-manufacturing-system-and-material-compositions-and-structur
+1537326,US,How Early Telephone Systems Managed Busy Lines Automatically,Automatic Electric Co,1925,0,public domain,https://patentbrief.org/patent/us/1537326/insulin-extraction-and-purification
+10998965,US,How High-Altitude Satellites Relay Data for Fast-Moving Low-Orbit Satellites,Asia Satellite Telecommunications Co,2021,23,active,https://patentbrief.org/patent/us/10998965/high-throughput-satellites-and-methods-of-operating-high-throughput-satellites-f
+8311950,US,Predicting User Interests Based on Who Looks at Whose Profile,Google LLC,2012,73,active,https://patentbrief.org/patent/us/8311950/detecting-content-on-a-social-network-using-browsing-patterns
+6630507,US,Using Cannabinoids to Protect the Brain from Oxidative Stress,US Department of Health and Human Services,2003,78,public domain,https://patentbrief.org/patent/us/6630507/cannabinoids-as-antioxidants-and-neuroprotectants
+9182882,US,How to Draw 3D Shapes on Touchscreens Using Your Fingers,Autodesk Inc,2015,17,active,https://patentbrief.org/patent/us/9182882/dynamic-creation-and-modeling-of-solid-models
+7812828,US,How Touchscreens Use Math to Recognize Your Fingers,Apple Inc,2010,93,active,https://patentbrief.org/patent/us/7812828/ellipse-fitting-for-multi-touch-surfaces
+6033785,US,How Car Windows Use Special Coatings to Balance Privacy and Visibility,Central Glass Co Ltd,2000,7,public domain,https://patentbrief.org/patent/us/6033785/vehicular-colored-glass-pane-with-light-transmittance-and-reflectance-adjustment
+6122658,US,How Servers Combine Global and Local Content for Personalized Web Displays,Microsoft Corp,2000,111,public domain,https://patentbrief.org/patent/us/6122658/custom-localized-information-in-a-networked-server-for-display-to-an-end-user
+9379564,US,How Electric Cars Safely Pause Charging When You Want to Unplug,Nissan Motor Co Ltd,2016,1,active,https://patentbrief.org/patent/us/9379564/charging-control-apparatus-and-charging-control-method
+4558176,US,How Computers Use Hardware to Stop Software Piracy and Cracking,Individual,1985,280,public domain,https://patentbrief.org/patent/us/4558176/computer-systems-to-inhibit-unauthorized-copying-unauthorized-usage-and-automated-cracking-of-protected-software
+1001260,US,How Ole Evinrude Invented the Modern Portable Outboard Motor,EVINRUDE MOTOR CO,1911,1,public domain,https://patentbrief.org/patent/us/1001260/outboard-motor-evinrude
+5774660,US,How Load Balancers Route Web Traffic Based on Specific Content,Resonate Inc,1998,1148,public domain,https://patentbrief.org/patent/us/5774660/world-wide-web-server-with-delayed-resource-binding-for-resource-based-load-balancing-on-a-distributed-resource-multi-node-network
+9361579,US,How Computers Calculate Probabilities in Large Knowledge Bases,International Business Machines Corp,2016,1,active,https://patentbrief.org/patent/us/9361579/large-scale-probabilistic-ontology-reasoning
+8683378,US,How Smartphones Switch Between Slow and Fast Scrolling,Apple Inc,2014,42,active,https://patentbrief.org/patent/us/8683378/scrolling-techniques-for-user-interfaces
+6828755,US,How Car Battery Modules Combine High and Low Voltage Systems,Johnson Controls Technology Co,2004,46,public domain,https://patentbrief.org/patent/us/6828755/battery-system-module
+5579430,US,How Digital Audio Compression Works,Fraunhofer Gesellschaft zur Foerderung der Angewandten Forschung eV,1996,108,public domain,https://patentbrief.org/patent/us/5579430/digital-encoding-process
+10599957,US,How to Automatically Detect and Fix Changes in AI Model Data,Capital One Services,2020,32,active,https://patentbrief.org/patent/us/10599957/systems-and-methods-for-detecting-data-drift-for-data-used-in-machine-learning-m
+6665308,US,How Cable Modems Fix Signal Distortions Before Sending Data,Terayon Communication Systems Inc,2003,188,public domain,https://patentbrief.org/patent/us/6665308/apparatus-and-method-for-equalization-in-distributed-digital-data-transmission-systems
+8615514,US,How Google Uses User Feedback to Rank Websites by Quality,Google LLC,2013,26,active,https://patentbrief.org/patent/us/8615514/evaluating-website-properties-by-partitioning-user-feedback
+11876858,US,Managing and Updating AI on Many Smart Devices from the Cloud,Armada Systems,2024,21,active,https://patentbrief.org/patent/us/11876858/cloud-based-fleet-and-asset-management-for-edge-computing-of-machine-learning-an
+9754221,US,A Computer Chip for Training Many AI Agents at Once,Alphaics,2017,53,active,https://patentbrief.org/patent/us/9754221/processor-for-implementing-reinforcement-learning-operations
+9481728,US,How Genetically Modified T-Cells Fight CD19 Cancers,University of Pennsylvania Penn,2016,37,active,https://patentbrief.org/patent/us/9481728/compositions-and-methods-for-treatment-of-cancer
+11429762,US,How Computers Train AI Models Using Separate Virtual Simulations,Amazon Technologies,2022,13,active,https://patentbrief.org/patent/us/11429762/simulation-orchestration-for-training-reinforcement-learning-models
+8619056,US,How Touchscreens Tell Real Touches From False Ghost Touches,Elan Microelectronics Corp,2013,2,active,https://patentbrief.org/patent/us/8619056/ghost-resolution-for-a-capacitive-touch-panel
+7233978,US,How Distributed Servers Find Data Using Location Pointers,Econnectix LLC,2007,119,public domain,https://patentbrief.org/patent/us/7233978/method-and-apparatus-for-managing-location-information-in-a-network-separate-from-the-data-to-which-the-location-information-pertains
+6073184,US,How Software Services Pass Messages Across Different Network Zones,Alcatel SA,2000,13,public domain,https://patentbrief.org/patent/us/6073184/method-of-transmitting-a-notification-to-a-receiver-from-plural-notification-services-in-a-distributed-application-network-and-a-network-for-implementing-the-method
+5673322,US,How Early Mobile Devices Accessed the Internet Using Split Proxies,Bell Communications Research Inc,1997,546,public domain,https://patentbrief.org/patent/us/5673322/system-and-method-for-providing-protocol-translation-and-filtering-to-access-the-world-wide-web-from-wireless-or-low-bandwidth-networks
+5966126,US,How to Build Complex Database Searches Using Venn Diagrams,Individual,1999,859,public domain,https://patentbrief.org/patent/us/5966126/graphic-user-interface-for-database-system
+589168,US,How Thomas Edison's Kinetographic Camera Captured Early Motion Pictures,Thomas A. Edison,1897,0,active,https://patentbrief.org/patent/us/589168/motion-picture-camera-kinetograph
+10276149,US,How Voice Assistants Change Their Speech Based on How You Talk,Amazon Technologies,2019,26,active,https://patentbrief.org/patent/us/10276149/dynamic-text-to-speech-output
+10962473,US,AI Model Predicts Protein Shapes from Infrared Light Data,Notco Delaware,2021,14,active,https://patentbrief.org/patent/us/10962473/protein-secondary-structure-prediction
+90646,US,Edison's First Patent: An Electric Vote Recorder,Thomas A. Edison,1869,0,active,https://patentbrief.org/patent/us/90646/edison-first-patent-vote-recorder
+8044672,US,How to Measure Stability in Complex Power Grids Using D-Q Impedance,Individual,2011,7,active,https://patentbrief.org/patent/us/8044672/method-for-measuring-d-q-impedance-of-polyphase-power-grid-components
+6178160,US,How DNS Servers Route Web Traffic to the Least Busy Server,Cisco Technology Inc,2001,123,public domain,https://patentbrief.org/patent/us/6178160/load-balancing-of-client-connections-across-a-network-using-server-based-algorithms
+549160,US,George Selden's 1895 Patent for a Road Engine,George B. Selden,1895,0,active,https://patentbrief.org/patent/us/549160/selden-automobile-patent
+8493330,US,How Touchscreens Precisely Align Signals to Detect Your Touch,Apple Inc,2013,13,active,https://patentbrief.org/patent/us/8493330/individual-channel-phase-delay-scheme
+7904576,US,How to Send Data Streams Independently Without Connection Overload,Hewlett Packard Development Co LP,2011,42,active,https://patentbrief.org/patent/us/7904576/reliable-datagram-via-independent-source-destination-resources
+11145922,US,Boosting Solid-State Batteries with a Capacitor Interlayer,GM Global Technology Operations,2021,14,active,https://patentbrief.org/patent/us/11145922/solid-state-battery-having-a-capacitor-assisted-interlayer
+10573086,US,How AR Glasses Make Virtual Objects Look Solid,Telefonaktiebolaget LM Ericsson AB,2020,14,active,https://patentbrief.org/patent/us/10573086/opacity-filter-for-display-device
+11115136,US,How to Tune Multi-Antenna Systems for Better Wireless Signals,LG Electronics,2021,14,active,https://patentbrief.org/patent/us/11115136/method-for-calibrating-an-array-antenna-in-a-wireless-communication-system-and-a
+12033006,US,Running AI Models Locally on Edge Devices with Cloud Updates,Armada Systems,2024,11,active,https://patentbrief.org/patent/us/12033006/edge-deployment-of-cloud-originated-machine-learning-and-artificial-intelligence
+310966,US,Early Roller Coaster Design for Thrill Rides,LaMarcus A. Thompson,1885,0,active,https://patentbrief.org/patent/us/310966/roller-coaster-thompson
+9409292,US,How a Snake Robot Uses Two Arms to Work Together,Sarcos LC,2016,27,active,https://patentbrief.org/patent/us/9409292/serpentine-robotic-crawler-for-performing-dexterous-operations
+12067362,US,How a Computer System Improves Large Language Model Output with Structured Data,Unlikely Artificial Intelligence,2024,5,active,https://patentbrief.org/patent/us/12067362/computer-implemented-methods-for-the-automated-analysis-or-use-of-data-including-12067362
+8133298,US,Making Iron More Efficiently and Generating Power with Oxygen,Air Products and Chemicals,2012,62,active,https://patentbrief.org/patent/us/8133298/blast-furnace-iron-production-with-integrated-power-generation
+9571603,US,How Servers Share an IP Address for High Availability,Cisco Technology Inc,2017,4,active,https://patentbrief.org/patent/us/9571603/redundancy-network-protocol-system
+6990497,US,How to Play Any Media Playlist by Converting it to a Standard Format,Microsoft Corp,2006,92,public domain,https://patentbrief.org/patent/us/6990497/dynamic-streaming-media-management
+9959544,US,How a Server Updates Smart Card Apps and Shows Ads,International Business Machines Corp,2018,1,public domain,https://patentbrief.org/patent/us/9959544/updating-an-application-on-a-smart-card-and-displaying-an-advertisement
+9368994,US,Device That Adjusts Power for Charging Multiple Devices,Wistron Corp,2016,0,active,https://patentbrief.org/patent/us/9368994/dynamic-charging-device-and-method-thereof
+116842,US,How Margaret Knight's Machine Made Flat-Bottom Paper Bags,Margaret E. Knight,1871,0,active,https://patentbrief.org/patent/us/116842/paper-bag-machine-knight
+966677,US,How Early Washing Machines Moved Clothes,HURLEY MACHINE Co,1910,0,public domain,https://patentbrief.org/patent/us/966677/electric-washing-machine-fisher
+293545,US,How Lewis Waterman's Original Fountain Pen Design Worked,Lewis E. Waterman,1884,0,active,https://patentbrief.org/patent/us/293545/fountain-pen-waterman
+271363,US,How James Ritty's First Cash Register Tracked Sales,James Ritty,1883,0,active,https://patentbrief.org/patent/us/271363/cash-register-ritty
+815350,US,John Holland's Design for an Early Submarine Boat,Individual,1906,0,public domain,https://patentbrief.org/patent/us/815350/holland-submarine
+8037168,US,How to Automatically Track and Act on Internet Domain Name Expirations,ESDR Network Solutions LLC,2011,55,public domain,https://patentbrief.org/patent/us/8037168/method-product-and-apparatus-for-enhancing-resolution-services-registration-services-and-search-services
+6732183,US,How to Seamlessly Switch Video Streams for Many Viewers,BroadWare Technologies LLC,2004,98,public domain,https://patentbrief.org/patent/us/6732183/video-and-audio-streaming-for-multiple-users
+8914752,US,How Snapchat Stories Advance with a Tap,Snapchat Inc,2014,176,active,https://patentbrief.org/patent/us/8914752/apparatus-and-method-for-accelerated-display-of-ephemeral-messages
+11989527,US,How a Computer System Checks and Improves AI Text,Unlikely Artificial Intelligence,2024,4,active,https://patentbrief.org/patent/us/11989527/computer-implemented-methods-for-the-automated-analysis-or-use-of-data-including-11989527
+10707961,US,High-Flying Aircraft Relays Satellite Internet to Ground Users,Space Systems Loral,2020,12,active,https://patentbrief.org/patent/us/10707961/adaptive-communication-system
+8587547,US,How to Split a Smartphone Keyboard with a Gesture,Apple Inc,2013,6,active,https://patentbrief.org/patent/us/8587547/device-method-and-graphical-user-interface-for-manipulating-soft-keyboards
+8168877,US,How to Automatically Generate Musical Harmonies from Audio,Harman International Industries Canada Ltd,2012,24,active,https://patentbrief.org/patent/us/8168877/musical-harmony-generation-from-polyphonic-audio-signals
+12141700,US,How AI Generates Images Based on Style and Content Cues,Naver,2024,3,active,https://patentbrief.org/patent/us/12141700/generative-adversarial-network-for-generating-images
+11417435,US,How a Nuclear Reactor's Rotating Drum Controls Power,GE Hitachi Nuclear Energy Americas,2022,8,active,https://patentbrief.org/patent/us/11417435/control-drum-for-a-mobile-nuclear-reactor
+10593988,US,Improving Lithium Battery Life with a Built-in Lithium Source,GM Global Technology Operations,2020,11,active,https://patentbrief.org/patent/us/10593988/electrochemical-cell-for-lithium-based-batteries
+10942571,US,How Laptops Create Localized Vibrations on Their Surfaces,Apple,2021,9,active,https://patentbrief.org/patent/us/10942571/laptop-computing-device-with-discrete-haptic-regions
+11407807,US,Using Specific Immune Cells to Fight Cancers Like Lung and Breast Cancer,Immatics Biotechnologies,2022,8,active,https://patentbrief.org/patent/us/11407807/peptides-and-combination-of-peptides-for-use-in-immunotherapy-against-various-tu
+10566652,US,How a Hybrid Layer Stops Metal Growths in Lithium Batteries,GM Global Technology Operations,2020,13,active,https://patentbrief.org/patent/us/10566652/lithium-metal-battery-with-hybrid-electrolyte-system
+9328156,US,How Genetically Modified T-Cells Attack Cancer,University of Pennsylvania Penn,2016,65,active,https://patentbrief.org/patent/us/9328156/use-of-chimeric-antigen-receptor-modified-t-cells-to-treat-cancer
+12245052,US,Using AI to Manage Wireless Network Resources Smarter,Intel,2025,3,active,https://patentbrief.org/patent/us/12245052/reinforcement-learning-rl-and-graph-neural-network-gnn-based-resource-management
+7267494,US,How a Special Fiber Stub Cleans Up Light Signals,Finisar,2007,81,public domain,https://patentbrief.org/patent/us/7267494/fiber-stub-for-cladding-mode-coupling-reduction
+8219158,US,BlackBerry Device with QWERTY Keyboard and Trackball Design,Research in Motion Ltd,2012,0,active,https://patentbrief.org/patent/us/8219158/handheld-wireless-communication-device
+10186887,US,How Batteries Charge Fast in the Cold Without Damage,EC Power,2019,11,active,https://patentbrief.org/patent/us/10186887/systems-and-methods-for-fast-charging-batteries-at-low-temperatures
+11176462,US,Predicting How Molecules Interact with Proteins Using Two AI Streams,RO5,2021,7,active,https://patentbrief.org/patent/us/11176462/system-and-method-for-prediction-of-protein-ligand-interactions-and-their-bioact
+11798529,US,Improving AI Language Understanding with Aligned Knowledge Graphs,Microsoft Technology Licensing,2023,3,active,https://patentbrief.org/patent/us/11798529/generation-of-optimized-knowledge-based-language-model-through-knowledge-graph-m
+12506552,US,How Phones and Towers Use AI to Improve Wireless Signal Quality,LG Electronics,2025,2,active,https://patentbrief.org/patent/us/12506552/method-and-apparatus-for-estimating-channel-in-wireless-communication-system
+10740671,US,How IBM Uses Resistive Memory Chips to Speed Up AI Training,International Business Machines,2020,7,active,https://patentbrief.org/patent/us/10740671/convolutional-neural-networks-using-resistive-processing-unit-array
+11239459,US,Making Solid-State Battery Electrodes That Don't Swell and Crack,GM Global Technology Operations,2022,6,active,https://patentbrief.org/patent/us/11239459/low-expansion-composite-electrodes-for-all-solid-state-batteries
+11794345,US,How One Person Can Control Two Robots as a Team,Sarcos,2023,2,active,https://patentbrief.org/patent/us/11794345/unified-robotic-vehicle-systems-and-methods-of-control
+9685235,US,How to Prepare 3D Flash Memory for Use,Seoul National University R&DB Foundation,2017,9,active,https://patentbrief.org/patent/us/9685235/method-of-initializing-3d-non-volatile-memory-device
+12423586,US,Making AI Smarter by Focusing on Unsure 'Nodes',D5AI,2025,1,active,https://patentbrief.org/patent/us/12423586/training-nodes-of-a-neural-network-to-be-decisive
+11120365,US,How AI Models Learn Complex Tasks by Breaking Them Down,Microsoft Technology Licensing,2021,5,active,https://patentbrief.org/patent/us/11120365/for-hierarchical-decomposition-deep-reinforcement-learning-for-an-artificial-int
+8135338,US,How Satellites Handle Super Fast User Data Using Shared Antennas,Space Systems Loral,2012,25,active,https://patentbrief.org/patent/us/8135338/satellite-system-with-enhanced-payload-capacity
+1141798,US,Early Car Wheel Traction Device,Individual,1915,0,public domain,https://patentbrief.org/patent/us/1141798/zipper-slide-fastener
+12326604,US,How Chips Get Both Light and Electricity on a Special Glass Base,Corning,2025,1,active,https://patentbrief.org/patent/us/12326604/integrated-circuit-packages-having-electrical-and-optical-connectivity-and-metho
+11416536,US,How a Recommendation System Uses Dislikes to Suggest New Content,Comcast Cable Communications,2022,3,active,https://patentbrief.org/patent/us/11416536/content-recommendation-system-11416536
+9256823,US,Efficiently Updating Connections in AI Brains,Qualcomm Technologies,2016,11,active,https://patentbrief.org/patent/us/9256823/apparatus-and-methods-for-efficient-updates-in-spiking-neuron-network
+11606373,US,AI System That Learns Normal Email Use to Spot and Stop Cyber Threats,Darktrace Holdings,2023,3,active,https://patentbrief.org/patent/us/11606373/cyber-threat-defense-system-protecting-email-networks-with-machine-learning-mode
+10377797,US,Training Immune Cells to Fight Cancer Using Specific Markers,Immatics Biotechnologies,2019,5,active,https://patentbrief.org/patent/us/10377797/cell-epitopes-and-combination-of-cell-epitopes-for-use-in-the-immunotherapy-of-m
+9282925,US,How Glucose Sensors Check Their Own Reliability for Insulin Pumps,Dexcom,2016,10,active,https://patentbrief.org/patent/us/9282925/systems-and-methods-for-replacing-signal-artifacts-in-a-glucose-sensor-data-stre
+9652041,US,Precisely Stopping Device Vibrations for Better Touch Feedback,Immersion,2017,33,active,https://patentbrief.org/patent/us/9652041/haptic-device-with-linear-resonant-actuator
+11235681,US,Smart EV Charging to Protect Battery Life During Long Parking,Inventus Holdings,2022,3,active,https://patentbrief.org/patent/us/11235681/curtailing-battery-degradation-of-an-electric-vehicle-during-long-term-parking
+11391826,US,How Car Factories Calibrate LIDAR Sensors for Self-Driving Cars,Magna Electronics,2022,4,active,https://patentbrief.org/patent/us/11391826/vehicle-lidar-sensor-calibration-system
+12085565,US,Using a Blood Marker to Predict Concussion Risk and Severity,University of Pennsylvania Penn,2024,1,active,https://patentbrief.org/patent/us/12085565/sntf-is-a-blood-biomarker-for-the-diagnosis-and-prognosis-of-sports-related-conc
+12327854,US,Capturing Carbon Dioxide While Making Electricity with Hydrogen and Solar,Individual,2025,2,active,https://patentbrief.org/patent/us/12327854/apparatuses-and-methods-for-carbon-dioxide-capturing-and-electrical-energy-produ
+9256834,US,How Quantum Computers Use Special Devices to Control Qubits,Microsoft Technology Licensing,2016,12,active,https://patentbrief.org/patent/us/9256834/quantum-computers-having-partial-interferometric-quantum-gates
+11915111,US,How Training Systems Share AI Knowledge Without Sharing Private Student Data,CAE,2024,1,active,https://patentbrief.org/patent/us/11915111/federated-machine-learning-in-adaptive-training-systems
+12340316,US,How to Build a Smart Knowledge Graph for Specific Topics,Oracle International,2025,1,active,https://patentbrief.org/patent/us/12340316/techniques-for-building-a-knowledge-graph-in-limited-knowledge-domains
+11702088,US,How Car Safety Systems Turn Off When Sensors Disagree,Magna Electronics,2023,1,active,https://patentbrief.org/patent/us/11702088/vehicular-driving-assist-system-with-sensor-offset-correction
+7833668,US,How Fuel Cells Reuse Exhaust Hydrogen for High Efficiency,Bloom Energy,2010,29,active,https://patentbrief.org/patent/us/7833668/fuel-cell-system-with-greater-than-95-fuel-utilization
+8310051,US,How Chips Are Stacked and Wired in Tiny Phone Parts,MediaTek,2012,14,active,https://patentbrief.org/patent/us/8310051/package-on-package-with-fan-out-wlcsp
+10956815,US,How to Fix Faulty Memory Cells in AI Chips,International Business Machines,2021,3,active,https://patentbrief.org/patent/us/10956815/killing-asymmetric-resistive-processing-units-for-neural-network-training
+10878237,US,How Eye Tracking Systems Adapt When They Can't See Eye Glints,Seeing Machines,2020,4,active,https://patentbrief.org/patent/us/10878237/systems-and-methods-for-performing-eye-gaze-tracking
+8882665,US,How Continuous Glucose Monitors Estimate Blood Sugar Levels Accurately,Medtronic Minimed,2014,9,active,https://patentbrief.org/patent/us/8882665/method-andor-system-for-multicompartment-analyte-monitoring-8882665
+8387464,US,Combining Sealed and Exposed Sensors on One Microchip,Freescale Semiconductor,2013,21,active,https://patentbrief.org/patent/us/8387464/laterally-integrated-mems-sensor-device-with-multi-stimulus-sensing
+8956321,US,How a Computer System Automatically Adjusts Blood Sugar in Real-Time,Ideal Medical Technologies,2015,8,active,https://patentbrief.org/patent/us/8956321/computerized-system-for-blood-chemistry-monitoring
+12039012,US,Sharing AI Knowledge Between Private Datasets Using Synthetic Data,Sharecare AI,2024,1,active,https://patentbrief.org/patent/us/12039012/systems-and-methods-for-heterogeneous-federated-transfer-learning
+12282696,US,How AI Transfers Visual Styles Between Images While Keeping Structure,Yeda Research and Development Co,2025,2,active,https://patentbrief.org/patent/us/12282696/method-and-system-for-semantic-appearance-transfer-using-splicing-vit-features
+12518214,US,Training AI on Private Data Without Seeing It,Nant Holdings IP,2026,0,active,https://patentbrief.org/patent/us/12518214/distributed-machine-learning-systems-including-generation-of-synthetic-data
+12114954,US,Uniform Scaling of Haptic Forces in Surgical Systems,Intuitive Surgical Operations,2024,1,active,https://patentbrief.org/patent/us/12114954/uniform-scaling-of-haptic-actuators
+12443890,US,How Devices Train Shared AI Models While Keeping Your Data Private,Google,2025,0,active,https://patentbrief.org/patent/us/12443890/partially-local-federated-learning
+12077385,US,How Warehouses Sort Items with Magnetic Levitation Shuttles,Target Brands,2024,1,active,https://patentbrief.org/patent/us/12077385/systems-and-methods-for-high-speed-warehouse-order-sortation
+11295174,US,How AI Agents Learn Faster by Predicting Opponents in Parallel,Royal Bank of Canada,2022,1,active,https://patentbrief.org/patent/us/11295174/opponent-modeling-with-asynchronous-methods-in-deep-rl
+12353827,US,Using Non-AI Systems to Improve AI Text Generation,Unlikely Artificial Intelligence,2025,0,active,https://patentbrief.org/patent/us/12353827/computer-implemented-methods-for-the-automated-analysis-or-use-of-data-including
+12412637,US,Computer Model Designs Proteins by Matching Structure to Sequence,International Business Machines,2025,0,active,https://patentbrief.org/patent/us/12412637/embedding-based-generative-model-for-protein-design
+12350368,US,Delivering Large Gene Editing Tools into Cells with Hybrid Virus-Lipid Packages,Massachusetts Institute of Technology,2025,0,active,https://patentbrief.org/patent/us/12350368/delivery-of-large-payloads
+10314897,US,How a Specific Protein Fragment Can Train Immune Cells to Fight Cancer,Immatics Biotechnologies,2019,4,active,https://patentbrief.org/patent/us/10314897/peptides-and-combination-of-peptides-for-use-in-immunotherapy-against-various-ca
+9256215,US,How Artificial Neurons Learn from Spikes and Internal States,Brain,2016,5,active,https://patentbrief.org/patent/us/9256215/apparatus-and-methods-for-generalized-state-dependent-learning-in-spiking-neuron
+12386177,US,How Disney's Compact AR Display Uses Special Mirrors,Disney Enterprises,2025,1,active,https://patentbrief.org/patent/us/12386177/compact-augmented-reality-virtual-reality-display
+11942620,US,How to Build Solid-State Batteries with Tiny Holes for Better Electrolyte,GM Global Technology Operations,2024,2,active,https://patentbrief.org/patent/us/11942620/solid-state-battery-with-uniformly-distributed-electrolyte-and-methods-of-fabric
+11648507,US,How to Capture Carbon Dioxide from Air or Smoke Using Seawater,Zero Carbon Energy Innovation Union,2023,2,active,https://patentbrief.org/patent/us/11648507/process-and-apparatus-of-ocean-carbon-capture-and-storage
+10335080,US,Wearable Sensor for Tracking Body Movement and Muscle Activity,Imperial Innovations,2019,2,active,https://patentbrief.org/patent/us/10335080/biomechanical-activity-monitoring
+12358049,US,How to 3D Print Metal Parts with Easy-to-Remove Supports,Desktop Metal,2025,1,active,https://patentbrief.org/patent/us/12358049/interface-layers-for-removable-supports
+10248907,US,How a Single Electronic Component Can Learn and Process AI Data,International Business Machines,2019,11,active,https://patentbrief.org/patent/us/10248907/resistive-processing-unit
+11126171,US,AI System for Diagnosing Machines and Managing Data in Factories,Strong Force IoT Portfolio 2016,2021,3,active,https://patentbrief.org/patent/us/11126171/methods-and-systems-of-diagnosing-machine-components-using-neural-networks-and-h
+12340293,US,How a System Finds and Creates Machine Learning Models,International Business Machines,2025,1,active,https://patentbrief.org/patent/us/12340293/machine-learning-model-repository-management-and-search-engine
+12163952,US,Predicting and Treating Dangerous Side Effects in CAR T-Cell Therapy,Juno Therapeutics,2024,0,active,https://patentbrief.org/patent/us/12163952/determining-toxicity-risk-in-car-t-cell-therapy
+11544411,US,How to Check if an AI Model Has Been Tampered With,Koninklijke Philips NV,2023,1,active,https://patentbrief.org/patent/us/11544411/machine-learning-model-validation-and-authentication
+9397374,US,How to Grade Used Batteries for a Second Life,Hitachi Automotive Systems,2016,4,active,https://patentbrief.org/patent/us/9397374/secondary-battery-module-battery-information-management-device-battery-informati
+11767169,US,How Warehouses Plan Pallet Stacks for Incoming Shipments,Target Brands,2023,1,active,https://patentbrief.org/patent/us/11767169/warehousing-systems-and-methods
+12419940,US,New Nanoparticles for Delivering Large RNA Medicines to Cells,Massachusetts Institute of Technology,2025,0,active,https://patentbrief.org/patent/us/12419940/compositions-and-methods-for-modified-dendrimer-nanoparticle-delivery
+11062694,US,Making Computer Voices Sound More Expressive from Your Speech,Amazon Technologies,2021,3,active,https://patentbrief.org/patent/us/11062694/text-to-speech-processing-with-emphasized-output-audio
+11648589,US,Automated System for Emptying and Sorting Items from Shipping Containers,Target Brands,2023,1,active,https://patentbrief.org/patent/us/11648589/systems-and-methods-to-enhance-the-utilization-of-order-sortation-systems
+11842324,US,AI for Spotting Dam Problems in Inspection Reports,Hohai University HHU,2023,1,active,https://patentbrief.org/patent/us/11842324/method-for-extracting-dam-emergency-event-based-on-dual-attention-mechanism
+6552634,US,Designing Electronic Networks for Efficient Power Amplification,Individual,2003,57,public domain,https://patentbrief.org/patent/us/6552634/wideband-minimum-rating-filters-and-multicouplers-for-power-amplifiers
+11593031,US,How Devices Use 'Credits' to Manage Data Flow to Storage,Samsung Electronics Co,2023,1,active,https://patentbrief.org/patent/us/11593031/operating-method-of-host-device-and-storage-device-using-credit
+12422629,US,A Stamped Mirror to Connect Optical Fibers to Tiny Light Chips,Senko Advanced Components,2025,0,active,https://patentbrief.org/patent/us/12422629/optical-connection-of-optical-fibers-to-grating-couplers
+11514901,US,How Voice Assistants Recognize Who is Talking,Amazon Technologies,2022,1,active,https://patentbrief.org/patent/us/11514901/anchored-speech-detection-and-speech-recognition
+11238372,US,How AI Learns to Manage Computer Applications Using Digital Simulators,VMware,2022,1,active,https://patentbrief.org/patent/us/11238372/simulator-training-for-automated-reinforcement-learning-based-application-manage
+11507851,US,How AI Connects Different Databases Using Knowledge Graphs,Samsung Electronics Co,2022,2,active,https://patentbrief.org/patent/us/11507851/system-and-method-of-integrating-databases-based-on-knowledge-graph
+12307349,US,How an AI System Answers Financial Questions Using Specialized Bots,Broadridge Financial Solutions,2025,0,active,https://patentbrief.org/patent/us/12307349/systems-and-methods-of-large-language-model-driven-orchestration-of-task-specifi
+12299406,US,How AI Checks Documents for Policy Rules and Compliance,Casetext,2025,0,active,https://patentbrief.org/patent/us/12299406/large-language-model-artificial-intelligence-text-evaluation-system
+10019188,US,How NAND Flash Memory Adjusts to Cold Temperatures,Samsung Electronics Co,2018,5,active,https://patentbrief.org/patent/us/10019188/storage-devices-memory-systems-and-operating-methods-to-suppress-operating-error
+9293619,US,Solar Cells with Built-in Smart Electronics on the Back,Solexel,2016,4,active,https://patentbrief.org/patent/us/9293619/smart-photovoltaic-cells-and-modules
+12277178,US,How Music Apps Learn What You Don't Want in Playlists,Spotify AB,2025,0,active,https://patentbrief.org/patent/us/12277178/media-content-item-recommendation-system
+11134620,US,Using Special Mud to Help Plants Grow Better,Individual,2021,1,active,https://patentbrief.org/patent/us/11134620/use-of-bentonite-for-improving-plant-growth-related-traits
+10307129,US,Fixing Blurry Tomography Scans from Patient Movement,Samsung Electronics Co,2019,2,active,https://patentbrief.org/patent/us/10307129/apparatus-and-method-for-reconstructing-tomography-images-using-motion-informati
+12248556,US,Making AI-Generated Content Traceable with a Hidden Code,Intel,2025,0,active,https://patentbrief.org/patent/us/12248556/authenticator-integrated-generative-adversarial-network-gan-for-secure-deepfake-
+9411722,US,How Asynchronous Buffers Speed Up Non-Volatile Memory Access,SanDisk Technologies,2016,7,active,https://patentbrief.org/patent/us/9411722/asynchronous-fifo-buffer-for-memory-access
+12181722,US,Stacking Chips with Light-Guiding Plastic Wires,Taiwan Semiconductor Manufacturing Co TSMC,2024,0,active,https://patentbrief.org/patent/us/12181722/structures-and-process-flow-for-integrated-photonic-electric-ic-package-by-using
+11728052,US,TerraPower's Molten Salt Reactor with Internal Heat Exchangers,Terra Power,2023,1,active,https://patentbrief.org/patent/us/11728052/fast-spectrum-molten-chloride-test-reactors
+10522884,US,Recycling Lithium-Ion Batteries to Make New Cathode Materials,Worcester Polytechnic Institute,2019,9,active,https://patentbrief.org/patent/us/10522884/method-and-apparatus-for-recycling-lithium-ion-batteries
+10964084,US,Creating Realistic Character Animations with AI Networks,Adobe,2021,1,active,https://patentbrief.org/patent/us/10964084/generating-realistic-animations-for-digital-animation-characters-utilizing-a-gen
+12135756,US,How Computers Automatically Tag Movies and Shows Better,Comcast Cable Communications,2024,0,active,https://patentbrief.org/patent/us/12135756/content-recommendation-system-with-weighted-metadata-annotations
+12118030,US,How a Recommendation System Learns What You Really Want to Watch,Malibu Entertainment,2024,0,active,https://patentbrief.org/patent/us/12118030/dynamic-feedback-in-a-recommendation-system
+12574477,US,Training AI Models Across Different Computers,Deep Sentinel,2026,0,active,https://patentbrief.org/patent/us/12574477/distributed-deep-learning-using-a-distributed-deep-neural-network
+11178503,US,How Smart Speakers Adapt Sound to Your Room and Listening Spot,Dolby Laboratories Licensing,2021,1,active,https://patentbrief.org/patent/us/11178503/system-for-rendering-and-playback-of-object-based-audio-in-various-listening-env
+10133281,US,How a Drone Can Fly Ahead of a Moving Vehicle,Pinnacle Vista,2018,2,active,https://patentbrief.org/patent/us/10133281/leading-drone-system
+11480727,US,How a Multi-Core Optical Fiber Reduces Signal Interference,Sumitomo Electric Industries,2022,2,active,https://patentbrief.org/patent/us/11480727/multi-core-optical-fiber
+12243216,US,How AI Cameras Check Factory Parts for Flaws,Musashi Auto Parts Canada,2025,0,active,https://patentbrief.org/patent/us/12243216/system-and-method-for-ai-visual-inspection
+12438891,US,How Multiple AI Models Detect Unusual Behavior on Computer Networks,Cisco Technology,2025,0,active,https://patentbrief.org/patent/us/12438891/anomaly-detection-based-on-ensemble-machine-learning-model
+12168044,US,Treating Liver Cancer with Specially Trained Immune Cells,Immatics Biotechnologies,2024,0,active,https://patentbrief.org/patent/us/12168044/peptides-and-combination-of-peptides-for-use-in-immunotherapy-against-non-small-
+11900293,US,Tracking Shoppers and Store Items for Better Recommendations,PayPal,2024,0,active,https://patentbrief.org/patent/us/11900293/merchant-action-recommendation-system
+10733420,US,How Self-Driving Cars Find Clear Paths Between Objects,GM Global Technology Operations,2020,1,active,https://patentbrief.org/patent/us/10733420/systems-and-methods-for-free-space-inference-to-break-apart-clustered-objects-in
+12056602,US,How a Memristor Circuit Adjusts AI Network Weights,Qatar Foundation,2024,1,active,https://patentbrief.org/patent/us/12056602/circuit-for-calculating-weight-adjustments-of-an-artificial-neural-network-and-a
+9949801,US,How Surgical Robots Reconfigure Their Arms Without Moving the Tool Tip,Intuitive Surgical Operations,2018,2,active,https://patentbrief.org/patent/us/9949801/systems-and-methods-for-commanded-reconfiguration-of-a-surgical-manipulator-usin
+11836577,US,Training Robot AI Models Faster Using Smart Simulations,Amazon Technologies,2023,0,active,https://patentbrief.org/patent/us/11836577/reinforcement-learning-model-training-through-simulation
+8296052,US,How Farm Vehicles Plant Evenly in Odd-Shaped Fields,CNH Amercia,2012,9,active,https://patentbrief.org/patent/us/8296052/method-for-avoiding-point-rows-for-quadrilateral-fields-using-autoguidance
+8303250,US,How Wind Turbine Blades Get More Lift with Extra Parts,General Electric,2012,14,active,https://patentbrief.org/patent/us/8303250/method-and-apparatus-for-increasing-lift-on-wind-turbine-blade
+10578505,US,How to Build a Tiny Pressure Sensor Inside a Silicon Chip,STMicroelectronics SRL,2020,1,active,https://patentbrief.org/patent/us/10578505/process-for-manufacturing-a-mems-pressure-sensor-and-corresponding-mems-pressure
+11741188,US,How a Chip Uses Memory to Speed Up AI Calculations,Western Digital Technologies,2023,0,active,https://patentbrief.org/patent/us/11741188/hardware-accelerated-discretized-neural-network
+8049150,US,How to Make Solar Troughs Catch More Sunlight at Their Ends,Skyline Solar,2011,23,active,https://patentbrief.org/patent/us/8049150/solar-collector-with-end-modifications
+11704899,US,How Assistant Systems Combine Information About One Thing from Many Places,Meta Platforms,2023,0,active,https://patentbrief.org/patent/us/11704899/resolving-entities-from-multiple-data-sources-for-assistant-systems
+10364282,US,Training Immune Cells to Fight Specific Cancers,Immatics Biotechnologies,2019,2,active,https://patentbrief.org/patent/us/10364282/peptides-and-combination-of-peptides-for-use-in-immunotherapy-against-esophageal
+10761280,US,"A Sealed, Stamped Metal Assembly for Guiding Light in Fiber Optics",Cudoquanta Florida,2020,1,active,https://patentbrief.org/patent/us/10761280/hermetic-optical-subassembly
+8209052,US,How a Robot Actuator Controls Force and Speed with Gears,Societe de Commercialisation des Produits de la Recherche Appliquee SOCPRA,2012,5,active,https://patentbrief.org/patent/us/8209052/high-performance-differential-actuator-for-robotic-interaction-tasks
+8612235,US,How Speech Recognizers Use Expected Answers to Speed Up,Vocollect,2013,6,active,https://patentbrief.org/patent/us/8612235/method-and-system-for-considering-information-about-an-expected-response-when-pe
+10947045,US,How Robots and Mobile Shelves Fulfill Orders in Warehouses,Target Brands,2021,1,active,https://patentbrief.org/patent/us/10947045/warehousing-and-order-fulfillment-systems-and-methods
+12073952,US,Using Gas Pressure to Safely Control Liquid Fuel Nuclear Reactors,BWXT Technical Services Group,2024,0,active,https://patentbrief.org/patent/us/12073952/fail-safe-reactivity-compensation-method-for-a-nuclear-reactor
+12416013,US,Boosting Plant Gene Editing and Regeneration with Special Genes,Tianjin Genovo Biotechnology Co,2025,1,active,https://patentbrief.org/patent/us/12416013/method-for-improving-plant-genetic-transformation-and-gene-editing-efficiency
+12048738,US,Using mRNA to Teach the Body to Fight Prostate Cancer,Curevac SE,2024,0,active,https://patentbrief.org/patent/us/12048738/composition-for-treating-prostate-cancer-pca
+12011291,US,Wearable Wrap Detects Blood Clots and Swelling in Joints,George Mason Research Foundation,2024,0,active,https://patentbrief.org/patent/us/12011291/non-invasive-wearable-biomechanical-and-physiology-monitor-for-injury-prevention
+8130043,US,How Multi-Stage Power Amplifiers Save Battery Life in Wireless Devices,Anadigics,2012,13,active,https://patentbrief.org/patent/us/8130043/multi-stage-power-amplifier-with-enhanced-efficiency
+11922469,US,How Computers Rank Financial News for Analysts,S&P Global,2024,0,active,https://patentbrief.org/patent/us/11922469/automated-news-ranking-and-recommendation-system
+11543533,US,How to Combine Wide-Angle LiDAR Depth with Standard Camera Images,Leddartech,2023,1,active,https://patentbrief.org/patent/us/11543533/systems-and-methods-for-wide-angle-lidar-using-non-uniform-magnification-optics
+10692210,US,How Computers Find Your Pupil Even With Glare,Fujitsu,2020,1,active,https://patentbrief.org/patent/us/10692210/recording-medium-storing-computer-program-for-pupil-detection-information-proces
+12414825,US,How a Surgical Robot Arm's Wrist Moves Instruments,CMR Surgical,2025,0,active,https://patentbrief.org/patent/us/12414825/surgical-arm
+12121527,US,Making Cancer-Fighting Antibody Drugs Safer with Precise Attachment,NBE Therapeutics AG,2024,0,active,https://patentbrief.org/patent/us/12121527/anthracycline-based-antibody-drug-conjugates-having-high-in-vivo-tolerability
+12437843,US,Using AI to Predict Protein Shapes for Drug Discovery,GDM Holding,2025,0,active,https://patentbrief.org/patent/us/12437843/predicting-protein-structures-using-geometry-neural-networks-that-estimate-simil
+10700376,US,How to Fast-Charge Lithium Batteries Without Damaging Them,GM Global Technology Operations,2020,8,active,https://patentbrief.org/patent/us/10700376/methods-for-fast-charging-and-detecting-lithium-plating-in-lithium-ion-batteries
+12083190,US,How an mRNA Vaccine Teaches Your Body to Fight Rabies,Curevac SE,2024,0,active,https://patentbrief.org/patent/us/12083190/rabies-vaccine
+11260033,US,How Tiny Particles Make CBD Easier to Absorb,Disruption Labs,2022,2,active,https://patentbrief.org/patent/us/11260033/compositions-for-the-delivery-of-therapeutic-agents-and-methods-of-use-and-makin
+11560405,US,Targeting Liver and Bile Duct Cancers with Specific Immune Cells,Immatics Biotechnologies,2023,0,active,https://patentbrief.org/patent/us/11560405/peptides-and-combination-thereof-for-use-in-the-immunotherapy-against-cancers-11560405
+12505360,US,How AI Learns to Fix IT Problems by Asking for Feedback,Bmc Helix,2025,0,active,https://patentbrief.org/patent/us/12505360/continuous-knowledge-graph-generation-using-causal-event-graph-feedback
+7614852,US,Wind Turbine Blades with a Deeply Curved Front Surface,Individual,2009,6,active,https://patentbrief.org/patent/us/7614852/wind-turbine-blade-and-assembly
+10950878,US,How a Fuel Cell Humidifier Controls Air Moisture with a Smart Valve,Hyundai Motor,2021,4,active,https://patentbrief.org/patent/us/10950878/humidifier-for-a-fuel-cell
+10588983,US,How a Special Enzyme Helps Deliver Immune Drugs Under the Skin,Halozyme,2020,7,active,https://patentbrief.org/patent/us/10588983/soluble-glycosaminoglycanases-and-methods-of-preparing-and-using-soluble-glycosa
+8636880,US,How to Make Hydrogen Gas and Cupric Chloride Using an Electrolysis Cell,Atomic Energy of Canada Ltd AECL,2014,3,active,https://patentbrief.org/patent/us/8636880/electrolysis-cell-for-the-conversion-of-cuprous-chloride-in-hydrochloric-acid-to
+20160166668,US,How an mRNA Vaccine Targets Prostate Cancer with Six Antigens,Curevac AG,,84,active,https://patentbrief.org/patent/us/20160166668/composition-and-vaccine-for-treating-prostate-cancer
+11743673,US,Smart Speaker System Adapts Sound Based on Speaker Placement,Koninklijke Philips NV,2023,0,active,https://patentbrief.org/patent/us/11743673/audio-processing-apparatus-and-method-therefor
+20160168227,US,How an mRNA Vaccine for Lung Cancer Teaches the Immune System to Fight,Curevac AG,,80,active,https://patentbrief.org/patent/us/20160168227/composition-and-vaccine-for-treating-lung-cancer
+11171521,US,How a Device Receives Wireless Power Using Terahertz Waves and Blockchain,Voice Life,2021,0,active,https://patentbrief.org/patent/us/11171521/receiver-device-for-facilitating-wireless-energy-reception
+20220161815,US,How Autonomous Cars Process Sensor Data for Driving,Intel,,72,active,https://patentbrief.org/patent/us/20220161815/autonomous-vehicle-system
+10031618,US,How Touchscreens Ignore Accidental Hovering or Palm Touches,Qualcomm,2018,1,active,https://patentbrief.org/patent/us/10031618/identifying-hover-andor-palm-input-and-rejecting-spurious-input-for-a-touch-pane
+10234934,US,How Sensors Measure Body Joint Movement Across Different Sections,Medibotics,2019,27,active,https://patentbrief.org/patent/us/10234934/sensor-array-spanning-multiple-radial-quadrants-to-measure-body-joint-movement
+11490056,US,How a Drone Automatically Films a Moving Car Like a Movie Crew,Toyota Motor,2022,3,active,https://patentbrief.org/patent/us/11490056/drone-system-and-method-of-capturing-image-of-vehicle-by-drone
+9412678,US,How to Stack Two Computer Chips with Direct Connections,Taiwan Semiconductor Manufacturing Co TSMC,2016,1,active,https://patentbrief.org/patent/us/9412678/structure-and-method-for-3d-ic-package
+11507804,US,Efficient Hardware for Spiking Neural Network Calculations,Commissariat a lEnergie Atomique et aux Energies Alternatives CEA,2022,1,active,https://patentbrief.org/patent/us/11507804/device-and-method-for-calculating-convolution-in-a-convolutional-neural-network
+10514610,US,Making Tiny Chip Patterns Using Gas and Light,Taiwan Semiconductor Manufacturing Co TSMC,2019,0,active,https://patentbrief.org/patent/us/10514610/lithography-patterning-with-a-gas-phase-resist
+9141832,US,Combining Radio Signals Efficiently with Special Wires,Massachusetts Institute of Technology,2015,11,active,https://patentbrief.org/patent/us/9141832/multiway-lossless-power-combining-and-outphasing-incorporating-transmission-line
+8932024,US,Wind Turbine Blades with Noise-Reducing Serrated Edges,Mitsubishi Heavy Industries,2015,20,active,https://patentbrief.org/patent/us/8932024/wind-turbine-blade-and-wind-power-generator-using-the-same
+12252707,US,How to Make Animals That Can Turn On CRISPR Gene Editing,Massachusetts Institute of Technology,2025,0,active,https://patentbrief.org/patent/us/12252707/delivery-engineering-and-optimization-of-systems-methods-and-compositions-for-se
+10743125,US,How a Device Renders Immersive Sound Objects Using Speaker Virtualization,Dolby Laboratories Licensing,2020,1,active,https://patentbrief.org/patent/us/10743125/audio-processing-apparatus-with-channel-remapper-and-object-renderer
+9727135,US,How Computers Learn to Track Your Eyes Better,Microsoft Technology Licensing,2017,2,active,https://patentbrief.org/patent/us/9727135/gaze-calibration
+11661612,US,How Engineered TALE Proteins Can Edit Genes,Sangamo Therapeutics,2023,1,active,https://patentbrief.org/patent/us/11661612/dna-binding-proteins-and-uses-thereof
+9854998,US,How Devices Precisely Track Glucose Across Body Compartments,Medtronic Minimed,2018,1,active,https://patentbrief.org/patent/us/9854998/method-andor-system-for-multicompartment-analyte-monitoring
+20180305704,US,How to Use Many CRISPR Guides to Study Many Genes at Once,Massachusetts Institute of Technology,,44,active,https://patentbrief.org/patent/us/20180305704/crispr-cas-component-systems-methods-and-compositions-for-sequence-manipulation
+11137298,US,How Fabric Sensors Measure Pressure on Your Body,University of California San Diego UCSD,2021,0,active,https://patentbrief.org/patent/us/11137298/supercapacitive-iontronic-nanofabric-sensing
+20150079560,US,Headset That Shows Your Brain's Focus Level,Individual,,41,active,https://patentbrief.org/patent/us/20150079560/wearable-monitoring-and-training-system-for-focus-andor-mood
+9884123,US,Targeted Platinum Drugs for Cancer Treatment,INVICTUS ONCOLOGY PVT,2018,3,active,https://patentbrief.org/patent/us/9884123/ligand-targeted-molecules-and-methods-thereof
+9925149,US,How to Build Tiny Lipid Carriers for Delivering Nutrients,Nanosphere Health Sciences,2018,10,active,https://patentbrief.org/patent/us/9925149/nanoparticle-compositions-and-methods-as-carriers-of-nutraceutical-factors-acros
+10818403,US,How Nuclear Power Plants Reuse Fuel Between Multiple Reactors,Nuscale Power,2020,2,active,https://patentbrief.org/patent/us/10818403/inter-module-fuel-shuffling
+11542303,US,How a Specific Peptide Boosts the Immune System Against Cancer,Immatics Biotechnologies,2023,1,active,https://patentbrief.org/patent/us/11542303/peptides-and-combination-thereof-for-use-in-the-immunotherapy-against-cancers
+20230044102,US,Improving AI Predictions by Factoring in How Much You Trust Each Model,Noblis,,31,active,https://patentbrief.org/patent/us/20230044102/ensemble-machine-learning-models-incorporating-a-model-trust-factor
+8156057,US,How Nanoparticles Form Adaptive Neural Network Connections,Knowmtech,2012,12,active,https://patentbrief.org/patent/us/8156057/adaptive-neural-network-utilizing-nanotechnology-based-components
+20180127759,US,Highly Efficient Bacterial Gene Editing Using Guide RNA and Reverse Transcriptase,Massachusetts Institute of Technology,,30,active,https://patentbrief.org/patent/us/20180127759/dynamic-genome-engineering
+8912428,US,Solar Cells Made of Stacking Layers with Different Energy Gaps,Epir Technologies,2014,2,active,https://patentbrief.org/patent/us/8912428/high-efficiency-multijunction-ii-vi-photovoltaic-solar-cells
+20230162023,US,Automated AI for Adapting to New Data Without Retraining,Mitsubishi Electric Research Laboratories,,46,active,https://patentbrief.org/patent/us/20230162023/system-and-method-for-automated-transfer-learning-with-domain-disentanglement
+10317904,US,How a Boat Guides Air and Underwater Drones for Data Collection,Pinnacle Vista,2019,1,active,https://patentbrief.org/patent/us/10317904/underwater-leading-drone-system
+12600775,US,Treating a Specific Lymphoma with Modified T Cells,Kite Pharma,2026,0,active,https://patentbrief.org/patent/us/12600775/chimeric-antigen-receptor-t-cell-therapy
+20220012637,US,Training AI Models Together with Unlabeled Data Using a Teacher,Nokia Technologies Oy,,37,active,https://patentbrief.org/patent/us/20220012637/federated-teacher-student-machine-learning
+9181624,US,Making Caustic Soda with Less Salt Using a Special Electrolysis Cell,Chlorine Engineers Corp,2015,7,active,https://patentbrief.org/patent/us/9181624/method-of-electrolysis-employing-two-chamber-ion-exchange-membrane-electrolytic-
+8269555,US,How to Make Radio Amplifiers More Efficient,NXP BV,2012,4,active,https://patentbrief.org/patent/us/8269555/efficient-linear-linc-power-amplifier
+11786761,US,How a Robotic Surgical Tool Clamps Tissue Manually and Automatically,Cilag GmbH International,2023,0,active,https://patentbrief.org/patent/us/11786761/ultrasonic-robotic-tool-actuation
+20210181737,US,How Autonomous Trucks Predict and Handle Tire Blowouts,Waymo,,28,active,https://patentbrief.org/patent/us/20210181737/prevention-detection-and-handling-of-the-tire-blowouts-on-autonomous-trucks
+11902010,US,How LEO Satellites Switch Beams for Speed and Avoid Interference,Telesat Technology,2024,0,active,https://patentbrief.org/patent/us/11902010/dual-leo-satellite-system-and-method-for-global-coverage
+12590172,US,How to Find Antibodies That Only Detect Bound Drug Targets,Morphosys,2026,0,active,https://patentbrief.org/patent/us/12590172/complex-specific-antibodies-and-antibody-fragments-and-its-use
+8053198,US,Method for Diagnosing Ovarian Cancer Using Biomarkers,Meso Scale Technologies,2011,0,active,https://patentbrief.org/patent/us/8053198/diagnostic-methods
+20230412513,US,How 5G Networks Coordinate AI Models Across Different Devices,Telefonaktiebolaget LM Ericsson AB,,17,active,https://patentbrief.org/patent/us/20230412513/providing-distributed-ai-models-in-communication-networks-and-related-nodesdevic
+20110234542,US,Using Different Light Colors to Detect Touches on Screens,Individual,,17,active,https://patentbrief.org/patent/us/20110234542/methods-and-systems-utilizing-multiple-wavelengths-for-position-detection
+11739322,US,CRISPR Gene Editing That Turns Itself Off,Institute of Genetics and Developmental Biology of CAS,2023,0,active,https://patentbrief.org/patent/us/11739322/method-for-genome-editing-using-a-self-inactivating-crispr-nuclease
+10444502,US,How Two People's Body Movements Are Tracked in Augmented Reality,Sixense Enterprises,2019,0,active,https://patentbrief.org/patent/us/10444502/method-and-apparatus-for-multiple-user-self-relative-tracking-for-augmented-real
+11006212,US,How a Speaker Bounces Sound Off the Ceiling for Wider Audio,Dolby Laboratories Licensing,2021,0,active,https://patentbrief.org/patent/us/11006212/upward-firing-loudspeaker-having-asymmetric-dispersion-for-reflected-sound-rende
+9055681,US,Attaching Flexible Circuits with Light Sensors to a Chip,International Business Machines,2015,0,active,https://patentbrief.org/patent/us/9055681/method-for-attaching-a-flexible-structure-to-a-device-and-a-device-having-a-flex
+10814473,US,Exoskeleton Shoulder Joint That Adapts to Your Arm's Movement,Arizona State University Downtown Phoenix campus,2020,0,active,https://patentbrief.org/patent/us/10814473/mechanism-for-alleviating-the-effects-of-joint-misalignment-between-users-and-we
+10479827,US,An Antibody That Detects Specific Sugar-Protein Combinations for Diagnostics,Sysmex,2019,0,active,https://patentbrief.org/patent/us/10479827/monoclonal-antibody-reacting-with-glycopeptide-and-use-thereof
+7824959,US,How to Stack Computer Chips on a Wafer for Smaller Devices,Samsung Electronics Co,2010,3,active,https://patentbrief.org/patent/us/7824959/wafer-level-stack-structure-for-system-in-package-and-method-thereof
+20240406210,US,How AI Explains Cyberattacks for Security Training,Darktrace Holdings,,13,active,https://patentbrief.org/patent/us/20240406210/cyber-security-training-tool-that-uses-a-large-language-model
+20230419182,US,How AI and Blockchain Team Up to Predict What You'll Buy,Hangzhou Tonghuashun Data Processing Co,,12,active,https://patentbrief.org/patent/us/20230419182/methods-and-systems-for-imrpoving-a-product-conversion-rate-based-on-federated-l
+20110132770,US,Making Chemicals from Carbon Dioxide and Steam Using Electricity,Areva SA,,22,active,https://patentbrief.org/patent/us/20110132770/process-for-producing-compounds-of-the-cxhyoz-type-by-reduction-of-carbon-dioxid
+20170088845,US,CRISPR Tools for Engineering Fungal Genomes,BP Corp North America,,8,active,https://patentbrief.org/patent/us/20170088845/vectors-and-methods-for-fungal-genome-engineering-by-crispr-cas9
+20190046446,US,How Special Nanoparticles Deliver Cancer Drugs Directly to Tumors,Eriochem Usa,,8,active,https://patentbrief.org/patent/us/20190046446/apo-e-modified-lipid-nanoparticles-for-drug-delivery-to-targeted-tissues-and-the
+10800031,US,How a Robotic Exoskeleton Helps Your Shoulder Move,Arizona State University Downtown Phoenix campus,2020,0,active,https://patentbrief.org/patent/us/10800031/spherical-parallel-manipulator-architecture-for-shoulder-robotic-exoskeleton
+10468695,US,How Fuel Cells Get Even Gas Flow with Special Layers,SolidPower SA,2019,1,active,https://patentbrief.org/patent/us/10468695/gas-distribution-element-for-a-fuel-cell
+20240109245,US,How to Precisely Control Solid-State 3D Printing for Stronger Materials,Meld Manufacturing,,9,active,https://patentbrief.org/patent/us/20240109245/process-control-systems-and-methods-using-a-solid-state-additive-manufacturing-s
+20220096616,US,Using Two Specific RNAs to Teach the Body to Fight Lung Cancer,Curevac AG,,7,active,https://patentbrief.org/patent/us/20220096616/composition-for-treating-lung-cancer-particularly-of-non-small-lung-cancers-nscl
+11095127,US,How to Smartly Manage Power in Small Grids with Renewable Energy,Southeast University,2021,0,active,https://patentbrief.org/patent/us/11095127/method-for-real-time-scheduling-of-multi-energy-complementary-micro-grids-based-
+9855653,US,Robots That Don't Get Stuck: A Master-Slave Control System,Muscle,2018,1,active,https://patentbrief.org/patent/us/9855653/master-slave-system
+20110120221,US,How a Tiny Sensor Uses an Extra Weight to Detect Motion,Seiko Epson,,40,active,https://patentbrief.org/patent/us/20110120221/mems-sensor-method-of-manufacturing-thereof-and-electronic-apparatus
+20210174903,US,How to Predict Protein Shapes Better Using Lab Tests and Computers,Protein Evolution,,21,active,https://patentbrief.org/patent/us/20210174903/enhanced-protein-structure-prediction-using-protein-homolog-discovery-and-constr
+20160291760,US,Adjusting Touchscreen Sensitivity Based on Device Tilt Angle,Wacom Co,,5,active,https://patentbrief.org/patent/us/20160291760/contact-discrimination-using-a-tilt-angle-of-a-touch-sensitive-surface
+11193946,US,Detecting Alzheimer's Risk Early with a Blood Test and Brain Scan,Seoul National University R&DB Foundation,2021,0,active,https://patentbrief.org/patent/us/11193946/blood-biomarker-for-discerning-beta-amyloid-accumulation-in-brain
+20230263439,US,How a Sensor Checks Itself for Accuracy Using Other Body Data,Dexcom,,7,active,https://patentbrief.org/patent/us/20230263439/systems-and-methods-for-multi-analyte-sensing
+9985438,US,"Optimizing Power for Remote Grids with Diesel, Wind, Solar, and Batteries",Electric Power Research Institute of State Grid Zhejiang Electric Power Co,2018,0,active,https://patentbrief.org/patent/us/9985438/optimization-method-for-independent-micro-grid-system
+10391181,US,A Stable Recipe for a Cancer-Fighting Antibody Drug,Seattle Genetics,2019,1,active,https://patentbrief.org/patent/us/10391181/cyclodextrin-and-antibody-drug-conjugate-formulations
+20200281484,US,Smart Clothing That Compares Pulse Signals from Both Sides of Your Body,Well Being Digital,,9,active,https://patentbrief.org/patent/us/20200281484/an-apparatus-for-monitoring-the-pulse-of-a-person-and-a-method-thereof
+20220383078,US,Adapting AI Models to Fit Device Resources,Huawei Technologies Co,,6,active,https://patentbrief.org/patent/us/20220383078/data-processing-method-and-related-device
+20210301031,US,Targeted Cancer Drugs Using Antibodies and Polymer Scaffolds,Mersana Therapeutics,,3,active,https://patentbrief.org/patent/us/20210301031/napi2b-targeted-antibody-drug-conjugates-and-methods-of-use-thereof
+9370488,US,Making Insulin Last Longer with Tiny Coated Drug Particles,Tehram,2016,0,active,https://patentbrief.org/patent/us/9370488/method-and-system-for-synthesizing-nanocarrier-based-long-acting-drug-delivery-s
+20180321681,US,How a Drone Flies Ahead of a Moving Ground or Water Vehicle,Pinnacle Vista,,12,active,https://patentbrief.org/patent/us/20180321681/leading-drone-method
+20240144032,US,How to Combine Information from Multiple Knowledge Graphs,Alipay Hangzhou Information Technology Co,,4,active,https://patentbrief.org/patent/us/20240144032/knowledge-graph-data-fusion
+10914745,US,Using Blood Markers to Diagnose Stroke and Tell Its Type,Randox Laboratories,2021,0,active,https://patentbrief.org/patent/us/10914745/biomarker-based-methods-for-aiding-the-diagnosis-of-stroke
+9168838,US,How an EV Charging Station Manages Power from Batteries and the Grid,NEC,2015,1,active,https://patentbrief.org/patent/us/9168838/charging-control-system-and-charging-control-method
+20120091953,US,How Electric Cars Adjust Charging Speed to Available Power,Tesla Motor,,11,active,https://patentbrief.org/patent/us/20120091953/ac-current-control-of-mobile-battery-chargers
+20240082373,US,How Special Molecules Boost Cancer-Fighting CAR-T Cells,Massachusetts Institute of Technology,,2,active,https://patentbrief.org/patent/us/20240082373/compositions-for-chimeric-antigen-receptor-t-cell-therapy-and-uses-thereof
+20190307892,US,Targeting Drugs to Specific Body Tissues Using ApoE3-Coated Nanoparticles,Eriochem Usa,,2,active,https://patentbrief.org/patent/us/20190307892/targeted-drug-delivery-and-therapeutic-methods-using-apo-e-modified-lipid-nanopa
+20210123152,US,How to Make Big Electrodes for Splitting Water,National Chung Shan Institute of Science and Technology NCSIST,,21,active,https://patentbrief.org/patent/us/20210123152/method-for-preparing-large-area-catalyst-electrode
+20250371349,US,How AI Learns to Run Faster on Specific Computer Chips,Intel,,2,active,https://patentbrief.org/patent/us/20250371349/methods-and-apparatus-for-hardware-aware-machine-learning-model-training
+20240186800,US,How a System Tracks and Transfers Rechargeable Batteries Between Users,Mirai Labo Co,,2,active,https://patentbrief.org/patent/us/20240186800/battery-management-system-battery-management-method-and-program
+20250190949,US,Matching People to Opportunities Using Personality and Body Data,Futurecite,,1,active,https://patentbrief.org/patent/us/20250190949/facilitating-personal-development-of-an-individual
+20230168149,US,How to See Where Gear Teeth Touch Using Glowing Oil,Gleason Works,,1,active,https://patentbrief.org/patent/us/20230168149/recognition-of-tooth-contact-with-a-luminescent-agent
+20210117042,US,How Devices Detect Touch Using Heat Signatures,Apple,,1,active,https://patentbrief.org/patent/us/20210117042/method-and-device-for-detecting-a-touch-between-a-first-object-and-a-second-obje
+20240338414,US,How AI Understands Answers Across Multiple Documents,Microsoft Technology Licensing,,1,active,https://patentbrief.org/patent/us/20240338414/inter-document-attention-mechanism
+20250027216,US,Dome-Shaped Plates for Efficient Hydrogen Production in Electrolyzers,Individual,,1,active,https://patentbrief.org/patent/us/20250027216/electrolyzer
+20220189458,US,How Wearable Devices Use Location and Biometrics to Know Who You Are,Amazon Technologies,,1,active,https://patentbrief.org/patent/us/20220189458/speech-based-user-recognition
+20210280268,US,How Computers Predict Protein Shapes Faster Using Smart Templates,Dnastar,,1,active,https://patentbrief.org/patent/us/20210280268/protein-structure-prediction-system
+20230195095,US,Industrial Equipment Data Organized into Smart Knowledge Graphs,Honeywell International,,1,active,https://patentbrief.org/patent/us/20230195095/industrial-knowledge-graph-and-contextualization
+20240165159,US,Targeting Cancer with CAR T Cells Using a Chemical Tag,Purdue Research Foundation,,1,active,https://patentbrief.org/patent/us/20240165159/compositions-and-methods-for-car-t-cell-therapy
+20230364252,US,Making Antibody Drug Conjugate Medicines Consistent Across Batches,Immunogen,,0,active,https://patentbrief.org/patent/us/20230364252/methods-for-formulating-antibody-drug-conjugate-compositions
+20230297446,US,How to Train AI Models with Fake Data Using Generative Networks,Capital One Services,,0,active,https://patentbrief.org/patent/us/20230297446/data-model-generation-using-generative-adversarial-networks
+20250171803,US,Targeting Cancer with CAR T Cells Using Small Molecule 'Flags',Purdue Research Foundation,,0,active,https://patentbrief.org/patent/us/20250171803/methods-and-compositions-for-car-t-cell-therapy
+20230383290,US,How to Precisely Edit Genes Using Retron-Guide RNA Cassettes,Leland Stanford Junior University,,0,active,https://patentbrief.org/patent/us/20230383290/high-throughput-precision-genome-editing
+20240296359,US,How Quantum Computers Learn to Sort Data,Google,,0,active,https://patentbrief.org/patent/us/20240296359/classification-using-quantum-neural-networks
+20250170731,US,How Robots Figure Out What They're Carrying While Moving,Boston Dynamics,,0,active,https://patentbrief.org/patent/us/20250170731/dynamic-mass-estimation-methods-for-an-integrated-mobile-manipulator-robot
+20220283184,US,Diagnosing Brain Diseases by Measuring a Protein in Blood or Urine,Individual,,2,active,https://patentbrief.org/patent/us/20220283184/novel-diagnostic-marker-for-creutzfeldt-jakob-disease-and-alzheimers-disease
+20250172879,US,How to Clean Metal Off Wafers After EUV Chipmaking,Taiwan Semiconductor Manufacturing Co TSMC,,0,active,https://patentbrief.org/patent/us/20250172879/metal-compound-removing-solvent-and-method-in-lithography
+20230245158,US,How a System Ranks Content Based on Friend Recommendations,Comcast Cable Communications,,0,active,https://patentbrief.org/patent/us/20230245158/content-recommendation-system
+20210205465,US,Targeting Bad Cells with Toxic Antibodies for Cancer and Autoimmune Disease,Apo T BV,,0,active,https://patentbrief.org/patent/us/20210205465/aberrant-cell-restricted-immunoglobulins-provided-with-a-toxic-moiety
+20240412809,US,AI Predicts 3D Protein Shapes from Genetic Code,DeepMind Technologies,,0,active,https://patentbrief.org/patent/us/20240412809/protein-structure-prediction-from-amino-acid-sequences-using-self-attention-neur
+20260003141,US,How Chips Talk Fast with Light Inside a Circuit Board,AT&S Austria Technologie und Systemtechnik AG,,0,active,https://patentbrief.org/patent/us/20260003141/package-having-component-carrier-and-embedded-optical-and-electric-chips-with-ho
+20200371093,US,Checking if Brain Injury Drugs Work Using Saliva or Urine,Medicortex Finland Oy,,0,active,https://patentbrief.org/patent/us/20200371093/prognostic-and-diagnostic-glycan-based-biomarkers-of-brain-damage
+20250102496,US,Better Lab Tests with Engineered Humanized Antibodies,Denka Co,,0,active,https://patentbrief.org/patent/us/20250102496/reagent-containing-humanized-antibody
+20250363357,US,How to Update AI on Small Devices with Slow Internet,Ubotica Technologies,,0,active,https://patentbrief.org/patent/us/20250363357/systems-and-methods-for-deploying-and-updating-neural-networks-at-the-edge-of-a-
+20250377309,US,How to Inspect Moving Objects on a Production Line with a Moving Camera,Isra Vision,,0,active,https://patentbrief.org/patent/us/20250377309/method-for-material-testing-of-an-object-in-a-production-andor-conveyor-line-and
+20230187025,US,How to Design High-Quality Gene Editing Tools for a Whole Genome,Genewiz Suzhou,,1,active,https://patentbrief.org/patent/us/20230187025/whole-genome-sgrna-library-constructing-system-and-application-thereof
+20220304938,US,"Tiny Lipid Balls for Precise, Better-Absorbed Cannabinoid Medicine",Nanosphere Health Sciences,,0,active,https://patentbrief.org/patent/us/20220304938/lipid-nanoparticle-compositions-and-methods-as-carriers-of-cannabinoids-in-stand
+20260080696,US,AI System for Analyzing Medical Images Using Magnification-Aligned Transformers,GUANGDONG PROVINCIAL PEOPLE'S HOSPITAL,,0,active,https://patentbrief.org/patent/us/20260080696/method-and-system-for-analyzing-pathological-images-based-on-magnification-align
+20230176052,US,"A New, More Accurate Test for 'Walking Pneumonia' Bacteria",Denka Co,,0,active,https://patentbrief.org/patent/us/20230176052/mycoplasma-pneumoniae-immunoassay-method-and-immunoassay-instrument
+20190160160,US,Making Drug Proteins Last Longer and Target Diseases Better,Individual,,0,active,https://patentbrief.org/patent/us/20190160160/methods-to-treat-diseases-with-protein-peptide-and-antigen-modification
