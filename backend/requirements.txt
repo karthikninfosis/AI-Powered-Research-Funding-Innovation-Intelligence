@@ -15,3 +15,5 @@ httpx
 supabase
 scikit-learn
 pypdf
+pandas
+sentence-transformers
