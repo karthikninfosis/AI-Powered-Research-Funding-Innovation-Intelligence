@@ -37,7 +37,8 @@ async def login_user(
 
     return {
         "message": "Login successful",
-        "user": result["user"]
+        "user": result["user"],
+        "token": result["token"]
     }
 @router.get("/me")
 async def me(user=Depends(get_current_user)):
