@@ -1,0 +1,16 @@
+# Static site deployment — no build step needed.
+# Files in the repo root are published as-is (index.html = homepage).
+[build]
+  publish = "."
+
+# Proxy backend API calls to the Render-hosted backend
+# (kept for any code that uses relative /api/... or /funding/... paths).
+[[redirects]]
+  from = "/api/*"
+  to = "https://research-api-lioc.onrender.com/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/funding/*"
+  to = "https://research-api-lioc.onrender.com/funding/:splat"
+  status = 200
