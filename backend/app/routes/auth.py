@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Response, HTTPException
+from fastapi import APIRouter, Depends, Response, Request, HTTPException
 from fastapi import HTTPException
 from fastapi import Response
 from app.middleware.auth import get_current_user
@@ -10,10 +10,14 @@ router = APIRouter(prefix="/api/auth", tags=["Authentication"])
 @router.post("/login")
 async def login_user(
     data: LoginRequest,
-    response: Response
+    response: Response,
+    request: Request
 ):
 
-    result = await login(data)
+    result = await login(
+        data,
+        request_base_url=str(request.base_url)
+    )
 
     if not result:
         raise HTTPException(
