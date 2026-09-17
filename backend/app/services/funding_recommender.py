@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -16,36 +15,33 @@ EMBEDDINGS_PATH = BASE_DIR / "ml_models" / "grant_embeddings.npy"
 
 
 # --------------------------------------------------
-# Load model
+# Lazy-loaded globals (first request only)
 # --------------------------------------------------
 
-print("Loading embedding model...")
-
-model = SentenceTransformer("all-MiniLM-L6-v2")
-
-print("Embedding model loaded.")
+_model = None
+_grants = None
+_embeddings = None
 
 
-# --------------------------------------------------
-# Load grants
-# --------------------------------------------------
+def _get_resources():
+    global _model, _grants, _embeddings
 
-print("Loading grants...")
+    if _model is not None:
+        return
 
-grants = pd.read_csv(CSV_PATH)
+    from sentence_transformers import SentenceTransformer
 
-print(f"Total grants: {len(grants)}")
+    print("Loading embedding model...")
+    _model = SentenceTransformer("all-MiniLM-L6-v2")
+    print("Embedding model loaded.")
 
+    print("Loading grants...")
+    _grants = pd.read_csv(CSV_PATH)
+    print(f"Total grants: {len(_grants)}")
 
-# --------------------------------------------------
-# Load existing embeddings
-# --------------------------------------------------
-
-print("Loading grant embeddings...")
-
-grant_embeddings = np.load(EMBEDDINGS_PATH, allow_pickle=True)
-
-print(f"Embeddings loaded: {grant_embeddings.shape}")
+    print("Loading grant embeddings...")
+    _embeddings = np.load(EMBEDDINGS_PATH, allow_pickle=True)
+    print(f"Embeddings loaded: {_embeddings.shape}")
 
 
 # --------------------------------------------------
@@ -57,15 +53,17 @@ def recommend_grants(
     top_k: int = 5
 ):
 
+    _get_resources()
+
     # Convert user innovation into embedding
-    user_embedding = model.encode(
+    user_embedding = _model.encode(
         [innovation_description]
     )
 
     # Compare user embedding with all grants
     similarities = cosine_similarity(
         user_embedding,
-        grant_embeddings
+        _embeddings
     )[0]
 
     # Get indexes of highest scores
@@ -77,7 +75,7 @@ def recommend_grants(
 
     for rank, index in enumerate(top_indices, start=1):
 
-        grant = grants.iloc[index]
+        grant = _grants.iloc[index]
 
         recommendations.append({
             "rank": rank,
